@@ -1,4 +1,4 @@
-!!python/object:__main__.weapon_gun
+!!python/object:db_weapons.weapon_gun
 name: 2A46
 range: 3000
 accuracy: 0.9

@@ -1,4 +1,4 @@
-!!python/object:__main__.formation
+!!python/object:db_formation.formation
 name: Tank Regiment (T-64B)
 personnel: 1143
 equipment:

@@ -1,4 +1,4 @@
-!!python/object:__main__.formation
+!!python/object:db_formation.formation
 name: Motor Rifle Battalion (BMP-2)
 personnel: 110
 equipment:

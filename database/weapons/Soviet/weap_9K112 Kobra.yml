@@ -1,4 +1,4 @@
-!!python/object:__main__.weapon_atgm
+!!python/object:db_weapons.weapon_atgm
 name: 9K112 Kobra
 range: 4000
 rie: 1

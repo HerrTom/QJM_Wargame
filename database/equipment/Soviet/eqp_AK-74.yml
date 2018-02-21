@@ -1,4 +1,4 @@
-!!python/object:__main__.equipment_inf
+!!python/object:db_equipment.equipment_inf
 name: AK-74
 weapons:
     - AK-74

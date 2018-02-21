@@ -1,4 +1,4 @@
-!!python/object:__main__.formation
+!!python/object:db_formation.formation
 equipment:
   1V12 ACRV: 16
   1V18 ACRV: 8

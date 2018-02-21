@@ -1,4 +1,4 @@
-!!python/object:__main__.formation_group
+!!python/object:db_formation.formation_group
 name: Soviet Generic TD
 formations:
     - Motor Rifle Regiment (BMP-2)

@@ -6,13 +6,13 @@ Di = 4000 # dispersion factor - hardcoded for now
 # common parsing functions
 def armour_factor(entry):
     # parse the fire control string
-    if entry.armour.lower() == 'aluminum':
+    if entry.armour.lower() == 'aluminium':
         ARMF = 0.7
     elif entry.armour.lower() == 'modern reactive':
         ARMF = 2.1
     elif entry.armour.lower() == 'reactive':
         ARMF = 1.6
-    elif entry.armour.lower() == 'modern composite':
+    elif entry.armour.lower() == 'composite':
         ARMF = 1.5
     elif entry.armour.lower() == 'early composite':
         ARMF = 1.3
@@ -48,6 +48,7 @@ class equip_list():
 
 
 class equipment_inf():
+    type = "INF"
     def __init__(self, name, weapons, range, weight, speed, ammo_store, crew):
         self.name = name
         self.weapons = weapons
@@ -79,7 +80,8 @@ class equipment_inf():
 
 
 class equipment_afv():
-    def __init__(self, name, weapons, range, weight, speed, ammo_store, crew):
+    type = "AFV"
+    def __init__(self, name, weapons, range, weight, speed, ammo_store, crew, FCE):
         self.name = name
         self.weapons = weapons
         self.range = range
@@ -88,7 +90,7 @@ class equipment_afv():
         self.ammo_store = ammo_store
         self.crew = crew
         self.armour = armour
-        self.fire_control
+        self.fire_control = FCE
 
     def __repr__(self):
         return '{}({} @{:,.0f})'.format(self.__class__.__name__,self.name, self.TLI)
@@ -125,6 +127,7 @@ class equipment_afv():
 
 
 class equipment_pc():
+    type = "PC"
     def __init__(
             self,
             name,
@@ -134,6 +137,7 @@ class equipment_pc():
             speed,
             ammo_store,
             crew,
+            FCE,
             squad):
         self.name = name
         self.weapons = weapons
@@ -143,7 +147,7 @@ class equipment_pc():
         self.ammo_store = ammo_store
         self.crew = crew
         self.armour = armour
-        self.fire_control
+        self.fire_control = FCE
         self.squad = squad
 
     def __repr__(self):

@@ -1,4 +1,4 @@
-!!python/object:__main__.equipment_afv
+!!python/object:db_equipment.equipment_afv
 name: T-80B
 weapons:
     - 2A46M
@@ -10,5 +10,5 @@ weight: 42.5
 speed: 70
 ammo_store: 36
 crew: 3
-armour: early reactive
+armour: reactive
 fire_control: 'laser rangefinder'

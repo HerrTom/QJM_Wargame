@@ -1,0 +1,47 @@
+!!python/object:db_formation.formation
+equipment:
+  1V12 ACRV: 400
+  1V18 ACRV: 160
+  2B11: 1920
+  2S1: 1980
+  2S3: 900
+  2S6: 440
+  AGS-17: 1440
+  AK-74: 84530
+  AT-4: 240
+  AT-7: 540
+  BM-21: 360
+  BMP-1: 60
+  BMP-2: 7890
+  BRDM-2: 520
+  BRDM-2 AT-5: 720
+  BRDM-2U: 2340
+  BRM-1: 130
+  BTR-60: 120
+  BTR-60PA (FAC): 130
+  BTR-60PB: 3300
+  D-30: 360
+  Engineer Vehicle: 3120
+  GAZ-66: 6600
+  MT-55: 130
+  MT-LB: 20
+  PKM: 3780
+  PRP-3: 200
+  RPG-7V: 14500
+  RPK-74: 10110
+  SA-13: 200
+  SA-7: 2550
+  SA-9: 320
+  SPG-9: 120
+  T-64B: 1740
+  T-80B: 6160
+  TMM Bridging Truck: 520
+  UAZ-469: 2840
+  Ural-375: 5240
+  Ural-375 POL: 3680
+  Van Truck: 1530
+  ZIL-130: 4330
+  ZIL-131: 4930
+  ZSU-23-4: 80
+name: Group of Soviet Forces Germany
+personnel: 170180

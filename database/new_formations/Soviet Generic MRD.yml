@@ -1,0 +1,47 @@
+!!python/object:db_formation.formation
+equipment:
+  1V12 ACRV: 24
+  1V18 ACRV: 8
+  2B11: 72
+  2S1: 36
+  2S3: 54
+  2S6: 8
+  AGS-17: 54
+  AK-74: 3071
+  AT-4: 24
+  AT-7: 54
+  BM-21: 18
+  BMP-1: 6
+  BMP-2: 132
+  BRDM-2: 16
+  BRDM-2 AT-5: 27
+  BRDM-2U: 76
+  BRM-1: 4
+  BTR-60: 6
+  BTR-60PA (FAC): 4
+  BTR-60PB: 294
+  D-30: 36
+  Engineer Vehicle: 96
+  GAZ-66: 251
+  MT-55: 4
+  MT-LB: 1
+  PKM: 108
+  PRP-3: 8
+  RPG-7V: 536
+  RPK-74: 381
+  SA-13: 4
+  SA-7: 93
+  SA-9: 12
+  SPG-9: 12
+  T-64B: 174
+  T-80B: 40
+  TMM Bridging Truck: 16
+  UAZ-469: 101
+  Ural-375: 249
+  Ural-375 POL: 120
+  Van Truck: 40
+  ZIL-130: 168
+  ZIL-131: 123
+  ZSU-23-4: 8
+name: Soviet Generic MRD
+personnel: 10004

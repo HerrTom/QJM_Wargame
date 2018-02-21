@@ -1,4 +1,4 @@
-!!python/object:__main__.weapon_gun
+!!python/object:db_weapons.weapon_gun
 name: PKT
 range: 600
 accuracy: 0.7

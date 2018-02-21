@@ -1,4 +1,4 @@
-!!python/object:__main__.equipment_afv
+!!python/object:db_equipment.equipment_afv
 name: T-80
 weapons:
     - 2A46

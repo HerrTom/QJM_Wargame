@@ -1,4 +1,4 @@
-!!python/object:__main__.equipment_pc
+!!python/object:db_equipment.equipment_pc
 name: BMP-2
 weapons:
     - 2A46
