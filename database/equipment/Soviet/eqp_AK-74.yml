@@ -4,3 +4,4 @@ weapons:
     - AK-74
 ammo_store: 300
 crew: 1
+nation: "Soviet"

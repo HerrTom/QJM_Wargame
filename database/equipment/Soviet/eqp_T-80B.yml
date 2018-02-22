@@ -12,3 +12,4 @@ ammo_store: 36
 crew: 3
 armour: reactive
 fire_control: 'laser rangefinder'
+nation: "Soviet"

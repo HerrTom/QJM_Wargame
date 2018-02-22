@@ -1,9 +1,9 @@
 !!python/object:db_equipment.equipment_pc
 name: BMP-2
 weapons:
-    - 2A46
+    - 2A42
+    - 9K113 Konkurs
     - PKT
-    - DShK
 range: 360
 weight: 42.5
 speed: 70
@@ -11,8 +11,5 @@ ammo_store: 36
 crew: 3
 armour: early composite
 fire_control: 'stabilised'
-squad:
-    - AK-74: 7
-    - RPG-7V: 1
-    - RPK-74: 1
-    
+squad: 300
+nation: "Soviet"

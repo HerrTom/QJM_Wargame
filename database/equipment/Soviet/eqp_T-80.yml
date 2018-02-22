@@ -11,3 +11,4 @@ ammo_store: 36
 crew: 3
 armour: early composite
 fire_control: 'steroscopic rangefinder'
+nation: "Soviet"

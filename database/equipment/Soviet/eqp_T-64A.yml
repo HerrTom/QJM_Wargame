@@ -1,0 +1,14 @@
+!!python/object:db_equipment.equipment_afv
+ammo_store: 36
+armour: early composite
+crew: 3
+fire_control: laser rangefinder
+name: T-64A
+nation: Soviet
+range: 500
+speed: 60.0
+weapons:
+- 2A46M
+- PKT
+- DShK
+weight: 38.0
