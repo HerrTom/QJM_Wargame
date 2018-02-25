@@ -3,6 +3,7 @@ ammo_store: 36
 armour: composite
 crew: 3
 fire_control: laser rangefinder
+amphibious: False
 name: T-64B
 nation: Soviet
 range: 500

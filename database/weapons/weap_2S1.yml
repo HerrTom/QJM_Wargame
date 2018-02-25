@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 97
+TLI: 2863623.8314678706
+accuracy: 0.85
+ammo: OF-430
+barrels: 1
+calibre: 122.0
+muzzle_vel: 680.0
+name: 2S1
+range: 15300
+rie: 1.0

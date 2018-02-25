@@ -77,4 +77,4 @@ if __name__ == "__main__":
         oob = oob_db()
         # run through the formations and print info
         for form in oob.forms:
-            form.disp_OLI()
+            print(form.GetOLI())

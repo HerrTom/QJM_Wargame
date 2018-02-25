@@ -3,8 +3,8 @@ equipment:
   1V12 ACRV: 400
   1V18 ACRV: 160
   2B11: 1920
-  2S1: 1980
-  2S3: 900
+  2S1 Gvozdika: 1980
+  2S3 Akatsiya: 900
   2S6: 440
   AGS-17: 1440
   AK-74: 84530
@@ -14,7 +14,7 @@ equipment:
   BMP-1: 60
   BMP-2: 7890
   BRDM-2: 520
-  BRDM-2 AT-5: 720
+  BRDM-2 9P148: 720
   BRDM-2U: 2340
   BRM-1: 130
   BTR-60: 120

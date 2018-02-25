@@ -12,4 +12,5 @@ ammo_store: 36
 crew: 3
 armour: reactive
 fire_control: 'laser rangefinder'
+amphibious: False
 nation: "Soviet"

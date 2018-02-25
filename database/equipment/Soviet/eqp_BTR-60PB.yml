@@ -1,0 +1,14 @@
+!!python/object:db_equipment.equipment_apc
+ammo_store: 500
+amphibious: true
+squad: 126
+armour: steel
+crew: 2
+name: BTR-60PB
+nation: Soviet
+range: 500
+speed: 80.0
+weapons:
+- KPVT
+- PKT
+weight: 10.3

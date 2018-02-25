@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 154
+TLI: 297486.6906352595
+accuracy: 0.6
+ammo: PG-15
+barrels: 1
+calibre: 73.0
+muzzle_vel: 290.0
+name: 2A28
+range: 600
+rie: 1.0

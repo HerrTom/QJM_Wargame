@@ -1,4 +1,4 @@
-!!python/object:db_weapons.weapon_gun
+!!python/object:db_weapons.weapon_autogun
 name: 2A42
 range: 3200
 accuracy: 0.7

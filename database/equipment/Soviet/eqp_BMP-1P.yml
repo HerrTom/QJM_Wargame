@@ -1,17 +1,17 @@
 !!python/object:db_equipment.equipment_ifv
-ammo_store: 300
+ammo_store: 40
 amphibious: true
 armour: steel
 crew: 2
 fire_control: none
-name: BMP-2
+name: BMP-1P
 nation: Soviet
 range: 600
 speed: 65.0
 squad: 126.0
 squad_weaps: []
 weapons:
-- 2A42
+- 2A28
 - 9K113 Konkurs
 - PKT
-weight: 14.1
+weight: 13.2

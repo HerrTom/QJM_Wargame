@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_inf
+ammo_store: 300
+crew: 1
+name: RPK-74
+nation: Soviet
+weapons:
+- RPK-74

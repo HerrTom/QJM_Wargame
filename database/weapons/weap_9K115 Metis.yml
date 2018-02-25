@@ -1,0 +1,14 @@
+!!python/object:db_weapons.weapon_atgm
+RF: 128
+TLI: 964483.5943837222
+ammo: 9K115 Metis
+barrels: 1
+calibre: 94.0
+enhancement: 1.2
+guidance: SACLOS wire day
+min_range: 40.0
+muzzle_vel: 223.0
+name: 9K115 Metis
+penetration: 460.0
+range: 1000
+rie: 1.0

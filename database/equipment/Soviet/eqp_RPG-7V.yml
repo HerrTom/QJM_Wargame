@@ -1,0 +1,8 @@
+!!python/object:db_equipment.equipment_infat
+ammo_store: 5
+crew: 1
+name: RPG-7V
+nation: Soviet
+weapons:
+- RPG-7V
+- AK-74

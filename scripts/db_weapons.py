@@ -18,9 +18,59 @@ class weapon_list():
 
     def __repr__(self):
         return '{}({})'.format(self.__class__.__name__,self.names)
-
+        
+    def weap_by_name(self, name_to_find):
+        return self.weapons[self.names.index(name_to_find)]
 
 class weapon_gun():
+    type = "Gun"
+    def __init__(
+            self,
+            name,
+            range,
+            accuracy,
+            rie,
+            barrels,
+            calibre,
+            muzzle_vel,
+            ammo):
+        self.name = name
+        self.range = range
+        self.accuracy = accuracy
+        self.rie = rie
+        self.barrels = barrels
+        self.calibre = calibre
+        self.muzzle_vel = muzzle_vel
+        self.ammo = ammo
+        
+        # if generated using __init__ also generate the TLI
+        self.GenTLI()
+
+    def __repr__(self):
+        return '{}({} @{:,.0f})'.format(self.__class__.__name__,self.name, self.TLI)
+
+    def GenTLI(self):
+        RF = qjm_interps.RF_From_Calibre(self.calibre)
+        PTS = qjm_interps.PTS_From_Calibre(self.calibre)
+        RIE = self.rie
+        # RN
+        RN_Range = 1 + (0.001 * self.range)**0.5
+        RN_MV = 0.007 * self.muzzle_vel * (0.1 * self.calibre)**0.5
+        if RN_MV > RN_Range:
+            RN = RN_MV
+        else:
+            RN = (RN_Range + RN_MV) / 2
+        A = self.accuracy
+        RL = 1
+        SME = 1
+        MCE = 1
+        AE = 1
+        MBE = qjm_interps.MBE(self.barrels)
+        self.RF = RF
+        self.TLI = RF * PTS * RIE * RN * A * RL * SME * MCE * AE * MBE
+        
+class weapon_autogun():
+    type = "Automatic gun"
     def __init__(
             self,
             name,
@@ -43,16 +93,15 @@ class weapon_gun():
         self.calibre = calibre
         self.muzzle_vel = muzzle_vel
         self.ammo = ammo
+        
+        # if generated using __init__ also generate the TLI
+        self.GenTLI()
 
     def __repr__(self):
         return '{}({} @{:,.0f})'.format(self.__class__.__name__,self.name, self.TLI)
 
     def GenTLI(self):
-        # RF - if empty use calibre
-        if self.rate_of_fire is None:
-            RF = qjm_interps.RF_From_Calibre(self.calibre)
-        else:
-            RF = self.rate_of_fire * self.rf_multiple
+        RF = self.rate_of_fire * self.rf_multiple
         PTS = qjm_interps.PTS_From_Calibre(self.calibre)
         RIE = self.rie
         # RN
@@ -71,16 +120,13 @@ class weapon_gun():
         self.RF = RF
         self.TLI = RF * PTS * RIE * RN * A * RL * SME * MCE * AE * MBE
 
-
 class weapon_atgm():
+    type = "ATGM"
     def __init__(
             self,
             name,
             range,
-            accuracy,
             rie,
-            rof,
-            rf_multiple,
             barrels,
             calibre,
             muzzle_vel,
@@ -92,8 +138,6 @@ class weapon_atgm():
         self.name = name
         self.range = range
         self.rie = rie
-        self.rate_of_fire = rof
-        self.rf_multiple = rf_multiple
         self.barrels = barrels
         self.calibre = calibre
         self.muzzle_vel = muzzle_vel
@@ -102,16 +146,15 @@ class weapon_atgm():
         self.penetration = penetration
         self.guidance = guidance
         self.enhancement = enhancement
+        
+        # if generated using __init__ also generate the TLI
+        self.GenTLI()
 
     def __repr__(self):
         return '{}({} @{:,.0f})'.format(self.__class__.__name__,self.name, self.TLI)
 
     def GenTLI(self):
-        # RF - if empty use calibre
-        if self.rate_of_fire is None:
-            RF = qjm_interps.RF_From_Calibre(self.calibre)
-        else:
-            RF = self.rate_of_fire * self.rf_multiple
+        RF = qjm_interps.RF_From_Calibre(self.calibre)
         PTS = qjm_interps.PTS_From_Calibre(self.calibre)
         RIE = self.rie
         # RN

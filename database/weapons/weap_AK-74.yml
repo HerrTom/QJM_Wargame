@@ -1,8 +1,8 @@
-!!python/object:db_weapons.weapon_gun
+!!python/object:db_weapons.weapon_autogun
 name: AK-74
 range: 300
 accuracy: 0.85
-rie: 1
+rie: 0.8
 rate_of_fire: 600
 rf_multiple: 4
 barrels: 1

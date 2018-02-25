@@ -1,0 +1,12 @@
+!!python/object:db_equipment.equipment_sparty
+ammo_store: 40
+amphibious: true
+armour: steel
+crew: 4
+name: 2S1 Gvozdika
+nation: Soviet
+range: 360
+speed: 70.0
+weapons:
+- 2S1
+weight: 42.5

@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_infat
+ammo_store: 5
+crew: 3
+name: 9M113 Konkurs
+nation: Soviet
+weapons:
+- 9K113 Konkurs

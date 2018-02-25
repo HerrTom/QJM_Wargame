@@ -1,0 +1,15 @@
+!!python/object:db_equipment.equipment_spat
+ammo_store: 10
+amphibious: false
+armour: steel
+crew: 3
+name: BRDM-2 9P148
+nation: Soviet
+range: 750
+speed: 100.0
+weapons:
+- 9K113 Konkurs
+- 9K113 Konkurs
+- 9K113 Konkurs
+- 9K113 Konkurs
+weight: 7.0
