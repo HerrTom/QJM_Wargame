@@ -1,5 +1,7 @@
 !!python/object:db_formation.formation_group
 name: Group of Soviet Forces Germany
+faction: USSR
+type: mech
 formations:
     - Soviet Generic TD 
     - Soviet Generic TD

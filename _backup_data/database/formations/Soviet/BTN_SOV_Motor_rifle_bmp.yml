@@ -1,6 +1,8 @@
 !!python/object:db_formation.formation
 name: Motor Rifle Battalion (BMP-2)
+type: mech
 personnel: 110
+faction: USSR
 equipment:
     AK-74: 162
     AK-74 GP-25: 27

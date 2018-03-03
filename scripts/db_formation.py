@@ -7,12 +7,25 @@ def ListToFormattedString(alist):
     s = ','.join(formatted_list)
     return s.format(*alist)
 
+class oli_obj():
+    def __init__(self):
+        self.total = 0
+        self.inf = 0
+        self.afv = 0
+        self.at = 0
+        self.arty = 0
+        self.ad = 0
+        self.air = 0
+    
 # generic formation class
 class formation():
-    def __init__(self, name, equipment, personnel,):
+    def __init__(self, name, equipment, personnel, faction, type, CEV,):
         self.name = name
+        self.type = type
         self.equipment = equipment
         self.personnel = personnel
+        self.faction = faction
+        sefl.CEV = CEV
 
     def __repr__(self):
         return 'formation({} @{:,.0f})'.format(self.name, self.OLI)
@@ -60,7 +73,7 @@ class formation():
             elif equip_type in ["Artillery", "SP Artillery"]:
                 self.OLI_arty += qty * equip_TLI
             elif equip_type in ["AD", "SP AD"]:
-                self.OLI_arty += qty * equip_TLI
+                self.OLI_ad += qty * equip_TLI
             
             
     def generate_formation(self, form_list):
@@ -80,22 +93,69 @@ class formation_list():
     def __init__(self, formations):
         self.names = list()
         self.forms = list()
+        self.factions = list()
         for form in formations:
             self.names.append(form.name)
             self.forms.append(form)
+            self.factions.append(form.faction)
 
     def formation_by_name(self, name_to_find):
         return self.forms[self.names.index(name_to_find)]
-
+    
+    def pers_by_names(self,name_list):
+        pers = 0
+        if name_list is str: # handle if there is only a string input
+            name_list = [name_list]
+        for name in name_list:
+            formation = self.formation_by_name(name)
+            pers += formation.personnel
+        return pers
+    
+    def vehicles_by_names(self,name_list,equip_db):
+        vehicles = 0
+        if name_list is str: # handle if there is only a string input
+            name_list = [name_list]
+        for name in name_list:
+            formation = self.formation_by_name(name)
+            for equip, qty in formation.equipment.items():
+                try:
+                    equip_entry = equip_db.equip_by_name(equip)
+                    equip_type = equip_entry.type
+                except BaseException:
+                    equip_type = None
+                    pass
+                # classify the equipment by category
+                if equip_type in ["APC", "IFV", "AFV", "SP AT", "SP Artillery", "SP AD"]:
+                    vehicles += qty
+                    #print("{}: {}".format(equip,qty))
+        return vehicles
+        
+    def oli_by_names(self,name_list):
+        OLI = oli_obj() # inits oli value to zero
+        if name_list is str: # handle if there is only a string input
+            name_list = [name_list]
+        for name in name_list:
+            formation = self.formation_by_name(name)
+            CEV = formation.CEV
+            OLI.total += formation.OLI
+            OLI.inf += formation.OLI_inf
+            OLI.afv += formation.OLI_afv
+            OLI.at += formation.OLI_at
+            OLI.arty += formation.OLI_arty
+            OLI.ad += formation.OLI_ad
+        return OLI
+    
     def __repr__(self):
         return 'formation_list({})'.format(self.names)
 
         
 # class that allows formations to be combined
 class formation_group():
-    def __init__(self, name, formations):
+    def __init__(self, name, formations, faction, type,):
         self.name = name
         self.formations = formations
+        self.faction = faction
+        self.type = type
 
     def __repr__(self):
         return 'formation_group({})'.format(self.name)
@@ -105,9 +165,11 @@ class formation_group():
         # run through the list of formations
         equipment = dict()
         personnel = 0
+        CEV = 0
         for name in self.formations:
             form = form_list.formation_by_name(name)
             equipment = Counter(equipment) + Counter(form.equipment)
             personnel += form.personnel
-        new_formation = formation(self.name, dict(equipment), personnel)
+        new_formation = formation(self.name, dict(equipment), personnel, self.faction, self.type,
+                                    CEV)
         return new_formation

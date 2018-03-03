@@ -1,0 +1,9 @@
+!!python/object:db_formation.formation
+name: Berlin Brigade
+type: mech
+CEV: 1.6
+personnel: 1143
+faction: USA
+equipment:
+    T-80B: 30
+    Engineer Vehicle: 24

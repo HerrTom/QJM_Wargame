@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 99
+TLI: 1249571.981689072
+accuracy: 0.8
+ammo: OF-843
+barrels: 1
+calibre: 120.0
+muzzle_vel: 325.0
+name: 2B11
+range: 7180
+rie: 1.0

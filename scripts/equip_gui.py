@@ -2,7 +2,7 @@ import wx
 import os
 import yaml
 
-import oob
+import db_oob
 import db_formation
 import db_weapons
 import db_equipment
@@ -19,7 +19,7 @@ os.chdir(dname)
 
 # global database
 global gdb
-gdb = oob.oob_db()
+gdb = db_oob.oob_db()
 
 weap_list_rows = 6
 
@@ -583,9 +583,10 @@ class InfoForm(wx.Frame):
         
         panel.SetSizerAndFit(main_sizer)
         #self.Fit()
-            
-app = wx.App()
-equip_gui = equipment_gui_frame()
-equip_gui.Show()
+        
+if __name__ == "__main__":         
+    app = wx.App()
+    equip_gui = equipment_gui_frame()
+    equip_gui.Show()
 
-app.MainLoop()
+    app.MainLoop()

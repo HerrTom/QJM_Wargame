@@ -1,5 +1,7 @@
 !!python/object:db_formation.formation_group
 name: Soviet Generic TD
+faction: USSR
+type: arm
 formations:
     - Motor Rifle Regiment (BMP-2)
     - Tank Regiment (T-80B)

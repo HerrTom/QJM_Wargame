@@ -173,6 +173,7 @@ class weapon_atgm():
         A = acc[self.guidance]
         RL = 1
         SME = 1
+        GE = 2 # guided weapons have a bonus effect
         MCE = 1
         AE = 1
         MBE = qjm_interps.MBE(self.barrels)
@@ -182,4 +183,4 @@ class weapon_atgm():
         VEL = 1 + .001 * (self.muzzle_vel - 400)
         EN = self.enhancement
         self.TLI = RF * PTS * RIE * RN * A * RL * \
-            SME * MCE * AE * MBE * MRN * PEN * VEL * EN
+            SME * MCE * AE * MBE * MRN * PEN * VEL * EN * GE

@@ -23,12 +23,14 @@ class oob_db():
         self.load_equip()
         self.load_formations()
         self.load_groups()
+        self.load_gm_formations()
     
     def update_data(self,):
         self.load_weaps()
         self.load_equip()
         self.load_formations()
         self.load_groups()
+        self.load_gm_formations()
     
     def load_weaps(self,):
         # load in the weapons
@@ -59,6 +61,15 @@ class oob_db():
             self.forms[-1].GenOLI(self.equip_db)
         
         self.forms_db = db_formation.formation_list(self.forms)
+        
+    def load_gm_formations(self,):
+        # Load the formation elements
+        self.gm_forms = []
+        for fid in glob.glob('../database/_gamemaster/**/*.yml', recursive=True):
+            with open(fid) as f:
+                self.gm_forms.append(yaml.load(f))
+            self.gm_forms[-1].GenOLI(self.equip_db)
+        self.gm_forms_db = db_formation.formation_list(self.gm_forms)
     
     def load_groups(self,):
         # Load the formation groups
@@ -78,3 +89,8 @@ if __name__ == "__main__":
         # run through the formations and print info
         for form in oob.forms:
             print(form.GetOLI())
+            # demo the personnel counter and vehicle counter
+            nm = form.name
+            pers = oob.forms_db.pers_by_names([nm])
+            veh = oob.forms_db.vehicles_by_names([nm],oob.equip_db)
+            print("{} has {} personnel and {} vehicles".format(nm,pers,veh))

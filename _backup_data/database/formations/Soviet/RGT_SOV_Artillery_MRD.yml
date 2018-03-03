@@ -1,6 +1,8 @@
 !!python/object:db_formation.formation
 name: Artillery Regiment (MRD)
+type: mech
 personnel: 1292
+faction: USSR
 equipment:
     2S3 Akatsiya: 54
     BM-21: 18

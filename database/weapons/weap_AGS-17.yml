@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 1600
+TLI: 218248.62128842683
+accuracy: 0.6
+ammo: VOG-17
+barrels: 1
+calibre: 30.0
+muzzle_vel: 185.0
+name: AGS-17
+range: 1700
+rate_of_fire: 400
+rf_multiple: 4
+rie: 1.0

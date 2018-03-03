@@ -3,12 +3,11 @@ import wx
 import os
 import yaml
 
-import oob
-
+import db_oob
 import db_weapons
 
 global gdb
-gdb = oob.oob_db()
+gdb = db_oob.oob_db()
 
 class weap_gui_frame(wx.Frame):
     def __init__(self,parent):

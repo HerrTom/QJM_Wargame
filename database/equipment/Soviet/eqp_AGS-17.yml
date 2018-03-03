@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_inf
+ammo_store: 200
+crew: 3
+name: AGS-17
+nation: Soviet
+weapons:
+- AGS-17

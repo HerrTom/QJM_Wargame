@@ -1,11 +1,10 @@
 !!python/object:db_formation.formation
-name: Tank Regiment (T-80B)
+name: Tank Regiment (T-64B)
 type: arm
-CEV: 1.2
 personnel: 1143
 faction: USSR
 equipment:
-    T-80B: 94
+    T-64B: 94
     2S1 Gvozdika: 18
     SA-13: 4
     2S6: 4

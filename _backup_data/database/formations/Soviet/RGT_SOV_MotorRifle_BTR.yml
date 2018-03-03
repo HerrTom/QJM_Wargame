@@ -1,7 +1,6 @@
 !!python/object:db_formation.formation
 name: Motor Rifle Regiment (BTR)
 type: mech
-CEV: 1.2
 personnel: 2523
 faction: USSR
 equipment:

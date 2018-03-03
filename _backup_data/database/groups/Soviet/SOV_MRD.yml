@@ -1,5 +1,7 @@
 !!python/object:db_formation.formation_group
 name: Soviet Generic MRD
+faction: USSR
+type: mech
 formations:
     - Motor Rifle Regiment (BMP-2)
     - Motor Rifle Regiment (BTR)

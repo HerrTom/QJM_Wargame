@@ -43,5 +43,7 @@ equipment:
   ZIL-130: 4330
   ZIL-131: 4930
   ZSU-23-4: 80
+faction: USSR
 name: Group of Soviet Forces Germany
 personnel: 170180
+type: mech

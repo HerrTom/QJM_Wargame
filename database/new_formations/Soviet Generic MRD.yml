@@ -43,5 +43,7 @@ equipment:
   ZIL-130: 168
   ZIL-131: 123
   ZSU-23-4: 8
+faction: USSR
 name: Soviet Generic MRD
 personnel: 10004
+type: mech

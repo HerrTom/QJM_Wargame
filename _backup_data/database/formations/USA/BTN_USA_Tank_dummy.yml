@@ -1,0 +1,7 @@
+!!python/object:db_formation.formation
+name: Dummy US Tank Battalion
+personnel: 1143
+faction: USA
+equipment:
+    T-80B: 30
+    Engineer Vehicle: 24

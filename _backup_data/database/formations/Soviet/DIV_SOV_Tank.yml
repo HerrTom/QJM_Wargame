@@ -37,4 +37,6 @@ equipment:
   ZIL-130: 229
   ZIL-131: 356
 name: Soviet Generic TD
+type: arm
 personnel: 7014
+faction: USSR

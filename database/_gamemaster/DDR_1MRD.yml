@@ -1,4 +1,5 @@
 !!python/object:db_formation.formation
+type: mech
 equipment:
   1V12 ACRV: 24
   1V18 ACRV: 8
@@ -12,7 +13,7 @@ equipment:
   AT-7: 54
   BM-21: 18
   BMP-1: 6
-  BMP-2: 261
+  BMP-1P: 261
   BRDM-2: 20
   BRDM-2 9P148: 36
   BRDM-2U: 98
@@ -34,7 +35,7 @@ equipment:
   SA-9: 16
   SPG-9: 12
   T-64B: 174
-  T-80B: 80
+  T-64A: 80
   TMM Bridging Truck: 20
   UAZ-469: 123
   Ural-375: 272
@@ -43,5 +44,7 @@ equipment:
   ZIL-130: 204
   ZIL-131: 137
   ZSU-23-4: 8
-name: Soviet Generic MRD
+name: 1 MRD (DDR)
+CEV: 0.9
 personnel: 10004
+faction: DDR

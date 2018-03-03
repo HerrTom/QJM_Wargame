@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_infarty
+ammo_store: 20
+crew: 5
+name: 2B11
+nation: Soviet
+weapons:
+- 2B11

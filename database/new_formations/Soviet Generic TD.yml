@@ -36,5 +36,7 @@ equipment:
   Van Truck: 88
   ZIL-130: 112
   ZIL-131: 241
+faction: USSR
 name: Soviet Generic TD
 personnel: 7014
+type: arm

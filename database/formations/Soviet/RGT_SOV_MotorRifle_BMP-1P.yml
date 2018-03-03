@@ -1,6 +1,9 @@
 !!python/object:db_formation.formation
 name: Motor Rifle Regiment (BMP-1P)
+type: mech
+CEV: 1.2
 personnel: 2523
+faction: USSR
 equipment:
     T-64B: 40
     2S1 Gvozdika: 18
