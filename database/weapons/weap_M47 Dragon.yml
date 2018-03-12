@@ -1,0 +1,14 @@
+!!python/object:db_weapons.weapon_atgm
+RF: 92
+TLI: 425757.4758636745
+ammo: M47
+barrels: 1
+calibre: 127.0
+enhancement: 1.0
+guidance: SACLOS wire day
+min_range: 75.0
+muzzle_vel: 200.0
+name: M47 Dragon
+penetration: 330.0
+range: 1000
+rie: 1.0

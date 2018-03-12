@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 1400
+TLI: 4472.134881973037
+accuracy: 0.85
+ammo: 5.56x45
+barrels: 1
+calibre: 5.56
+muzzle_vel: 900.0
+name: M-16
+range: 300
+rate_of_fire: 700
+rf_multiple: 2
+rie: 0.8

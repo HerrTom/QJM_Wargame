@@ -181,8 +181,12 @@ class GamemasterFrame(wx.Frame):
         self.simulate_btn = wx.Button(button_panel,-1,"Simulate")
         self.simulate_btn.Bind(wx.EVT_BUTTON,self.OnSimulate)
         self.save_btn = wx.Button(button_panel,-1,"Save State")
+        self.save_btn.Bind(wx.EVT_BUTTON,self.OnSave)
+        self.load_btn = wx.Button(button_panel,-1,"Load State")
+        self.load_btn.Bind(wx.EVT_BUTTON,self.OnLoad)
         button_sizer.Add(self.simulate_btn,1,wx.EXPAND|wx.ALL,3)
         button_sizer.Add(self.save_btn,1,wx.EXPAND|wx.ALL,3)
+        button_sizer.Add(self.load_btn,1,wx.EXPAND|wx.ALL,3)
         
         
     def OnAttackerCheck(self,event):
@@ -418,17 +422,36 @@ class GamemasterFrame(wx.Frame):
               "Op. Vuln     | {:9,.3f} | {:9,.3f}\n".format(va_operational,vd_operational),)
         
         # advance rate - probably need to run for each individual formation?
-        for form in attackers_forms:
-            unittype = form.type
+        for name in attackers:
+            index = gdb.gm_forms_db.names.index(name)
+            unittype = gdb.gm_forms_db.forms[index].type
             adv_base = mc.advance_rate_base(P_ratio,unittype,def_posture)
             adv_roads = mc.advance_rate_road(road_quality,road_density)
             adv_terr = mc.advance_rate_terr(terrain,unittype)
             adv_rate = adv_base * adv_roads * adv_terr
-            print("{} advance rate: {:.1f} km/day\n".format(form.name,adv_rate))
+            atk_losses = gdb.gm_forms_db.forms[index].casualties(P_ratio,'attack',day=True,
+                                            duration=self.duration.GetValue())
+            print("{} advance rate: {:.1f} km/day".format(gdb.gm_forms_db.forms[index].name,adv_rate))
+            print("---")
+            print(gdb.gm_forms_db.forms[index].SITREP(atk_losses))
+        
+        for name in defenders:
+            index = gdb.gm_forms_db.names.index(name)
+            def_losses = gdb.gm_forms_db.forms[index].casualties(P_ratio,def_posture,day=True,
+                                            duration=self.duration.GetValue())
+            print("---")
+            print(gdb.gm_forms_db.forms[index].SITREP(def_losses,activity=def_posture+' defense'),)
         
         # finish the report
         print("*** END REPORT ***")
         
+    def OnSave(self,event):
+        for form in gdb.gm_forms_db.forms:
+            form.output()
+    
+    def OnLoad(self,event):
+        gdb.load_gm_formations("../database/_gamemaster/formations/")
+    
     def OnClose(self,event):
         dlg = wx.MessageDialog(self, 
             "Are you sure you want to close?",

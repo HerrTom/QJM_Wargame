@@ -1,0 +1,21 @@
+!!python/object:db_formation.formation
+name: (USA) 2nd Btn, 6th Infantry
+type: mech
+CEV: 1.8
+personnel: 1726
+faction: USA
+equipment:
+    M60A1: 10
+    M113A1: 22
+    M-16: 762
+    M16 M203: 95
+    M60 MMG: 117
+    M47 Dragon: 66
+    M224: 9
+    M106: 6
+    M125: 12
+    M901 ITV: 18
+    M163 Vulcan: 3
+    M728 CEV: 1
+    AVLB: 1
+    M109A1: 8

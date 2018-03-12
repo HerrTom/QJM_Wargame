@@ -1,4 +1,9 @@
+import os
 from collections import Counter
+from scipy.interpolate import interp1d
+from random import random
+import yaml
+
 # future work I want to do here is to combine the formation_group and 
 # formation objects such that any formation can have sub-formations
 
@@ -16,6 +21,12 @@ class oli_obj():
         self.arty = 0
         self.ad = 0
         self.air = 0
+
+def DictToText(x):
+    txt = ""
+    for key, item in x.items():
+        txt += "            {:5,.0f} {}\n".format(-item,key)
+    return txt
     
 # generic formation class
 class formation():
@@ -30,6 +41,33 @@ class formation():
     def __repr__(self):
         return 'formation({} @{:,.0f})'.format(self.name, self.OLI)
     
+    def output(self,path="../database/_gamemaster/working/"):
+        frm = self
+        if hasattr(frm,'equip_list'):
+            del frm.equip_list
+        os.makedirs(path, exist_ok=True)
+        # output the yaml file containing the equipment
+        with open("{}{}.yml".format(path,self.name),'w+') as f:
+            yaml.dump(self, f, default_flow_style=False)
+    
+    def SITREP(self,loss_dict={"N/A": 0},activity='Attacking'):
+        # returns a SITREP report
+        # skipping ID lines (3-7)
+        datestr = "0400 01 JANUARY 1983"
+        situation = activity
+        location = "Berlin"
+        losses = DictToText(loss_dict)
+        return ("DATE AND TIME {}\n"
+                "UNIT          {}\n"
+                "ACTIVITY      {}\n"
+                "EFFECTIVE     {:.0f}% combat power\n"
+                "DISPOSITION   {:.0f}% PERSONNEL | {:.0f}% VEHICLES\n"
+                "LOCATION      {}\n"
+                "SITUATION     Losses:\n{}\n"
+                "PERSONNEL:    {:,.0f}\n".format(datestr,self.name,situation,self.OLI/self.OLI_base*100,
+                                self.personnel/self.personnel_base*100, self.vehicles/self.vehicles_base*100,
+                                location,losses,self.personnel))
+    
     def GetOLI(self,):
         return ("OLI statistics for {}\n"
         "Overall:     {:,.0f}\n"
@@ -42,13 +80,21 @@ class formation():
                                         self.OLI_arty,self.OLI_ad,
                                         ListToFormattedString(self.NoTLIData))
     
+    def BaseStats(self):
+        self.OLI_base = self.OLI
+        self.personnel_base = self.personnel
+        self.vehicles_base = self.vehicles
+    
     def GenOLI(self, equipment_list):
+        self.equip_list = equipment_list
         self.OLI        = 0
         self.OLI_inf    = 0 # infantry
         self.OLI_afv    = 0 # tanks
         self.OLI_at     = 0 # anti tank
         self.OLI_arty   = 0 # artillery
         self.OLI_ad     = 0 # air defense
+        
+        self.vehicles = 0
         
         self.NoTLIData = list()
         for equip, qty in self.equipment.items():
@@ -74,8 +120,78 @@ class formation():
                 self.OLI_arty += qty * equip_TLI
             elif equip_type in ["AD", "SP AD"]:
                 self.OLI_ad += qty * equip_TLI
+            # while we're at it, let's also calculate the vehicles in the unit
+            # classify the equipment by category
+            if equip_type in ["APC", "IFV", "AFV", "SP AT", "SP Artillery", "SP AD"]:
+                self.vehicles += qty
+                #print("{}: {}".format(equip,qty))
+                
+    def casualties(self,power_ratio,mission,day=True,duration=24):
+        # calculate the strength/size factor
+        size_pts = [0, 5000, 10000, 20000, 30000, 50000, 100000]
+        size_factor_pts = [2.0, 1.5, 1.0, 0.9, 0.8, 0.7, 0.6]
+        size_interp = interp1d(size_pts,size_factor_pts,fill_value='extrapolate') # lin interpolator
+        factor_size = size_interp(self.personnel)
+        op_pts = [1000, 3, 2.5, 1.5, 0.83, 0.6, 0.45, 0.35, 0.25, 0.2, 0.15]
+        op_factor_pts = [0, 0.7, 0.8, 0.9, 1.0 ,1.1, 1.2, 1.3, 1.4, 1.5, 1.6]
+        op_interp = interp1d(op_pts, op_factor_pts, fill_value='extrapolate')
+        if mission == 'attack':
+            casualty_base = .028
+            factor_opposition = op_interp(power_ratio)
+        else:
+            casualty_base = .015
+            factor_opposition = op_interp(1/power_ratio)
+        if day:
+            factor_day = 1
+        else:
+            factor_day = 0.5
+        
+        duration_factor = duration/24
+        
+        casualty_rate = casualty_base * factor_size * factor_opposition * factor_day * duration_factor
+        print("Casualty rate: {:.1f}% for {}".format(casualty_rate*100,self.name))
+        # create the losses dictionary
+        loss_dict = Counter()
+        pers_losses = 0
+        # go through the equipment and kill it
+        for equip, qty in self.equipment.items():
+            try:
+                equip_entry = self.equip_list.equip_by_name(equip)
+                equip_type = equip_entry.type
+                crew = equip_entry.crew
+                if equip_type in ['ARM', 'APC', 'IFV']:
+                    factor_equipment = 5.4
+                elif equip_type in ['SP Artillery']:
+                    factor_equipment = 0.5
+                elif equip_type in ['Artillery']:
+                    factor_equipment = 0.2
+                else: # any other weapon
+                    factor_equipment = 1
+            except: # execption handles nonexistant weapons
+                factor_equipment = 1
+                crew = 1
+                pass
+            casualty_rate_adj = casualty_rate * factor_equipment
+            losses = 0
             
-            
+            for x in range(qty):
+                # roll for a kill
+                roll = random() # roll a random float
+                if roll <= casualty_rate_adj:
+                    losses += 1
+                    pers_losses += crew
+            loss_dict.update({equip: -losses})
+        # add the generated loss dictionary to the 
+        temp_equip = Counter(self.equipment)
+        temp_equip.update(loss_dict)
+        self.equipment = dict(temp_equip)
+        self.personnel += -pers_losses
+        
+        # after killing everything, reevaluate the OLI
+        self.GenOLI(self.equip_list)
+        
+        return dict(loss_dict)
+        
     def generate_formation(self, form_list):
         # creates a formation from the group definition
         # run through the list of formations

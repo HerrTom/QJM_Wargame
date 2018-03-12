@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 2400
+TLI: 26638.2223482574
+accuracy: 0.7
+ammo: 12.7x99
+barrels: 1
+calibre: 12.7
+muzzle_vel: 1005.0
+name: M2HB
+range: 800
+rate_of_fire: 600
+rf_multiple: 4
+rie: 1.0

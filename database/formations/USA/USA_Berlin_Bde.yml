@@ -1,0 +1,22 @@
+!!python/object:db_formation.formation
+name: Berlin Brigade (USA)
+type: mech
+CEV: 2.0
+personnel: 1726
+faction: USA
+equipment:
+    M60A1: 22
+    M113A1: 24
+    M-16: 762
+    M16 M203: 95
+    M60 MMG: 117
+    M47 Dragon: 66
+    M151 MG: 8
+    M151 TOW: 6
+    M106: 6
+    M125: 9
+    M163 Vulcan: 3
+    M728 CEV: 1
+    AVLB: 1
+    M109A1: 10
+    Truck: 38

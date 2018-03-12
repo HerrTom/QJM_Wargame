@@ -1,6 +1,7 @@
 import wx
 import os
 import yaml
+from fuzzywuzzy import process
 
 import db_oob
 import db_formation
@@ -22,6 +23,27 @@ global gdb
 gdb = db_oob.oob_db()
 
 weap_list_rows = 6
+
+class MatchingCombo(wx.ComboBox):
+    def __init__(self,*args, **kwargs):
+        # init the combo box
+        wx.ComboBox.__init__(self,*args,**kwargs)
+        # as long as 
+        self.Bind(wx.EVT_KILL_FOCUS,self.CheckItems)
+        
+    def CheckItems(self,event):
+        entered_text = self.GetValue()
+        if entered_text != "": # only check if we have actually entered something
+            # get through the items
+            options = list()
+            for i in range(self.GetCount()):
+                options.append(self.GetString(i))
+            
+            # search for the closest match
+            match = process.extractOne(entered_text,options)
+            self.SetValue(match[0])
+        pass
+        
 
 # Equipment editor frame
 class equipment_gui_frame(wx.Frame):
@@ -349,7 +371,9 @@ class equipment_gui_frame(wx.Frame):
                 entry = ""
                 pass
             self.weaps_box.append(wx.BoxSizer(wx.HORIZONTAL))
-            self.weaps.append(wx.ComboBox(self.right_panel,-1,entry,choices=weapon_choices))
+            #self.weaps.append(wx.ComboBox(self.right_panel,-1,entry,choices=weapon_choices))
+            self.weaps.append(MatchingCombo(self.right_panel,-1,entry,choices=weapon_choices,
+                                            style=wx.TE_PROCESS_ENTER))
             self.weaps_box[-1].Add(self.weaps[-1],1,wx.ALL,0)
             self.weaps_static.Add(self.weaps_box[-1],1,wx.ALL|wx.EXPAND,0)
         self.SendSizeEvent() # forces everything to be repainted

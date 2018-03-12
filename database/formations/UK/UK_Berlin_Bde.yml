@@ -1,0 +1,19 @@
+!!python/object:db_formation.formation
+name: Berlin Infantry Bde (UK)
+type: mech
+CEV: 1.8
+personnel: 1726
+faction: UK
+equipment:
+    Chieftain Mk.9: 18
+    FV432/30: 13
+    Javelin LAAD: 12
+    FV432: 155
+    FN FAL: 1391
+    FN MAG: 189
+    M72: 135
+    MILAN: 24
+    L9A1: 27
+    FV438: 24
+    FV432 81mm: 24
+    Truck: 74

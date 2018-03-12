@@ -80,7 +80,7 @@ def advance_rate_base(ratio,unittype,deftype):
     #elif ratio < max(pratio_pts):
     else:
         rate_pts = advance[unittype][deftype]
-        rate_interp = interp1d(pratio_pts,rate_pts,'cubic',fill_value='extrapolate')
+        rate_interp = interp1d(pratio_pts,rate_pts,'cubic',fill_value=max(rate_pts),bounds_error=False)
         base = float(rate_interp(ratio))
     #else:
     #    base = 60

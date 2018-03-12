@@ -1,0 +1,85 @@
+!!python/object:db_formation.formation
+CEV: 1.2
+NoTLIData:
+- 2S6
+- BRDM-2U
+- BRM-1
+- BTR-60PA (FAC)
+- Engineer Vehicle
+- GAZ-66
+- MT-55
+- PRP-3
+- SA-13
+- SA-7
+- TMM Bridging Truck
+- UAZ-469
+- Ural-375
+- Ural-375 POL
+- Van Truck
+- ZIL-130
+- ZIL-131
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  KNoOq8mSJkE=
+OLI_ad: 0
+OLI_afv: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  O8nu1FWvJUE=
+OLI_arty: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  2muLPVlj10A=
+OLI_at: 3756.259040903763
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  siaB6qgbJ0E=
+OLI_inf: 1408.2647911061076
+equipment:
+  2S1 Gvozdika: 18
+  2S6: 4
+  AK-74: 262
+  BMP-2: 2
+  BRDM-2: 4
+  BRDM-2U: 11
+  BRM-1: 1
+  BTR-60PA (FAC): 1
+  BTR-60PB: 2
+  Engineer Vehicle: 22
+  GAZ-66: 16
+  MT-55: 1
+  PRP-3: 1
+  RPG-7V: 33
+  RPK-74: 21
+  SA-13: 4
+  SA-7: 2
+  T-80B: 92
+  TMM Bridging Truck: 3
+  UAZ-469: 12
+  Ural-375: 22
+  Ural-375 POL: 26
+  Van Truck: 24
+  ZIL-130: 8
+  ZIL-131: 68
+faction: USSR
+name: Tank Regiment (T-80B)
+personnel: 1101
+personnel_base: 1143
+type: arm
+vehicles: 118
+vehicles_base: 123

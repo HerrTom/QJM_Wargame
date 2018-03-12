@@ -1,0 +1,8 @@
+!!python/object:db_equipment.equipment_infat
+ammo_store: 4
+crew: 2
+name: M47 Dragon
+nation: USA
+weapons:
+- M47 Dragon
+- M-16

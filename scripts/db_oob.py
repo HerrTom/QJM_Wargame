@@ -59,16 +59,19 @@ class oob_db():
             with open(fid) as f:
                 self.forms.append(yaml.load(f))
             self.forms[-1].GenOLI(self.equip_db)
+            self.forms[-1].BaseStats()
         
         self.forms_db = db_formation.formation_list(self.forms)
         
-    def load_gm_formations(self,):
+    def load_gm_formations(self,path="../database/_gamemaster/working/"):
         # Load the formation elements
+        path = path+'**/*.yml'
         self.gm_forms = []
-        for fid in glob.glob('../database/_gamemaster/**/*.yml', recursive=True):
+        for fid in glob.glob(path, recursive=True):
             with open(fid) as f:
                 self.gm_forms.append(yaml.load(f))
             self.gm_forms[-1].GenOLI(self.equip_db)
+            self.gm_forms[-1].BaseStats()
         self.gm_forms_db = db_formation.formation_list(self.gm_forms)
     
     def load_groups(self,):
@@ -93,4 +96,4 @@ if __name__ == "__main__":
             nm = form.name
             pers = oob.forms_db.pers_by_names([nm])
             veh = oob.forms_db.vehicles_by_names([nm],oob.equip_db)
-            print("{} has {} personnel and {} vehicles".format(nm,pers,veh))
+            print("{} has {} personnel and {} vehicles\n *****\n".format(nm,pers,veh))

@@ -1,0 +1,14 @@
+!!python/object:db_weapons.weapon_atgm
+RF: 84
+TLI: 4401778.443481876
+ammo: TOW
+barrels: 1
+calibre: 135.0
+enhancement: 1.2
+guidance: SACLOS wire day/night
+min_range: 65.0
+muzzle_vel: 300.0
+name: BGM-71 TOW
+penetration: 430.0
+range: 3000
+rie: 1.0

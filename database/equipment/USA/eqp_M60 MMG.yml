@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_inf
+ammo_store: 600
+crew: 1
+name: M60 MMG
+nation: USA
+weapons:
+- M60 MMG

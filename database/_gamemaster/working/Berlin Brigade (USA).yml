@@ -1,0 +1,63 @@
+!!python/object:db_formation.formation
+CEV: 1.8
+NoTLIData:
+- AVLB
+- M106
+- M109A1
+- M125
+- M16 M203
+- M163 Vulcan
+- M224
+- M728 CEV
+- M901 ITV
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  PuxrYKT700A=
+OLI_ad: 0
+OLI_afv: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  66ZHA+6Lw0A=
+OLI_arty: 0
+OLI_at: 6561.001563871125
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  MHFhsY3R2EA=
+OLI_inf: 3893.7073461403593
+equipment:
+  AVLB: 1
+  M-16: 685
+  M106: 4
+  M109A1: 8
+  M113A1: 9
+  M125: 11
+  M16 M203: 85
+  M163 Vulcan: 3
+  M224: 8
+  M47 Dragon: 61
+  M60 MMG: 103
+  M60A1: 10
+  M728 CEV: 0
+  M901 ITV: 17
+faction: USA
+name: Berlin Brigade (USA)
+personnel: 1583
+personnel_base: 1726
+type: mech
+vehicles: 19
+vehicles_base: 32

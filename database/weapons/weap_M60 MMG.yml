@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 2000
+TLI: 5646.086103487974
+accuracy: 0.7
+ammo: 7.62x51
+barrels: 1
+calibre: 7.62
+muzzle_vel: 825.0
+name: M60 MMG
+range: 700
+rate_of_fire: 500
+rf_multiple: 4
+rie: 0.8

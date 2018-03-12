@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 113
+TLI: 5138440.773935165
+accuracy: 0.9
+ammo: M833
+barrels: 1
+calibre: 105.0
+muzzle_vel: 1500.0
+name: M68
+range: 3000
+rie: 1.0

@@ -1,0 +1,14 @@
+!!python/object:db_equipment.equipment_apc
+ammo_store: 800
+amphibious: true
+armour: aluminium
+crew: 2
+name: M113A1
+nation: USA
+range: 500
+speed: 80.0
+squad: 115.0
+squad_weaps: []
+weapons:
+- M2HB
+weight: 11.2

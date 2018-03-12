@@ -1,0 +1,12 @@
+!!python/object:db_equipment.equipment_spat
+ammo_store: 5
+amphibious: false
+armour: steel
+crew: 2
+name: M151 TOW
+nation: USA
+range: 460
+speed: 140.0
+weapons:
+- BGM-71 TOW
+weight: 0.25
