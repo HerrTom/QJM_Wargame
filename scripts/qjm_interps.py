@@ -1,5 +1,5 @@
 from scipy.interpolate import pchip_interpolate, interp1d
-
+from numpy import loadtxt
 
 def PTS_From_Calibre(calibre):
     InterpCalibre = [
@@ -183,3 +183,17 @@ def ASE(AmmoRatio):
     InterpASE = [0, 0.2, 0.5, 0.75, 0.85, 0.9, 0.95, 1, 1]
     interp = interp1d(InterpAmmo, InterpASE)
     return interp(AmmoRatio)
+
+def casualty_size_factor(personnel): # data from TNDM
+    pers_pts = [500,1000,2000,4000,6000,8000,10000,12500,15000,25000,35000,45000,60000,75000,80000,100000,200000]
+    factor_pts = [21,8,5,2.5,1.8,1.4,1.2,1.15,1.1,1,0.9,0.8,0.7,0.6,0.5,0.4,0.3]
+    pers_factor_interp = interp1d(pers_pts,factor_pts,'slinear',fill_value='extrapolate')
+    return pers_factor_interp(personnel)
+
+def casualty_opposition_factor(power_ratio):
+    data = loadtxt("../database/lookup_tables/opposition_factor.csv",delimiter=',',
+            skiprows=1)
+    power_pts = data[:,0]
+    factor_pts = data[:,1]
+    casualty_op_interp = interp1d(power_pts,factor_pts,'slinear',fill_value='extrapolate')
+    return casualty_op_interp(power_ratio)

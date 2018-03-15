@@ -1,0 +1,22 @@
+!!python/object:db_formation.formation
+name: (USSR) 178th Sep Motor Rifle Btn
+type: mech
+CEV: 1.2
+personnel: 478
+faction: USSR
+equipment:
+    BRDM-2: 3
+    BTR-60: 34
+    2B11: 8
+    9K32 Strela-2: 9
+    9K113 Konkurs: 4
+    9K115 Metis: 9
+    RPG-7V: 35
+    AGS-17: 6
+    RPK-74: 27
+    AK-74: 189
+    PKM: 9
+    UAZ-469: 3
+    GAZ-66: 15
+    URAL 375: 4
+    URAL 375 POL: 2

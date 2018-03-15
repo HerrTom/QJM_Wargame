@@ -2,14 +2,14 @@
 ammo_store: 500
 amphibious: true
 armour: steel
-crew: 3
-name: BRDM-2
+crew: 2
+name: BTR-70
 nation: Soviet
-range: 750
-speed: 100.0
-squad: 7.0
+range: 500
+speed: 80.0
+squad: 126.0
 squad_weaps: []
 weapons:
 - KPVT
 - PKT
-weight: 7.0
+weight: 11.2

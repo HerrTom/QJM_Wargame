@@ -1,0 +1,14 @@
+!!python/object:db_formation.formation
+name: (USSR) 79th Sep Artillery Btn
+type: mech
+CEV: 1.2
+personnel: 128
+faction: USSR
+equipment:
+    PRP-3: 1
+    2S1 Gvozdika: 18
+    UAZ-469: 1
+    GAZ-66: 12
+    Ural 375: 34
+    ZIL-131: 3
+    URAL 375 POL: 3

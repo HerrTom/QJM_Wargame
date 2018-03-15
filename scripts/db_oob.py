@@ -63,9 +63,9 @@ class oob_db():
         
         self.forms_db = db_formation.formation_list(self.forms)
         
-    def load_gm_formations(self,path="../database/_gamemaster/working/"):
+    def load_gm_formations(self,path="../database/_gamemaster/working"):
         # Load the formation elements
-        path = path+'**/*.yml'
+        path = path+'/**/*.yml'
         self.gm_forms = []
         for fid in glob.glob(path, recursive=True):
             with open(fid) as f:
@@ -90,6 +90,7 @@ class oob_db():
 if __name__ == "__main__":
         oob = oob_db()
         # run through the formations and print info
+        no_equip = []
         for form in oob.forms:
             print(form.GetOLI())
             # demo the personnel counter and vehicle counter
@@ -97,3 +98,9 @@ if __name__ == "__main__":
             pers = oob.forms_db.pers_by_names([nm])
             veh = oob.forms_db.vehicles_by_names([nm],oob.equip_db)
             print("{} has {} personnel and {} vehicles\n *****\n".format(nm,pers,veh))
+        oob.load_gm_formations("../database/_gamemaster/formations/")
+        for form in oob.gm_forms:
+            for itm in form.NoTLIData:
+                no_equip.append(itm)
+        print("No equipment for gm_forms items:")
+        print(list(set(no_equip)))

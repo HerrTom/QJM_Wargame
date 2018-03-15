@@ -1,0 +1,14 @@
+!!python/object:db_weapons.weapon_atgm
+RF: 94
+TLI: 0.0
+ammo: 9M14 Malyutka
+barrels: 1
+calibre: 125.0
+enhancement: 1.0
+guidance: SACLOS wire day
+min_range: 500.0
+muzzle_vel: 115.0
+name: 9K14 Malyutka
+penetration: 300.0
+range: 3000
+rie: 1.0

@@ -4,6 +4,8 @@ from scipy.interpolate import interp1d
 from random import random
 import yaml
 
+import qjm_interps
+
 # future work I want to do here is to combine the formation_group and 
 # formation objects such that any formation can have sub-formations
 
@@ -41,13 +43,13 @@ class formation():
     def __repr__(self):
         return 'formation({} @{:,.0f})'.format(self.name, self.OLI)
     
-    def output(self,path="../database/_gamemaster/working/"):
+    def output(self,path="../database/_gamemaster/working"):
         frm = self
         if hasattr(frm,'equip_list'):
             del frm.equip_list
         os.makedirs(path, exist_ok=True)
         # output the yaml file containing the equipment
-        with open("{}{}.yml".format(path,self.name),'w+') as f:
+        with open("/{}{}.yml".format(path,self.name),'w+') as f:
             yaml.dump(self, f, default_flow_style=False)
     
     def SITREP(self,loss_dict={"N/A": 0},activity='Attacking'):
@@ -67,7 +69,7 @@ class formation():
                 "PERSONNEL:    {:,.0f}\n".format(datestr,self.name,situation,self.OLI/self.OLI_base*100,
                                 self.personnel/self.personnel_base*100, self.vehicles/self.vehicles_base*100,
                                 location,losses,self.personnel))
-    
+
     def GetOLI(self,):
         return ("OLI statistics for {}\n"
         "Overall:     {:,.0f}\n"
@@ -128,19 +130,18 @@ class formation():
                 
     def casualties(self,power_ratio,mission,day=True,duration=24):
         # calculate the strength/size factor
-        size_pts = [0, 5000, 10000, 20000, 30000, 50000, 100000]
-        size_factor_pts = [2.0, 1.5, 1.0, 0.9, 0.8, 0.7, 0.6]
-        size_interp = interp1d(size_pts,size_factor_pts,fill_value='extrapolate') # lin interpolator
-        factor_size = size_interp(self.personnel)
-        op_pts = [1000, 3, 2.5, 1.5, 0.83, 0.6, 0.45, 0.35, 0.25, 0.2, 0.15]
-        op_factor_pts = [0, 0.7, 0.8, 0.9, 1.0 ,1.1, 1.2, 1.3, 1.4, 1.5, 1.6]
-        op_interp = interp1d(op_pts, op_factor_pts, fill_value='extrapolate')
+        factor_size = qjm_interps.casualty_size_factor(self.personnel)
+        #op_pts = [1000, 3, 2.5, 1.5, 0.83, 0.6, 0.45, 0.35, 0.25, 0.2, 0.15]
+        #op_factor_pts = [0, 0.7, 0.8, 0.9, 1.0 ,1.1, 1.2, 1.3, 1.4, 1.5, 1.6]
+        #op_interp = interp1d(op_pts, op_factor_pts, fill_value='extrapolate')
         if mission == 'attack':
             casualty_base = .028
-            factor_opposition = op_interp(power_ratio)
+            #factor_opposition = op_interp(power_ratio)
+            factor_opposition = qjm_interps.casualty_opposition_factor(power_ratio)
         else:
             casualty_base = .015
-            factor_opposition = op_interp(1/power_ratio)
+            #factor_opposition = op_interp(1/power_ratio)
+            factor_opposition = qjm_interps.casualty_opposition_factor(1/power_ratio)
         if day:
             factor_day = 1
         else:
@@ -261,6 +262,13 @@ class formation_list():
             OLI.ad += formation.OLI_ad
         return OLI
     
+    def find_no_entries(self,):
+        no_equip = []
+        for form in self.forms:
+            for itm in form.NoTLIData:
+                no_equip.append(itm)
+        return list(set(no_equip))
+
     def __repr__(self):
         return 'formation_list({})'.format(self.names)
 

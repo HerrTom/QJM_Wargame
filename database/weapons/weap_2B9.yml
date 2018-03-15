@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 480
+TLI: 1614808.302032888
+accuracy: 0.8
+ammo: 82mm OF
+barrels: 1
+calibre: 82.0
+muzzle_vel: 270.0
+name: 2B9
+range: 4270
+rate_of_fire: 120
+rf_multiple: 4
+rie: 1.0

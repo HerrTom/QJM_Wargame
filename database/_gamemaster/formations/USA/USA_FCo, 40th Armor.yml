@@ -1,0 +1,8 @@
+!!python/object:db_formation.formation
+name: (USA) F Company, 40th Armor
+type: mech
+CEV: 1.8
+personnel: 64
+faction: USA
+equipment:
+    M60A1: 16

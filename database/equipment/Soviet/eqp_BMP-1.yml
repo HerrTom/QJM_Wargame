@@ -1,0 +1,17 @@
+!!python/object:db_equipment.equipment_ifv
+ammo_store: 40
+amphibious: true
+armour: steel
+crew: 2
+fire_control: none
+name: BMP-1
+nation: Soviet
+range: 600
+speed: 65.0
+squad: 126.0
+squad_weaps: []
+weapons:
+- 2A28
+- 9K14P Malyutka
+- PKT
+weight: 13.2

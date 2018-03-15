@@ -1,7 +1,7 @@
 !!python/object:db_equipment.equipment_infat
 ammo_store: 5
 crew: 2
-name: 9M115 Metis
+name: 9K115 Metis
 nation: Soviet
 weapons:
 - 9K115 Metis

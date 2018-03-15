@@ -528,8 +528,12 @@ class equipment_gui_frame(wx.Frame):
     
     def show_info(self,event):
         info = str()
-        for form in gdb.forms:
-            info = info + form.GetOLI() + "\n"
+        #for form in gdb.forms:
+        #    info = info + form.GetOLI() + "\n"
+        # temporarily load in the gamemaster formations
+        # should probably get rid of them
+        gdb.load_gm_formations("../database/_gamemaster/formations/")
+        info = "No equipment data found for following items:\n" + str(gdb.gm_forms_db.find_no_entries())
         infobox = InfoForm(self,info)
         infobox.Show()
     

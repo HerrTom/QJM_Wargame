@@ -6,6 +6,7 @@ import wx.lib.newevent
 
 import yaml
 
+import equip_gui
 import db_oob
 import model_constants as mc
 
@@ -13,6 +14,8 @@ import model_constants as mc
 abspath = os.path.abspath(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
+# get the gamemaster folder
+gmdir = os.path.abspath("../database/_gamemaster/")
 
 gdb = db_oob.oob_db()
 side_dict = {"NATO": ["BRD","UK","USA"], "Warsaw Pact": ["USSR","DDR"]}
@@ -64,11 +67,19 @@ class GamemasterFrame(wx.Frame):
         ## create a menu
         menubar = wx.MenuBar()
         filemenu = wx.Menu()
-        reloadmenu = filemenu.Append(wx.ID_ANY,"&Reload database")
+        editmenu = wx.Menu()
+        reloadmenu = filemenu.Append(wx.ID_ANY,"&Load state")
         filemenu.AppendSeparator()
         quitmenu = filemenu.Append(wx.ID_EXIT, "&Quit", "Quit application")
+        dbmenu = editmenu.Append(wx.ID_ANY,"&Database Editor")
         menubar.Append(filemenu,"&File")
+        menubar.Append(editmenu,"&Edit")
         self.SetMenuBar(menubar)
+
+        # menu binds
+        self.Bind(wx.EVT_MENU,self.OnLoad,reloadmenu)
+        self.Bind(wx.EVT_MENU,self.OnClose,quitmenu)
+        self.Bind(wx.EVT_MENU,self.OnDbEdit,dbmenu)
 
         
         sides = ["","NATO","Warsaw Pact"]
@@ -144,14 +155,19 @@ class GamemasterFrame(wx.Frame):
         datar2_sizer = wx.BoxSizer(wx.HORIZONTAL)
         main_sizer.Add(datar2_sizer,0,wx.EXPAND|wx.ALL)
         # season
-        season_sizer = wx.StaticBoxSizer(wx.VERTICAL,main_panel,"Season:")
+        season_sizer = wx.StaticBoxSizer(wx.HORIZONTAL,main_panel,"Season:")
         season_choices = ["winter, jungle","winter, desert","winter, temperate",
                         "spring, jungle","spring, desert","spring, temperate",
                         "summer, jungle","summer, desert","summer, temperate",
                         "fall, jungle","fall, desert","fall, temperate"]
-        self.season = wx.Choice(main_panel,-1,choices=season_choices)
+        seasons_choices   = ["spring","summer","fall","winter"]
+        seasonloc_choices = ["temperate","jungle","desert"]
+        self.season = wx.Choice(main_panel,-1,choices=seasons_choices)
+        self.seasonloc = wx.Choice(main_panel,-1,choices=seasonloc_choices)
         self.season.SetSelection(0)
+        self.seasonloc.SetSelection(0)
         season_sizer.Add(self.season,1,wx.EXPAND|wx.ALL,3)
+        season_sizer.Add(self.seasonloc,1,wx.EXPAND|wx.ALL,3)
         datar2_sizer.Add(season_sizer,1,wx.EXPAND|wx.ALL,5)
         # roads
         road_density_choices = ["dense network","medium network","sparse network"]
@@ -283,10 +299,13 @@ class GamemasterFrame(wx.Frame):
         J_defender = gdb.gm_forms_db.vehicles_by_names(defenders,gdb.equip_db)
         
         # get environment data from the forms
-        terrain = self.terrain.GetString(self.terrain.GetSelection())
-        weather = self.weather.GetString(self.weather.GetSelection())
-        season = self.season.GetString(self.weather.GetSelection())
+        terrain         = self.terrain.GetString(self.terrain.GetSelection())
+        weather         = self.weather.GetString(self.weather.GetSelection())
+        season_sel      = self.season.GetString(self.weather.GetSelection())
+        season_locale   = self.seasonloc.GetString(self.weather.GetSelection())
         
+        season = season_sel+', '+season_locale
+
         # get the posture from the form
         def_posture = self.posture.GetString(self.posture.GetSelection())
         
@@ -445,12 +464,28 @@ class GamemasterFrame(wx.Frame):
         # finish the report
         print("*** END REPORT ***")
         
+    def OnDbEdit(self,event):
+        eqp = equip_gui.equipment_gui_frame()
+        eqp.Show()
+
     def OnSave(self,event):
-        for form in gdb.gm_forms_db.forms:
-            form.output()
+        dlg = wx.DirDialog(self,message="Master folder for formations to save",
+                           defaultPath=gmdir)
+        result = dlg.ShowModal()
+        path = dlg.GetPath()
+        dlg.Destroy()
+        if result == wx.ID_OK:
+            for form in gdb.gm_forms_db.forms:
+                form.output(path)
     
     def OnLoad(self,event):
-        gdb.load_gm_formations("../database/_gamemaster/formations/")
+        dlg = wx.DirDialog(self,message="Master folder for formations to load",
+                           defaultPath=gmdir)
+        result = dlg.ShowModal()
+        path = dlg.GetPath()
+        dlg.Destroy()
+        if result == wx.ID_OK:
+            gdb.load_gm_formations(path)
     
     def OnClose(self,event):
         dlg = wx.MessageDialog(self, 

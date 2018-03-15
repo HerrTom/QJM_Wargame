@@ -1,0 +1,20 @@
+!!python/object:db_formation.formation
+name: (USSR) 133rd Sep Motor Rifle Btn
+type: mech
+CEV: 1.2
+personnel: 456
+faction: USSR
+equipment:
+    BRDM-2: 3
+    BMP-1P: 33
+    2B9: 8
+    9K32 Strela-2: 9
+    RPG-7V: 35
+    AGS-17: 6
+    RPK-74: 27
+    AK-74: 189
+    PKM: 18
+    UAZ-469: 3
+    GAZ-66: 15
+    URAL 375: 4
+    URAL 375 POL: 2

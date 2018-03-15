@@ -61,7 +61,7 @@ def season(seasontype,factor):
                     "fall, desert": [1,1,1],
                     "fall, temperate": [1.1,1,0.9],}
     return seasondict[seasontype][idx]
-    
+
 def advance_rate_base(ratio,unittype,deftype):
     pratio_pts = [1, 1.1, 1.25, 1.45, 1.75, 2.25, 3.0, 4.25, 6.0]
     advance = {

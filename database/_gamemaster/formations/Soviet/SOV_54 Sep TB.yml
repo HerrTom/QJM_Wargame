@@ -1,0 +1,12 @@
+!!python/object:db_formation.formation
+name: (USSR) 54th Sep Tank Btn
+type: mech
+CEV: 1.2
+personnel: 123
+faction: USSR
+equipment:
+    BRDM-2: 3
+    T-64A: 31
+    AK-74: 14
+    GAZ-66: 7
+    URAL 375 POL: 3
