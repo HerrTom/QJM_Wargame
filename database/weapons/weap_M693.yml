@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 2880
+TLI: 302931.75646537956
+accuracy: 0.8
+ammo: 20x139
+barrels: 1
+calibre: 20.0
+muzzle_vel: 1050.0
+name: M693
+range: 2500
+rate_of_fire: 720
+rf_multiple: 4
+rie: 1.0

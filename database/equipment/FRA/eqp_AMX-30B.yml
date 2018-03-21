@@ -1,0 +1,15 @@
+!!python/object:db_equipment.equipment_afv
+ammo_store: 56
+amphibious: false
+armour: steel
+crew: 4
+fire_control: stereoscopic rangefinder
+name: AMX-30B
+nation: FRA
+range: 650
+speed: 65.0
+weapons:
+- Modele F1
+- M621
+- L8A1
+weight: 36.0

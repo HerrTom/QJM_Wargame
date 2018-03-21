@@ -1,0 +1,8 @@
+!!python/object:db_equipment.equipment_inf
+ammo_store: 1
+crew: 1
+name: M72 LAW
+nation: USA
+weapons:
+- M72A2 LAW
+- M-16

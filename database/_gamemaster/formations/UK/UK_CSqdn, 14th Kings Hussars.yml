@@ -1,0 +1,10 @@
+!!python/object:db_formation.formation
+name: (UK) C Sqdn, 14th Kings Hussars
+type: mech
+CEV: 1.8
+personnel: 76
+faction: UK
+equipment:
+    FV432: 1
+    Spartan MCT: 1
+    Chieftain Mk VI: 18

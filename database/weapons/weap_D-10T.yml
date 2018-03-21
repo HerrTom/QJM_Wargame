@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 119
+TLI: 904115.7090000001
+accuracy: 0.9
+ammo: 3BM8
+barrels: 1
+calibre: 100.0
+muzzle_vel: 915.0
+name: D-10T
+range: 3000
+rie: 1.0

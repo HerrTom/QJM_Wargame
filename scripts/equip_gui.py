@@ -12,16 +12,6 @@ import weapon_gui
 
 # GUI script for creating database entries
 
-
-# set the working directory to the script location
-abspath = os.path.abspath(__file__)
-dname = os.path.dirname(abspath)
-os.chdir(dname)
-
-# global database
-global gdb
-gdb = db_oob.oob_db()
-
 weap_list_rows = 6
 
 class MatchingCombo(wx.ComboBox):
@@ -42,36 +32,37 @@ class MatchingCombo(wx.ComboBox):
             # search for the closest match
             match = process.extractOne(entered_text,options)
             self.SetValue(match[0])
-        pass
+        event.Skip()
         
 
 # Equipment editor frame
-class equipment_gui_frame(wx.Frame):
-    def __init__(self):
-        wx.Frame.__init__(self,None,title="QJM Equipment Editor")
-        self.Bind(wx.EVT_CLOSE, self.OnClose)
+class EquipmentWindow(wx.Panel):
+    def __init__(self,parent):
+        wx.Panel.__init__(self,parent,)
+        #wx.Frame.__init__(self,None,title="QJM Equipment Editor")
         
-        # create a menu bar on the top
-        menubar = wx.MenuBar()
-        filemenu = wx.Menu()
-        
-        # submenu for New
-        toolsmenu = wx.Menu()
-        weaponmenu = toolsmenu.Append(wx.ID_ANY,"&Weapon Editor","Edit weapon entries")
-        self.Bind(wx.EVT_MENU,self.on_new_weap,weaponmenu)
-        
-        # File menu appends
-        infomenu = filemenu.Append(wx.ID_ANY,"&Display formation info")
-        reloadmenu = filemenu.Append(wx.ID_ANY,"&Reload database")
-        filemenu.AppendSeparator()
-        quitmenu = filemenu.Append(wx.ID_EXIT, "&Quit", "Quit application")
-        self.Bind(wx.EVT_MENU,self.OnClose,quitmenu)
-        self.Bind(wx.EVT_MENU,self.show_info,infomenu)
-        self.Bind(wx.EVT_MENU,self.on_reload_db,reloadmenu)
-        menubar.Append(filemenu, "&File")
-        menubar.Append(toolsmenu, "&Tools")
 
-        self.SetMenuBar(menubar)
+        ## create a menu bar on the top
+        #menubar = wx.MenuBar()
+        #filemenu = wx.Menu()
+        
+        ## submenu for New
+        #toolsmenu = wx.Menu()
+        #weaponmenu = toolsmenu.Append(wx.ID_ANY,"&Weapon Editor","Edit weapon entries")
+        #self.Bind(wx.EVT_MENU,self.on_new_weap,weaponmenu)
+        
+        ## File menu appends
+        #infomenu = filemenu.Append(wx.ID_ANY,"&Display formation info")
+        #reloadmenu = filemenu.Append(wx.ID_ANY,"&Reload database")
+        #filemenu.AppendSeparator()
+        #quitmenu = filemenu.Append(wx.ID_EXIT, "&Quit", "Quit application")
+        #self.Bind(wx.EVT_MENU,self.OnClose,quitmenu)
+        #self.Bind(wx.EVT_MENU,self.show_info,infomenu)
+        #self.Bind(wx.EVT_MENU,self.on_reload_db,reloadmenu)
+        #menubar.Append(filemenu, "&File")
+        #menubar.Append(toolsmenu, "&Tools")
+
+        #self.SetMenuBar(menubar)
         
         
         frame_sizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -82,7 +73,7 @@ class equipment_gui_frame(wx.Frame):
         lp_sizer.Add(lp_staticsizer, 1, wx.ALL, 3)
 
         # equipment list
-        self.equip_listbox = wx.ListBox(left_panel,-1, choices=gdb.equip_db.names,
+        self.equip_listbox = wx.ListBox(left_panel,-1, choices=self.GetTopLevelParent().gdb.equip_db.names,
                                         style=wx.LB_ALWAYS_SB,size=(180,-1))
         lp_staticsizer.Add(self.equip_listbox, 1, wx.ALL|wx.EXPAND, 3)
         
@@ -95,12 +86,15 @@ class equipment_gui_frame(wx.Frame):
         # buttons
         self.new_button = wx.Button(left_panel, -1,"New",)
         self.save_button = wx.Button(left_panel, -1,"Save",)
+        self.reload_button = wx.Button(left_panel,-1,"Reload")
         
         self.new_button.Bind(wx.EVT_BUTTON, self.clear_form)
         self.save_button.Bind(wx.EVT_BUTTON, self.save_equipment)
+        self.reload_button.Bind(wx.EVT_BUTTON,self.on_reload_db)
         
         lp_sizer.Add(self.new_button,  0, wx.ALL|wx.EXPAND, 3)
         lp_sizer.Add(self.save_button, 0, wx.ALL|wx.EXPAND, 3)
+        lp_sizer.Add(self.reload_button, 0, wx.ALL|wx.EXPAND, 3)
         
         
         # right hand panel has all the data for the entry
@@ -181,7 +175,7 @@ class equipment_gui_frame(wx.Frame):
         rp_sizer.Add(armour_static,0,wx.LEFT|wx.RIGHT|wx.EXPAND,3)
         
         # fire control
-        FCE_choices = ["none", "steroscopic rangefinder", "laser rangefinder", 
+        FCE_choices = ["none", "stereoscopic rangefinder", "laser rangefinder", 
                         "early thermal optics", "thermal optics",]
         FCE_static = wx.StaticBoxSizer(wx.HORIZONTAL,self.right_panel,"FCE type:")
         self.FCE = wx.Choice(self.right_panel,-1,choices=FCE_choices)
@@ -228,7 +222,7 @@ class equipment_gui_frame(wx.Frame):
         self.squad.Enable(False)
         self.amph.Enable(False)
         # reset the FCE choices
-        FCE_choices = ["none", "steroscopic rangefinder", "laser rangefinder", 
+        FCE_choices = ["none", "stereoscopic rangefinder", "laser rangefinder", 
                         "early thermal optics", "thermal optics",]
         self.FCE.Set(FCE_choices)
         
@@ -297,7 +291,7 @@ class equipment_gui_frame(wx.Frame):
             self.crew.Enable(True)
     
     def populate_data(self,entry):
-        data = gdb.equip_db.equip_by_name(entry)
+        data = self.GetTopLevelParent().gdb.equip_db.equip_by_name(entry)
         self.equip_name.SetValue(data.name)
         self.nation.SetValue(data.nation)
         # new way to do this is to ENABLE the required data values
@@ -360,7 +354,7 @@ class equipment_gui_frame(wx.Frame):
         # generates a list of comboboxes with rows rows
         self.weaps_box = list()
         self.weaps = list()
-        weapon_choices = [""] + gdb.weaps_db.names
+        weapon_choices = [""] + self.GetTopLevelParent().gdb.weaps_db.names
         for i in range(rows):
             try:
                 if not clear:
@@ -383,7 +377,7 @@ class equipment_gui_frame(wx.Frame):
     #     rows = len(self.weaps_box)
     #     self.weapons_list(rows) # apparently the length is always one greater than before
     #     # self.weaps_box.append(wx.BoxSizer(wx.HORIZONTAL))
-    #     # self.weaps.append(wx.ComboBox(self.right_panel,-1,"",choices=gdb.weaps_db.names))
+    #     # self.weaps.append(wx.ComboBox(self.right_panel,-1,"",choices=self.GetTopLevelParent().gdb.weaps_db.names))
     #     # self.weaps_box[-1].Add(self.weaps[-1],1,wx.ALL,0)
     #     # self.weaps_subsizer.Add(self.weaps_box[-1],1,wx.ALL|wx.EXPAND,0)
     # 
@@ -424,7 +418,7 @@ class equipment_gui_frame(wx.Frame):
         self.amph.SetValue(False)
         # clear the weapons list
         for i,weapon_entry in enumerate(self.weaps):
-            self.weaps[i].Set([""] + gdb.weaps_db.names) #update choices
+            self.weaps[i].Set([""] + self.GetTopLevelParent().gdb.weaps_db.names) #update choices
             self.weaps[i].SetValue("")
     
     def save_equipment(self,event):
@@ -508,8 +502,8 @@ class equipment_gui_frame(wx.Frame):
         with open("{}eqp_{}.yml".format(path,name),'w+') as f:
             yaml.dump(new_equip, f, default_flow_style=False)
         # reload the data and update the listctrl
-        gdb.update_data() # reloads all the data
-        self.equip_listbox.Set(gdb.equip_db.names)
+        self.GetTopLevelParent().gdb.update_data() # reloads all the data
+        self.equip_listbox.Set(self.GetTopLevelParent().gdb.equip_db.names)
     
     def load_equipment(self,event):
         selected = self.equip_listbox.GetString(self.equip_listbox.GetSelection())
@@ -521,30 +515,22 @@ class equipment_gui_frame(wx.Frame):
         weap_gui.Show()
     
     def on_reload_db(self,event):
-        gdb.update_data()
+        self.GetTopLevelParent().gdb.update_data()
         # update the weapons list available
         for i,weapon_entry in enumerate(self.weaps):
-            self.weaps[i].Set([""] + gdb.weaps_db.names) #update choices
+            self.weaps[i].Set([""] + self.GetTopLevelParent().gdb.weaps_db.names) #update choices
     
     def show_info(self,event):
         info = str()
-        #for form in gdb.forms:
+        #for form in self.GetTopLevelParent().gdb.forms:
         #    info = info + form.GetOLI() + "\n"
         # temporarily load in the gamemaster formations
         # should probably get rid of them
-        gdb.load_gm_formations("../database/_gamemaster/formations/")
-        info = "No equipment data found for following items:\n" + str(gdb.gm_forms_db.find_no_entries())
+        self.GetTopLevelParent().gdb.load_gm_formations("../database/_gamemaster/formations/")
+        info = "No equipment data found for following items:\n" + str(self.GetTopLevelParent().gdb.gm_forms_db.find_no_entries())
         infobox = InfoForm(self,info)
         infobox.Show()
     
-    def OnClose(self,event):
-        dlg = wx.MessageDialog(self, 
-            "Are you sure you want to close?",
-            "Confirm exit", wx.OK|wx.CANCEL|wx.ICON_QUESTION)
-        result = dlg.ShowModal()
-        dlg.Destroy()
-        if result == wx.ID_OK:
-            self.Destroy()
 
 class squad_dialog(wx.Frame):
     def __init__(self,parent):
@@ -561,7 +547,7 @@ class squad_dialog(wx.Frame):
         self.equip_pair_item = list()
         self.equip_pair_qty = list()
         # equipment available will be only infantry types
-        eqp = [""] + gdb.equip_db.names_by_types(["INF","AT","AD"])
+        eqp = [""] + self.GetTopLevelParent().gdb.equip_db.names_by_types(["INF","AT","AD"])
         for i in range(6):
             equip_pair_sizer.append(wx.BoxSizer(wx.HORIZONTAL))
             self.equip_pair_item.append(wx.Choice(panel,-1,choices=eqp))
@@ -595,7 +581,7 @@ class squad_dialog(wx.Frame):
             equipname = item.GetString(item.GetSelection())
             if equipname != "":
                 equipqty = int(self.equip_pair_qty[i].GetValue())
-                TLI += equipqty * gdb.equip_db.equip_by_name(equipname).TLI
+                TLI += equipqty * self.GetTopLevelParent().gdb.equip_db.equip_by_name(equipname).TLI
         self.tli_ctrl.SetValue("TLI: "+str(int(TLI)))
         self.parent.squad.SetValue(str(int(TLI))) # set the TLI on the bottom
 
@@ -612,9 +598,3 @@ class InfoForm(wx.Frame):
         panel.SetSizerAndFit(main_sizer)
         #self.Fit()
         
-if __name__ == "__main__":         
-    app = wx.App()
-    equip_gui = equipment_gui_frame()
-    equip_gui.Show()
-
-    app.MainLoop()

@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 3200
+TLI: 281894.8289330615
+accuracy: 0.7
+ammo: 20x102
+barrels: 1
+calibre: 20.0
+muzzle_vel: 1005.0
+name: M621
+range: 2500
+rate_of_fire: 800
+rf_multiple: 4
+rie: 1.0

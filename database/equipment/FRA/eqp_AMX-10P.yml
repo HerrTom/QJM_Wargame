@@ -1,0 +1,16 @@
+!!python/object:db_equipment.equipment_ifv
+ammo_store: 800
+amphibious: true
+armour: steel
+crew: 3
+fire_control: stereoscopic rangefinder
+name: AMX-10P
+nation: FRA
+range: 600
+speed: 65.0
+squad: 30.0
+squad_weaps: []
+weapons:
+- M693
+- NF-1
+weight: 14.2

@@ -1,0 +1,14 @@
+!!python/object:db_equipment.equipment_afv
+ammo_store: 162
+amphibious: false
+armour: aluminium
+crew: 3
+fire_control: ''
+name: FV432 RARDEN
+nation: UK
+range: 580
+speed: 50.0
+weapons:
+- L21A1 RARDEN
+- L8A1
+weight: 15.0

@@ -1,0 +1,8 @@
+!!python/object:db_equipment.equipment_infat
+ammo_store: 3
+crew: 2
+name: Carl Gustav
+nation: UK
+weapons:
+- Carl Gustav
+- FN FAL

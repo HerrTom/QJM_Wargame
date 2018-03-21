@@ -27,7 +27,7 @@ class oli_obj():
 def DictToText(x):
     txt = ""
     for key, item in x.items():
-        txt += "            {:5,.0f} {}\n".format(-item,key)
+        txt += "            {:> 6,d}   {:15}\n".format(item,key)
     return txt
     
 # generic formation class
@@ -52,23 +52,36 @@ class formation():
         with open("/{}{}.yml".format(path,self.name),'w+') as f:
             yaml.dump(self, f, default_flow_style=False)
     
-    def SITREP(self,loss_dict={"N/A": 0},activity='Attacking'):
+    def SITREP(self,loss_dict={"N/A": 0},activity='Attacking',
+               datestr="",location="",writefolder=None):
         # returns a SITREP report
         # skipping ID lines (3-7)
-        datestr = "0400 01 JANUARY 1983"
+        #datestr = "0400 01 JANUARY 1983"
         situation = activity
-        location = "Berlin"
+        #location = "Berlin"
         losses = DictToText(loss_dict)
-        return ("DATE AND TIME {}\n"
+        current = DictToText(self.equipment)
+        if self.vehicles_base == 0: # deal with divide by zero problems
+            self.vehicles_base = 1
+        sitrep_string = ("DATE AND TIME {}\n"
                 "UNIT          {}\n"
                 "ACTIVITY      {}\n"
                 "EFFECTIVE     {:.0f}% combat power\n"
                 "DISPOSITION   {:.0f}% PERSONNEL | {:.0f}% VEHICLES\n"
                 "LOCATION      {}\n"
-                "SITUATION     Losses:\n{}\n"
+                "SITUATION\n"
+                "              Losses:\n{}\n"
+                "              Current:\n{}\n"
                 "PERSONNEL:    {:,.0f}\n".format(datestr,self.name,situation,self.OLI/self.OLI_base*100,
                                 self.personnel/self.personnel_base*100, self.vehicles/self.vehicles_base*100,
-                                location,losses,self.personnel))
+                                location,losses,current,self.personnel))
+        if writefolder is not None:
+            filename = writefolder + '/{} {}.txt'.format(datestr,self.name)
+            with open(filename, 'w+') as f:
+                f.write(sitrep_string)
+                f.close()
+        
+        return sitrep_string
 
     def GetOLI(self,):
         return ("OLI statistics for {}\n"
@@ -187,6 +200,7 @@ class formation():
         temp_equip.update(loss_dict)
         self.equipment = dict(temp_equip)
         self.personnel += -pers_losses
+        loss_dict.update({"PERSONNEL": -pers_losses})
         
         # after killing everything, reevaluate the OLI
         self.GenOLI(self.equip_list)

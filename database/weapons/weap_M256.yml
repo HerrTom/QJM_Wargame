@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 99
+TLI: 7569522.581385725
+accuracy: 0.9
+ammo: M829
+barrels: 1
+calibre: 120.0
+muzzle_vel: 1750.0
+name: M256
+range: 4000
+rie: 1.0

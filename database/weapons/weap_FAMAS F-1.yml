@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 1800
+TLI: 4419.521530420413
+accuracy: 0.7
+ammo: 5.56x45
+barrels: 1
+calibre: 5.56
+muzzle_vel: 840.0
+name: FAMAS F-1
+range: 300
+rate_of_fire: 900
+rf_multiple: 2
+rie: 0.8

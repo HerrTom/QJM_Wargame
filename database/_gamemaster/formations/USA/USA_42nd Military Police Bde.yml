@@ -1,0 +1,12 @@
+!!python/object:db_formation.formation
+name: (USA) 42nd Military Police Bde
+type: inf
+CEV: 1.8
+personnel: 1860
+faction: USA
+equipment:
+    M-16: 1212
+    M-60 MMG: 132
+    M72 LAW: 176
+    Truck: 120
+    M151: 50

@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "QJM_Wargame", "QJM_Wargame.pyproj", "{913C3AD7-DDF3-43BA-839B-2F257B6C4811}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{913C3AD7-DDF3-43BA-839B-2F257B6C4811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{913C3AD7-DDF3-43BA-839B-2F257B6C4811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE2EA904-A8D7-4579-ACCC-37CDB1A8358E}
+	EndGlobalSection
+EndGlobal

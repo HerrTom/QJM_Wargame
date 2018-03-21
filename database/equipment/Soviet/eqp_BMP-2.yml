@@ -8,7 +8,7 @@ name: BMP-2
 nation: Soviet
 range: 600
 speed: 65.0
-squad: 126.0
+squad: 32.0
 squad_weaps: []
 weapons:
 - 2A42

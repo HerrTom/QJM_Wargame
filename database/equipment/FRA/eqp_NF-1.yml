@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_inf
+ammo_store: 800
+crew: 2
+name: NF-1
+nation: FRA
+weapons:
+- NF-1

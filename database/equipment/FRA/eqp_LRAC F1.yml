@@ -1,0 +1,8 @@
+!!python/object:db_equipment.equipment_infat
+ammo_store: 150
+crew: 1
+name: LRAC F1
+nation: FRA
+weapons:
+- LRAC F1
+- FAMAS F-1

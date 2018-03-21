@@ -185,8 +185,10 @@ def ASE(AmmoRatio):
     return interp(AmmoRatio)
 
 def casualty_size_factor(personnel): # data from TNDM
-    pers_pts = [500,1000,2000,4000,6000,8000,10000,12500,15000,25000,35000,45000,60000,75000,80000,100000,200000]
-    factor_pts = [21,8,5,2.5,1.8,1.4,1.2,1.15,1.1,1,0.9,0.8,0.7,0.6,0.5,0.4,0.3]
+    data = loadtxt("../database/lookup_tables/strength_size_factor.csv",delimiter=',',
+            skiprows=1)
+    pers_pts = data[:,0]
+    factor_pts = data[:,1]
     pers_factor_interp = interp1d(pers_pts,factor_pts,'slinear',fill_value='extrapolate')
     return pers_factor_interp(personnel)
 

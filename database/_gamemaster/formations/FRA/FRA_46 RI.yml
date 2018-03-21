@@ -1,0 +1,17 @@
+!!python/object:db_formation.formation
+name: (FRA) 46e Regiment d'Infanterie
+type: mech
+CEV: 1.8
+personnel: 938
+faction: FRA
+equipment:
+    VAB: 68
+    FAMAS F-1: 426
+    NF-1: 83
+    LRAC F1: 68
+    MILAN: 14
+    Hotchkiss M201: 23
+    M40A1 RR: 2
+    TDA 81mm: 8
+    M693 F2: 8
+    MO-120: 6

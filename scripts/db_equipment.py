@@ -1,8 +1,24 @@
 import qjm_interps
 
-global Di
-Di = 4000 # dispersion factor - hardcoded for now
+import inspect
 
+global Di
+Di = 5000 # dispersion factor - hardcoded for now
+
+def what(var,):
+    """
+    Gets the name of var. Does it from the out most frame inner-wards.
+    :param var: variable to get name from.
+    :return: string
+    """
+    for fi in reversed(inspect.stack()):
+        names = [var_name for var_name, var_val in fi.frame.f_locals.items() if var_val is var]
+        if len(names) > 0:
+            return names[0]
+
+def printvars(*argv):
+    for arg in argv:
+        print(what(arg),arg)
 
 # Todo:
 # - Create a master Equipment class that contains the GenTLI function
@@ -351,6 +367,10 @@ class equipment_afv():
         CL = 1
 
         self.TLI = ((WEAP * MOF * RA) + PF * ARMF) * RFE * FCE * ASE * AME * CL
+
+        #print('---',self.name,'---')
+        #printvars(WEAP,MOF,RA,PF,ARMF,RFE,FCE,ASE,AME,CL)
+        #print('TLI',self.TLI)
 
 class equipment_sparty():
     type = "SP Artillery"

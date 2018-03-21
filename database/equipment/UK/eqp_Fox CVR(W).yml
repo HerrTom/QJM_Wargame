@@ -1,0 +1,14 @@
+!!python/object:db_equipment.equipment_afv
+ammo_store: 162
+amphibious: false
+armour: aluminium
+crew: 3
+fire_control: none
+name: Fox CVR(W)
+nation: UK
+range: 434
+speed: 104.0
+weapons:
+- L21A1 RARDEN
+- L8A1
+weight: 6.75

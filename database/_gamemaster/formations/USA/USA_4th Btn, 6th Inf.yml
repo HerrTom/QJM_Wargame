@@ -2,13 +2,15 @@
 name: (USA) 4th Btn, 6th Infantry
 type: mech
 CEV: 1.8
-personnel: 510
+personnel: 554
 faction: USA
 equipment:
-    M113A1: 14
+    M113A1: 24
     M-16: 303
     M-60 MMG: 33
     M72 LAW: 54
-    M106: 8
+    M106: 6
+    M151 TOW: 12
+    M47 Dragon: 12
     FIM-92 Stinger: 2
     Truck: 14

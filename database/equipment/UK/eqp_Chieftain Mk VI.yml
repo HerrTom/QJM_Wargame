@@ -1,0 +1,15 @@
+!!python/object:db_equipment.equipment_afv
+ammo_store: 64
+amphibious: false
+armour: steel
+crew: 4
+fire_control: laser rangefinder
+name: Chieftain Mk VI
+nation: UK
+range: 500
+speed: 48.0
+weapons:
+- L11A5
+- L8A1
+- L8A1
+weight: 55.0

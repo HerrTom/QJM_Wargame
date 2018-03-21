@@ -4,7 +4,7 @@ def signed_sqrt(x):
     if x >= 0:
         return x**0.5
     else:
-        return -(-x) * 0.5
+        return -(-x) ** 0.5
 
         
 # class that allows a list of weapons to be easily contained and searched
@@ -21,6 +21,13 @@ class weapon_list():
         
     def weap_by_name(self, name_to_find):
         return self.weapons[self.names.index(name_to_find)]
+
+class weapon():
+    type = "No type"
+    def __init__(self,):
+        self.name = ""
+    def __repr__(self):
+        return '{}({} @{:,.0f})'.format(self.__class__.__name__,self.name, self.TLI)
 
 class weapon_gun():
     type = "Gun"
@@ -55,7 +62,7 @@ class weapon_gun():
         RIE = self.rie
         # RN
         RN_Range = 1 + (0.001 * self.range)**0.5
-        RN_MV = 0.007 * self.muzzle_vel * (0.1 * self.calibre)**0.5
+        RN_MV = 0.007 * self.muzzle_vel * 0.1 * (self.calibre)**0.5
         if RN_MV > RN_Range:
             RN = RN_MV
         else:
@@ -106,7 +113,7 @@ class weapon_autogun():
         RIE = self.rie
         # RN
         RN_Range = 1 + (0.001 * self.range)**0.5
-        RN_MV = 0.007 * self.muzzle_vel * (0.1 * self.calibre)**0.5
+        RN_MV = 0.007 * self.muzzle_vel * 0.1 * (self.calibre)**0.5
         if RN_MV > RN_Range:
             RN = RN_MV
         else:
@@ -159,7 +166,7 @@ class weapon_atgm():
         RIE = self.rie
         # RN
         RN_Range = 1 + (0.001 * self.range)**0.5
-        RN_MV = 0.007 * self.muzzle_vel * (0.1 * self.calibre)**0.5
+        RN_MV = 0.007 * self.muzzle_vel * 0.1 * (self.calibre)**0.5
         if RN_MV > RN_Range:
             RN = RN_MV
         else:

@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 135
+TLI: 176549.08658767992
+accuracy: 0.7
+ammo: LRAC
+barrels: 1
+calibre: 89.0
+muzzle_vel: 295.0
+name: LRAC F1
+range: 500
+rie: 1.0

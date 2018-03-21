@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 99
+TLI: 1873919.831739483
+accuracy: 0.9
+ammo: L15 APDS-T
+barrels: 1
+calibre: 120.0
+muzzle_vel: 1370.0
+name: L11A5
+range: 3000
+rie: 1.0

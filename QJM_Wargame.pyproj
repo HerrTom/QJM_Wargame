@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{913c3ad7-ddf3-43ba-839b-2f257b6c4811}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>scripts\main.py</StartupFile>
+    <SearchPath>scripts</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="scripts\db_equipment.py" />
+    <Compile Include="scripts\db_formation.py" />
+    <Compile Include="scripts\db_oob.py" />
+    <Compile Include="scripts\db_weapons.py" />
+    <Compile Include="scripts\equip_gui.py" />
+    <Compile Include="scripts\formation_gui.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="scripts\gamemaster_gui.py" />
+    <Compile Include="scripts\main.py" />
+    <Compile Include="scripts\model_constants.py" />
+    <Compile Include="scripts\qjm_interps.py" />
+    <Compile Include="scripts\weapon_gui.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database\equipment\Soviet\eqp_2B11.yml" />
+    <Content Include="database\equipment\Soviet\eqp_2B9.yml" />
+    <Content Include="database\equipment\Soviet\eqp_2S1 Gvozdika.yml" />
+    <Content Include="database\equipment\Soviet\eqp_2S3 Akatsiya.yml" />
+    <Content Include="database\equipment\Soviet\eqp_9K113 Konkurs.yml" />
+    <Content Include="database\equipment\Soviet\eqp_9K115 Metis.yml" />
+    <Content Include="database\equipment\Soviet\eqp_AGS-17.yml" />
+    <Content Include="database\equipment\Soviet\eqp_AK-74.yml" />
+    <Content Include="database\equipment\Soviet\eqp_BMP-1.yml" />
+    <Content Include="database\equipment\Soviet\eqp_BMP-1P.yml" />
+    <Content Include="database\equipment\Soviet\eqp_BMP-2.yml" />
+    <Content Include="database\equipment\Soviet\eqp_BRDM-2 9P148.yml" />
+    <Content Include="database\equipment\Soviet\eqp_BRDM-2.yml" />
+    <Content Include="database\equipment\Soviet\eqp_BRDM-2U.yml" />
+    <Content Include="database\equipment\Soviet\eqp_BTR-60PB %28FAC%29.yml" />
+    <Content Include="database\equipment\Soviet\eqp_BTR-60PB.yml" />
+    <Content Include="database\equipment\Soviet\eqp_BTR-70.yml" />
+    <Content Include="database\equipment\Soviet\eqp_PKM.yml" />
+    <Content Include="database\equipment\Soviet\eqp_RPG-7V.yml" />
+    <Content Include="database\equipment\Soviet\eqp_RPK-74.yml" />
+    <Content Include="database\equipment\Soviet\eqp_T-64A.yml" />
+    <Content Include="database\equipment\Soviet\eqp_T-64B.yml" />
+    <Content Include="database\equipment\Soviet\eqp_T-80.yml" />
+    <Content Include="database\equipment\Soviet\eqp_T-80B.yml" />
+    <Content Include="database\equipment\USA\eqp_M-16.yml" />
+    <Content Include="database\equipment\USA\eqp_M-60 MMG.yml" />
+    <Content Include="database\equipment\USA\eqp_M113A1.yml" />
+    <Content Include="database\equipment\USA\eqp_M151 TOW.yml" />
+    <Content Include="database\equipment\USA\eqp_M47 Dragon.yml" />
+    <Content Include="database\equipment\USA\eqp_M60A1.yml" />
+    <Content Include="database\formations\Soviet\RGT_SOV_MotorRifle_BMP-1P.yml" />
+    <Content Include="database\formations\Soviet\RGT_SOV_MotorRifle_BTR.yml" />
+    <Content Include="database\formations\Soviet\RGT_SOV_Tank_T80B.yml" />
+    <Content Include="database\formations\UK\UK_Berlin_Bde.yml" />
+    <Content Include="database\formations\USA\USA_Berlin_Bde.yml" />
+    <Content Include="database\lookup_tables\opposition_factor.csv" />
+    <Content Include="database\lookup_tables\strength_size_factor.csv" />
+    <Content Include="database\weapons\weap_2A28.yml" />
+    <Content Include="database\weapons\weap_2A42.yml" />
+    <Content Include="database\weapons\weap_2A46.yml" />
+    <Content Include="database\weapons\weap_2A46M.yml" />
+    <Content Include="database\weapons\weap_2B11.yml" />
+    <Content Include="database\weapons\weap_2B9.yml" />
+    <Content Include="database\weapons\weap_2S1.yml" />
+    <Content Include="database\weapons\weap_2S3.yml" />
+    <Content Include="database\weapons\weap_9K112 Kobra.yml" />
+    <Content Include="database\weapons\weap_9K113 Konkurs.yml" />
+    <Content Include="database\weapons\weap_9K115 Metis.yml" />
+    <Content Include="database\weapons\weap_9K14 Malyutka.yml" />
+    <Content Include="database\weapons\weap_9K14P Malyutka.yml" />
+    <Content Include="database\weapons\weap_AGS-17.yml" />
+    <Content Include="database\weapons\weap_AK-74.yml" />
+    <Content Include="database\weapons\weap_BGM-71 TOW.yml" />
+    <Content Include="database\weapons\weap_DShK.yml" />
+    <Content Include="database\weapons\weap_KPVT.yml" />
+    <Content Include="database\weapons\weap_M-16.yml" />
+    <Content Include="database\weapons\weap_M2HB.yml" />
+    <Content Include="database\weapons\weap_M47 Dragon.yml" />
+    <Content Include="database\weapons\weap_M60 MMG.yml" />
+    <Content Include="database\weapons\weap_M68.yml" />
+    <Content Include="database\weapons\weap_M73.yml" />
+    <Content Include="database\weapons\weap_PKM.yml" />
+    <Content Include="database\weapons\weap_PKT.yml" />
+    <Content Include="database\weapons\weap_RPG-7V.yml" />
+    <Content Include="database\weapons\weap_RPK-74.yml" />
+    <Content Include="database\_gamemaster\formations\DDR\DDR_MotSchutz1.yml" />
+    <Content Include="database\_gamemaster\formations\DDR\DDR_MotSchutz2.yml" />
+    <Content Include="database\_gamemaster\formations\DDR\DDR_MotSchutz3.yml" />
+    <Content Include="database\_gamemaster\formations\Soviet\SOV_10 Sep TB.yml" />
+    <Content Include="database\_gamemaster\formations\Soviet\SOV_133 Sep MRB.yml" />
+    <Content Include="database\_gamemaster\formations\Soviet\SOV_154 Sep MRB.yml" />
+    <Content Include="database\_gamemaster\formations\Soviet\SOV_178 Sep MRB.yml" />
+    <Content Include="database\_gamemaster\formations\Soviet\SOV_53 Sep TB.yml" />
+    <Content Include="database\_gamemaster\formations\Soviet\SOV_54 Sep TB.yml" />
+    <Content Include="database\_gamemaster\formations\Soviet\SOV_65 Sep TB.yml" />
+    <Content Include="database\_gamemaster\formations\Soviet\SOV_79 Sep ArtyB.yml" />
+    <Content Include="database\_gamemaster\formations\USA\USA_2nd Btn, 6th Inf.yml" />
+    <Content Include="database\_gamemaster\formations\USA\USA_3rd Btn, 6th Inf.yml" />
+    <Content Include="database\_gamemaster\formations\USA\USA_4th Btn, 6th Inf.yml" />
+    <Content Include="database\_gamemaster\formations\USA\USA_FCo, 40th Armor.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="database\" />
+    <Folder Include="database\equipment\" />
+    <Folder Include="database\equipment\Soviet\" />
+    <Folder Include="database\equipment\USA\" />
+    <Folder Include="database\formations\" />
+    <Folder Include="database\formations\Soviet\" />
+    <Folder Include="database\formations\UK\" />
+    <Folder Include="database\formations\USA\" />
+    <Folder Include="database\groups\" />
+    <Folder Include="database\groups\Soviet\" />
+    <Folder Include="database\lookup_tables" />
+    <Folder Include="database\weapons\" />
+    <Folder Include="database\_gamemaster\" />
+    <Folder Include="database\_gamemaster\formations\" />
+    <Folder Include="database\_gamemaster\formations\DDR\" />
+    <Folder Include="database\_gamemaster\formations\Soviet\" />
+    <Folder Include="database\_gamemaster\formations\USA\" />
+    <Folder Include="database\_gamemaster\reports\" />
+    <Folder Include="database\_gamemaster\working\" />
+    <Folder Include="scripts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

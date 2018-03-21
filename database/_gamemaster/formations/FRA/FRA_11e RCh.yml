@@ -1,0 +1,13 @@
+!!python/object:db_formation.formation
+name: (FRA) 11e Regiment d'Chasseurs
+type: arm
+CEV: 1.8
+personnel: 388
+faction: FRA
+equipment:
+    AMX-30B: 53
+    AMX-10PC: 1
+    AMX-10P: 13
+    FAMAS F-1: 91
+    NF-1: 17
+    LRAC F1: 13

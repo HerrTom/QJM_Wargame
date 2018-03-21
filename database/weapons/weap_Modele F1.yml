@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 113
+TLI: 1651999.607530538
+accuracy: 0.9
+ammo: M833
+barrels: 1
+calibre: 105.0
+muzzle_vel: 1525.0
+name: Modele F1
+range: 3000
+rie: 1.0

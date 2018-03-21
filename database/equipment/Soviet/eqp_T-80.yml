@@ -1,15 +1,15 @@
 !!python/object:db_equipment.equipment_afv
-name: T-80
-weapons:
-    - 2A46
-    - PKT
-    - DShK
-range: 360
-weight: 42.5
-speed: 70
 ammo_store: 36
-crew: 3
+amphibious: false
 armour: early composite
-fire_control: 'steroscopic rangefinder'
-amphibious: False
-nation: "Soviet"
+crew: 3
+fire_control: stereoscopic rangefinder
+name: T-80
+nation: Soviet
+range: 360
+speed: 70.0
+weapons:
+- 2A46
+- PKT
+- DShK
+weight: 42.5

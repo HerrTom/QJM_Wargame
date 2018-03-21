@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 99
+TLI: 503042.8682146122
+accuracy: 0.8
+ammo: 120mm
+barrels: 1
+calibre: 120.0
+muzzle_vel: 325.0
+name: MO-120
+range: 8140
+rie: 1.0

@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 140
+TLI: 141062.0911456547
+accuracy: 0.7
+ammo: FFV441
+barrels: 1
+calibre: 84.0
+muzzle_vel: 255.0
+name: Carl Gustav
+range: 700
+rie: 1.0

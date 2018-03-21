@@ -1,8 +1,10 @@
 import os
 
 import wx
+from wx.adv import DatePickerCtrl, TimePickerCtrl
 from wx.lib.mixins.listctrl import CheckListCtrlMixin, ListCtrlAutoWidthMixin
 import wx.lib.newevent
+from wx.lib.masked import TimeCtrl
 
 import yaml
 
@@ -17,8 +19,8 @@ os.chdir(dname)
 # get the gamemaster folder
 gmdir = os.path.abspath("../database/_gamemaster/")
 
-gdb = db_oob.oob_db()
-side_dict = {"NATO": ["BRD","UK","USA"], "Warsaw Pact": ["USSR","DDR"]}
+#self.GetTopLevelParent().gdb = db_oob.oob_db()
+side_dict = {"NATO": ["BRD","FRA","UK","USA"], "Warsaw Pact": ["USSR","DDR"]}
 
 #checklist event
 CheckList, EVT_CHECKLISTCTRL, = wx.lib.newevent.NewEvent()
@@ -44,9 +46,11 @@ class CheckListCtrl(wx.ListCtrl, CheckListCtrlMixin, ListCtrlAutoWidthMixin):
     def OnCheckItem(self,index,flag):
         wx.PostEvent(self,CheckList(idx=index,flg=flag))
 
-class GamemasterFrame(wx.Frame):
-    def __init__(self):
-        wx.Frame.__init__(self,None,title="QJM Game Master")
+#class GamemasterFrame(wx.Frame):
+class GamemasterWindow(wx.Panel):
+    def __init__(self,parent):
+        #wx.Frame.__init__(self,None,title="QJM Game Master")
+        wx.Panel.__init__(self,parent)
         self.Bind(wx.EVT_CLOSE, self.OnClose)
         
         self.SetMinSize((850,400))
@@ -64,22 +68,22 @@ class GamemasterFrame(wx.Frame):
         main_sizer.Add(side_sizer,1,wx.EXPAND|wx.ALL)
         main_panel.SetSizer(main_sizer)
         
-        ## create a menu
-        menubar = wx.MenuBar()
-        filemenu = wx.Menu()
-        editmenu = wx.Menu()
-        reloadmenu = filemenu.Append(wx.ID_ANY,"&Load state")
-        filemenu.AppendSeparator()
-        quitmenu = filemenu.Append(wx.ID_EXIT, "&Quit", "Quit application")
-        dbmenu = editmenu.Append(wx.ID_ANY,"&Database Editor")
-        menubar.Append(filemenu,"&File")
-        menubar.Append(editmenu,"&Edit")
-        self.SetMenuBar(menubar)
+        ### create a menu
+        #menubar = wx.MenuBar()
+        #filemenu = wx.Menu()
+        #editmenu = wx.Menu()
+        #reloadmenu = filemenu.Append(wx.ID_ANY,"&Load state")
+        #filemenu.AppendSeparator()
+        #quitmenu = filemenu.Append(wx.ID_EXIT, "&Quit", "Quit application")
+        #dbmenu = editmenu.Append(wx.ID_ANY,"&Database Editor")
+        #menubar.Append(filemenu,"&File")
+        #menubar.Append(editmenu,"&Edit")
+        #self.SetMenuBar(menubar)
 
-        # menu binds
-        self.Bind(wx.EVT_MENU,self.OnLoad,reloadmenu)
-        self.Bind(wx.EVT_MENU,self.OnClose,quitmenu)
-        self.Bind(wx.EVT_MENU,self.OnDbEdit,dbmenu)
+        ## menu binds
+        #self.Bind(wx.EVT_MENU,self.OnLoad,reloadmenu)
+        #self.Bind(wx.EVT_MENU,self.OnClose,quitmenu)
+        #self.Bind(wx.EVT_MENU,self.OnDbEdit,dbmenu)
 
         
         sides = ["","NATO","Warsaw Pact"]
@@ -119,6 +123,10 @@ class GamemasterFrame(wx.Frame):
         self.defender_oli = wx.StaticText(main_panel,-1,"Total defender OLI: {:>9,.0f}".format(0),)
         defender_sizer.Add(self.defender_oli,0,wx.CENTRE|wx.EXPAND|wx.ALL,3)
         
+        # bind double click for SITREP
+        self.Bind(wx.EVT_LIST_ITEM_ACTIVATED,self.ShowSITREP,self.attacker_list)
+        self.Bind(wx.EVT_LIST_ITEM_ACTIVATED,self.ShowSITREP,self.defender_list)
+
         # battle data #########################
         data_sizer = wx.BoxSizer(wx.HORIZONTAL)
         main_sizer.Add(data_sizer,0,wx.EXPAND|wx.ALL)
@@ -188,6 +196,21 @@ class GamemasterFrame(wx.Frame):
         posture_sizer.Add(self.posture,1,wx.EXPAND|wx.ALL,3)
         datar2_sizer.Add(posture_sizer,1,wx.EXPAND|wx.ALL,5)
         
+        # date and name
+        mdata_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        main_sizer.Add(mdata_sizer,0,wx.EXPAND|wx.ALL,0)
+        datesizer =  wx.StaticBoxSizer(wx.HORIZONTAL,main_panel,"Date and location:")
+        self.date = DatePickerCtrl(main_panel,-1,style=wx.adv.DP_DROPDOWN)
+        self.date.SetValue(wx.DateTime(1,10,1983)) # default is 1 Nov 1983
+        #self.time = TimePickerCtrl(main_panel,-1)
+        self.time = TimeCtrl(main_panel,-1,value='00:00',format='24HHMM')
+        self.location = wx.TextCtrl(main_panel,-1,"")
+        datesizer.Add(self.date,0,wx.EXPAND|wx.ALL,3)
+        datesizer.Add(self.time,0,wx.EXPAND|wx.ALL,3)
+        datesizer.Add(self.location,1,wx.EXPAND|wx.ALL,3)
+        mdata_sizer.Add(datesizer,1,wx.EXPAND|wx.ALL,3)
+
+
         # buttons
         button_panel = wx.Panel(self,style=wx.BORDER_THEME)
         frame_sizer.Add(button_panel,0,wx.ALL|wx.EXPAND)
@@ -208,7 +231,7 @@ class GamemasterFrame(wx.Frame):
     def OnAttackerCheck(self,event):
         idx = event.idx
         name = self.attacker_list.GetItemText(idx,col=0)
-        form = gdb.gm_forms_db.formation_by_name(name)
+        form = self.GetTopLevelParent().gdb.gm_forms_db.formation_by_name(name)
         flag = event.flg
         if flag: # if checked, add the OLI value
             self.oli_atk += form.OLI
@@ -220,7 +243,7 @@ class GamemasterFrame(wx.Frame):
     def OnDefenderCheck(self,event):
         idx = event.idx
         name = self.defender_list.GetItemText(idx,col=0)
-        form = gdb.gm_forms_db.formation_by_name(name)
+        form = self.GetTopLevelParent().gdb.gm_forms_db.formation_by_name(name)
         flag = event.flg
         if flag: # if checked, add the OLI value
             self.oli_def += form.OLI
@@ -235,7 +258,7 @@ class GamemasterFrame(wx.Frame):
         if side == "":
             return
         faction_search = side_dict[side]
-        formations = gdb.gm_forms_db.forms
+        formations = self.GetTopLevelParent().gdb.gm_forms_db.forms
         for form in formations:
             if form.faction in faction_search:
                 entry = [form.name, "{:,.0f}".format(form.OLI)]
@@ -247,7 +270,7 @@ class GamemasterFrame(wx.Frame):
         if side == "":
             return
         faction_search = side_dict[side]
-        formations = gdb.gm_forms_db.forms
+        formations = self.GetTopLevelParent().gdb.gm_forms_db.forms
         for form in formations:
             if form.faction in faction_search:
                 entry = [form.name, "{:,.0f}".format(form.OLI)]
@@ -280,10 +303,10 @@ class GamemasterFrame(wx.Frame):
             if self.attacker_list.IsChecked(idx):
                 attackers.append(self.attacker_list.GetItemText(idx))
         for form in attackers:
-            attackers_forms.append(gdb.gm_forms_db.formation_by_name(form))
-        attacker_oli = gdb.gm_forms_db.oli_by_names(attackers)
-        N_attacker = gdb.gm_forms_db.pers_by_names(attackers)
-        J_attacker = gdb.gm_forms_db.vehicles_by_names(attackers,gdb.equip_db)
+            attackers_forms.append(self.GetTopLevelParent().gdb.gm_forms_db.formation_by_name(form))
+        attacker_oli = self.GetTopLevelParent().gdb.gm_forms_db.oli_by_names(attackers)
+        N_attacker = self.GetTopLevelParent().gdb.gm_forms_db.pers_by_names(attackers)
+        J_attacker = self.GetTopLevelParent().gdb.gm_forms_db.vehicles_by_names(attackers,self.GetTopLevelParent().gdb.equip_db)
         
         # Get OLI values from checked defenders
         defenders = list()
@@ -291,20 +314,21 @@ class GamemasterFrame(wx.Frame):
         for idx in range(self.defender_list.GetItemCount()):
             if self.defender_list.IsChecked(idx):
                 defenders.append(self.defender_list.GetItemText(idx))
-        defender_oli = gdb.gm_forms_db.oli_by_names(defenders)
+        defender_oli = self.GetTopLevelParent().gdb.gm_forms_db.oli_by_names(defenders)
         for form in defenders:
-            defenders_forms.append(gdb.gm_forms_db.formation_by_name(form))
+            defenders_forms.append(self.GetTopLevelParent().gdb.gm_forms_db.formation_by_name(form))
         
-        N_defender = gdb.gm_forms_db.pers_by_names(defenders)
-        J_defender = gdb.gm_forms_db.vehicles_by_names(defenders,gdb.equip_db)
+        N_defender = self.GetTopLevelParent().gdb.gm_forms_db.pers_by_names(defenders)
+        J_defender = self.GetTopLevelParent().gdb.gm_forms_db.vehicles_by_names(defenders,self.GetTopLevelParent().gdb.equip_db)
         
         # get environment data from the forms
         terrain         = self.terrain.GetString(self.terrain.GetSelection())
         weather         = self.weather.GetString(self.weather.GetSelection())
-        season_sel      = self.season.GetString(self.weather.GetSelection())
-        season_locale   = self.seasonloc.GetString(self.weather.GetSelection())
+        season_sel      = self.season.GetString(self.season.GetSelection())
+        season_locale   = self.seasonloc.GetString(self.seasonloc.GetSelection())
         
-        season = season_sel+', '+season_locale
+        seasonstr = season_sel+', '+season_locale
+        print(seasonstr)
 
         # get the posture from the form
         def_posture = self.posture.GetString(self.posture.GetSelection())
@@ -315,14 +339,14 @@ class GamemasterFrame(wx.Frame):
         # artillery & air defence
         rwg = mc.terrain(terrain,'arty')
         hwg = mc.weather(weather,'arty')
-        zwg = mc.season(season,'arty')
+        zwg = mc.season(seasonstr,'arty')
         # tanks
         rwi = mc.terrain(terrain,'tank')
         hwi = mc.weather(weather,'tank')
         # aircraft
         rwy = mc.terrain(terrain,'air')
         hwy = mc.weather(weather,'air')
-        zwy = mc.season(season,'air')
+        zwy = mc.season(seasonstr,'air')
         
         # these constants are for air superiority
         wyg = 1
@@ -366,7 +390,7 @@ class GamemasterFrame(wx.Frame):
         rdu = mc.terrain(terrain,'defpos') # terrain for defender - uses terrain defpos
         hau = mc.weather(weather,'attack') # weather for attacker
         hdu = 1 # weather for defender - defender is always 1
-        zau = mc.season(season,'attack') # season for attacker
+        zau = mc.season(seasonstr,'attack') # season for attacker
         zdu = 1 # season for defender - defender is always 1
         
         # mobility factors
@@ -418,8 +442,10 @@ class GamemasterFrame(wx.Frame):
         P_defender = S_defender * md_operational * Op_defender * vd_operational
         P_ratio = P_attacker / P_defender
         
-        
-        
+        dateval = self.date.GetValue().FormatISODate()
+        #timeval = self.time.GetValue().FormatISOTime()
+        timeval = self.time.GetWxDateTime().FormatISOTime()
+        location = self.location.GetValue()
         
         print("*** START REPORT ***\n")
         
@@ -442,28 +468,39 @@ class GamemasterFrame(wx.Frame):
         
         # advance rate - probably need to run for each individual formation?
         for name in attackers:
-            index = gdb.gm_forms_db.names.index(name)
-            unittype = gdb.gm_forms_db.forms[index].type
+            index = self.GetTopLevelParent().gdb.gm_forms_db.names.index(name)
+            unittype = self.GetTopLevelParent().gdb.gm_forms_db.forms[index].type
             adv_base = mc.advance_rate_base(P_ratio,unittype,def_posture)
             adv_roads = mc.advance_rate_road(road_quality,road_density)
             adv_terr = mc.advance_rate_terr(terrain,unittype)
             adv_rate = adv_base * adv_roads * adv_terr
-            atk_losses = gdb.gm_forms_db.forms[index].casualties(P_ratio,'attack',day=True,
+            atk_losses = self.GetTopLevelParent().gdb.gm_forms_db.forms[index].casualties(P_ratio,'attack',day=True,
                                             duration=self.duration.GetValue())
-            print("{} advance rate: {:.1f} km/day".format(gdb.gm_forms_db.forms[index].name,adv_rate))
+            print("{} advance rate: {:.1f} km/day".format(self.GetTopLevelParent().gdb.gm_forms_db.forms[index].name,adv_rate))
             print("---")
-            print(gdb.gm_forms_db.forms[index].SITREP(atk_losses))
+            print(self.GetTopLevelParent().gdb.gm_forms_db.forms[index].SITREP(atk_losses,activity='Attacking',datestr="{} {}".format(dateval,timeval),location=location))
         
         for name in defenders:
-            index = gdb.gm_forms_db.names.index(name)
-            def_losses = gdb.gm_forms_db.forms[index].casualties(P_ratio,def_posture,day=True,
+            index = self.GetTopLevelParent().gdb.gm_forms_db.names.index(name)
+            def_losses = self.GetTopLevelParent().gdb.gm_forms_db.forms[index].casualties(P_ratio,def_posture,day=True,
                                             duration=self.duration.GetValue())
             print("---")
-            print(gdb.gm_forms_db.forms[index].SITREP(def_losses,activity=def_posture+' defense'),)
+            print(self.GetTopLevelParent().gdb.gm_forms_db.forms[index].SITREP(def_losses,activity=def_posture+' defense',datestr="{} {}".format(dateval,timeval),location=location))
         
         # finish the report
         print("*** END REPORT ***")
-        
+    
+    def ShowSITREP(self,event):
+        # get the list that was clicked
+        formlist = event.GetEventObject()
+        # get the item from the list
+        item = formlist.GetItemText(event.GetIndex(),col=0)
+        # print a sitrep for the item
+        form = self.GetTopLevelParent().gdb.gm_forms_db.formation_by_name(item)
+        infoframe = formation_info_form(self,form.SITREP()+
+                                        "\nNo TLI data for:\n{}".format(form.NoTLIData),item)
+        infoframe.Show()
+
     def OnDbEdit(self,event):
         eqp = equip_gui.equipment_gui_frame()
         eqp.Show()
@@ -475,7 +512,7 @@ class GamemasterFrame(wx.Frame):
         path = dlg.GetPath()
         dlg.Destroy()
         if result == wx.ID_OK:
-            for form in gdb.gm_forms_db.forms:
+            for form in self.GetTopLevelParent().gdb.gm_forms_db.forms:
                 form.output(path)
     
     def OnLoad(self,event):
@@ -485,7 +522,7 @@ class GamemasterFrame(wx.Frame):
         path = dlg.GetPath()
         dlg.Destroy()
         if result == wx.ID_OK:
-            gdb.load_gm_formations(path)
+            self.GetTopLevelParent().gdb.load_gm_formations(path)
     
     def OnClose(self,event):
         dlg = wx.MessageDialog(self, 
@@ -496,9 +533,15 @@ class GamemasterFrame(wx.Frame):
         if result == wx.ID_OK:
             self.Destroy()
 
-if __name__ == "__main__":         
-    app = wx.App()
-    gm_gui = GamemasterFrame()
-    gm_gui.Show()
-
-    app.MainLoop()
+class formation_info_form(wx.Frame):
+     def __init__(self,parent,information,title="Information"):
+        wx.Frame.__init__(self,parent,title=title,
+                            style = wx.DEFAULT_FRAME_STYLE)
+        panel = wx.Panel(self)
+        main_sizer = wx.BoxSizer(wx.VERTICAL)
+        
+        self.info_box = wx.TextCtrl(panel,-1,information,style = wx.TE_MULTILINE)
+        main_sizer.Add(self.info_box,1,wx.EXPAND|wx.ALL,5)
+        
+        panel.SetSizerAndFit(main_sizer)
+        #self.Fit()

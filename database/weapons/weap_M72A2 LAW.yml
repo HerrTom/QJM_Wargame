@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 164
+TLI: 146254.07118905048
+accuracy: 0.75
+ammo: M72A2
+barrels: 1
+calibre: 66.0
+muzzle_vel: 145.0
+name: M72A2 LAW
+range: 200
+rie: 1.0

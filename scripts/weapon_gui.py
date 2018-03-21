@@ -6,13 +6,13 @@ import yaml
 import db_oob
 import db_weapons
 
-global gdb
-gdb = db_oob.oob_db()
 
-class weap_gui_frame(wx.Frame):
+#class weap_gui_frame(wx.Frame):
+class WeaponWindow(wx.Panel):
     def __init__(self,parent):
-        wx.Frame.__init__(self,parent,title="QJM Weapon Editor")
-        self.Bind(wx.EVT_CLOSE, self.OnClose)
+        #wx.Frame.__init__(self,parent,title="QJM Weapon Editor")
+        wx.Panel.__init__(self,parent,)
+        #self.Bind(wx.EVT_CLOSE, self.OnClose)
         
         
         frame_sizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -23,8 +23,8 @@ class weap_gui_frame(wx.Frame):
         lp_sizer.Add(lp_staticsizer, 1, wx.ALL, 3)
 
         # equipment list
-        self.weap_listbox = wx.ListBox(left_panel,-1, choices=gdb.weaps_db.names,
-                                        style=wx.LB_ALWAYS_SB,size=(100,-1))
+        self.weap_listbox = wx.ListBox(left_panel,-1, choices=self.GetTopLevelParent().gdb.weaps_db.names,
+                                        style=wx.LB_ALWAYS_SB,size=(180,-1))
         lp_staticsizer.Add(self.weap_listbox, 1, wx.ALL|wx.EXPAND, 3)
         
         self.weap_listbox.Bind(wx.EVT_LISTBOX_DCLICK, self.load_weapon)
@@ -216,11 +216,11 @@ class weap_gui_frame(wx.Frame):
         self.weap_guidance.SetSelection(0)
         self.weap_enhancement.SetValue("")
         # when the data clears, update the database
-        gdb.update_data() # reloads all the data
+        self.GetTopLevelParent().gdb.update_data() # reloads all the data
     
     def populate_data(self,entry):
         self.clear_data(None)
-        data = gdb.weaps_db.weap_by_name(entry)
+        data = self.GetTopLevelParent().gdb.weaps_db.weap_by_name(entry)
         self.weap_name.SetValue(data.name)
         if data.type == "Automatic gun":
             self.weap_type.SetSelection(self.weap_type.FindString("Automatic gun"))
@@ -350,8 +350,8 @@ class weap_gui_frame(wx.Frame):
         with open("{}weap_{}.yml".format(path,name),'w+') as f:
             yaml.dump(new_equip, f, default_flow_style=False)
         # reload the data and update the listctrl
-        gdb.update_data() # reloads all the data
-        self.weap_listbox.Set(gdb.weaps_db.names)
+        self.GetTopLevelParent().gdb.update_data() # reloads all the data
+        self.weap_listbox.Set(self.GetTopLevelParent().gdb.weaps_db.names)
         self.disable_by_type(None)
     
     def on_name_box(self,event):
@@ -369,10 +369,3 @@ class weap_gui_frame(wx.Frame):
         dlg.Destroy()
         if result == wx.ID_OK:
             self.Destroy()
-
-if __name__ == "__main__":
-    app = wx.App()
-    weap_gui = weap_gui_frame(None)
-    weap_gui.Show()
-    
-    app.MainLoop()

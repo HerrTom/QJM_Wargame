@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 600
+TLI: 953.8159616185769
+accuracy: 0.95
+ammo: 7.62x51
+barrels: 1
+calibre: 7.62
+muzzle_vel: 840.0
+name: FN FAL
+range: 1200
+rate_of_fire: 300
+rf_multiple: 2
+rie: 0.9

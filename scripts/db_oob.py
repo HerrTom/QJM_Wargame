@@ -63,7 +63,7 @@ class oob_db():
         
         self.forms_db = db_formation.formation_list(self.forms)
         
-    def load_gm_formations(self,path="../database/_gamemaster/working"):
+    def load_gm_formations(self,path="../database/_gamemaster/formations"):
         # Load the formation elements
         path = path+'/**/*.yml'
         self.gm_forms = []

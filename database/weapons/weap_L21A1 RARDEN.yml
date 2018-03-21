@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 360
+TLI: 129744.51942182374
+accuracy: 0.8
+ammo: 30x170mm
+barrels: 1
+calibre: 30.0
+muzzle_vel: 1175.0
+name: L21A1 RARDEN
+range: 2000
+rate_of_fire: 90
+rf_multiple: 4
+rie: 1.0

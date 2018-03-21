@@ -7,7 +7,7 @@ name: BTR-70
 nation: Soviet
 range: 500
 speed: 80.0
-squad: 126.0
+squad: 32.0
 squad_weaps: []
 weapons:
 - KPVT

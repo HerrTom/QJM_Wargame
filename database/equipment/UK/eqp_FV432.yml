@@ -1,0 +1,14 @@
+!!python/object:db_equipment.equipment_apc
+ammo_store: 2000
+amphibious: false
+armour: aluminium
+crew: 2
+name: FV432
+nation: UK
+range: 580
+speed: 50.0
+squad: 30.0
+squad_weaps: []
+weapons:
+- L8A1
+weight: 15.0

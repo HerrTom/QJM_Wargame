@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_infat
+ammo_store: 5
+crew: 2
+name: 9K14P Malyutka
+nation: Soviet
+weapons:
+- 9K14P Malyutka
