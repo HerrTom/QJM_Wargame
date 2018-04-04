@@ -1,0 +1,11 @@
+!!python/object:db_formation.formation
+name: (BRD) 3rd West Berlin Police
+type: inf
+CEV: 1.0
+personnel: 1746
+faction: BRD
+equipment:
+    G3A3: 300
+    P1: 660
+    M72A2 (BRD): 66
+    Golf Mk1: 720

@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 333
+TLI: 99.40583454761145
+accuracy: 0.6
+ammo: 9x19
+barrels: 1
+calibre: 9.0
+muzzle_vel: 365.0
+name: Pistole P1
+range: 50
+rie: 0.5

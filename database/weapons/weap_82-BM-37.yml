@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 142
+TLI: 180110.98528100917
+accuracy: 0.8
+ammo: 82mm
+barrels: 1
+calibre: 82.0
+muzzle_vel: 211.0
+name: 82-BM-37
+range: 3040
+rie: 1.0

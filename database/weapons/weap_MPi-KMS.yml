@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 2400
+TLI: 2086.004407488794
+accuracy: 0.8
+ammo: 7.62x39
+barrels: 1
+calibre: 5.45
+muzzle_vel: 715.0
+name: MPi-KMS
+range: 300
+rate_of_fire: 600
+rf_multiple: 4
+rie: 0.8

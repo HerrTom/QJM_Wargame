@@ -1,0 +1,13 @@
+!!python/object:db_formation.formation
+name: (DDR) KdA Potsdam
+type: inf
+CEV: 0.4
+personnel: 402
+faction: DDR
+equipment:
+    MPi-KM: 240
+    RPK: 30
+    RPG-7V: 15
+    SPG-9: 9
+    Granatwerfer 82: 9
+    BTR-152: 36

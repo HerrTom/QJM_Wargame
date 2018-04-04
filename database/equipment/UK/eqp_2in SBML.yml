@@ -1,0 +1,8 @@
+!!python/object:db_equipment.equipment_infarty
+ammo_store: 36
+crew: 2
+name: 2in SBML
+nation: UK
+weapons:
+- 2in SBML
+- FN FAL

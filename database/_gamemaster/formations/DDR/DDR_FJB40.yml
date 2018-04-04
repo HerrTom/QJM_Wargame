@@ -1,0 +1,15 @@
+!!python/object:db_formation.formation
+name: (DDR) FJB 40
+type: inf
+CEV: 2.3
+personnel: 359
+faction: DDR
+equipment:
+    MPi-KMS: 219
+    RPK: 27
+    RPG-7D: 27
+    SPG-9: 3
+    9K113 Konkurs: 6
+    9K32 Strela-2: 9
+    AGS-17: 6
+    2B11: 8

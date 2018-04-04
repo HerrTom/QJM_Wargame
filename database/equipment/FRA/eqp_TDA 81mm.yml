@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_infarty
+ammo_store: 45
+crew: 4
+name: TDA 81mm
+nation: FRA
+weapons:
+- TDA 81mm

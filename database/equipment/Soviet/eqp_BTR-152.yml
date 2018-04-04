@@ -1,0 +1,14 @@
+!!python/object:db_equipment.equipment_apc
+ammo_store: 500
+amphibious: true
+armour: steel
+crew: 2
+name: BTR-152
+nation: Soviet
+range: 650
+speed: 75.0
+squad: 32.0
+squad_weaps: []
+weapons:
+- DShK
+weight: 9.91

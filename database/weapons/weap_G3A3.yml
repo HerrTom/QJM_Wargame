@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 1000
+TLI: 1556.6508654263246
+accuracy: 0.95
+ammo: 7.62x51
+barrels: 1
+calibre: 7.62
+muzzle_vel: 800.0
+name: G3A3
+range: 1200
+rate_of_fire: 500
+rf_multiple: 2
+rie: 0.9

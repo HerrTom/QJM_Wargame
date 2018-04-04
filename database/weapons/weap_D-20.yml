@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 62
+TLI: 841145.201717902
+accuracy: 0.7
+ammo: OF-32
+barrels: 1
+calibre: 152.0
+muzzle_vel: 650.0
+name: D-20
+range: 17400
+rie: 1.0

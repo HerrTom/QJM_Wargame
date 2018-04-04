@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_infarty
+ammo_store: 20
+crew: 4
+name: Granatwerfer 82
+nation: DDR
+weapons:
+- 82-BM-37

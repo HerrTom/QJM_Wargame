@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 129
+TLI: 141726.22577004982
+accuracy: 0.5
+ammo: PG-7
+barrels: 1
+calibre: 93.0
+muzzle_vel: 300.0
+name: RPG-7D
+range: 400
+rie: 1.0

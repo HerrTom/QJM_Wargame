@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_infad
+ammo_store: 2000
+crew: 4
+name: HS-831A
+nation: FRA
+weapons:
+- HS-831A

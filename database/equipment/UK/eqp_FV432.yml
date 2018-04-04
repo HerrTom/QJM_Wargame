@@ -1,7 +1,7 @@
 !!python/object:db_equipment.equipment_apc
 ammo_store: 2000
 amphibious: false
-armour: aluminium
+armour: steel
 crew: 2
 name: FV432
 nation: UK

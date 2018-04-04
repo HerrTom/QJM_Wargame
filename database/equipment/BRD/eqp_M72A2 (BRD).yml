@@ -1,0 +1,8 @@
+!!python/object:db_equipment.equipment_infat
+ammo_store: 1
+crew: 1
+name: M72A2 (BRD)
+nation: BRD
+weapons:
+- M72A2 LAW
+- G3A3

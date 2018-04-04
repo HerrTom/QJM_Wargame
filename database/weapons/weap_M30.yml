@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 111
+TLI: 342811.81671587256
+accuracy: 0.8
+ammo: M329A1
+barrels: 1
+calibre: 106.7
+muzzle_vel: 225.0
+name: M30
+range: 5650
+rie: 1.0

@@ -1,0 +1,9 @@
+!!python/object:db_formation.formation
+name: (DDR) 40th Artillery Brigade
+type: inf
+CEV: 1.0
+personnel: 432
+faction: DDR
+equipment:
+    M-46: 36
+    D-20: 18

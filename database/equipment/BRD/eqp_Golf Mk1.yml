@@ -1,0 +1,14 @@
+!!python/object:db_equipment.equipment_apc
+ammo_store: 96
+amphibious: false
+armour: steel
+crew: 1
+name: Golf Mk1
+nation: BRD
+range: 600
+speed: 180.0
+squad: 0.0
+squad_weaps: []
+weapons:
+- Pistole P1
+weight: 0.79

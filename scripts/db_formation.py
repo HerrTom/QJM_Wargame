@@ -9,6 +9,14 @@ import qjm_interps
 # future work I want to do here is to combine the formation_group and 
 # formation objects such that any formation can have sub-formations
 
+def make_safe_filename(s):
+    def safe_char(c):
+        if c.isalnum():
+            return c
+        else:
+            return "_"
+    return "".join(safe_char(c) for c in s).rstrip("_")
+
 def ListToFormattedString(alist):
     formatted_list = ['{:}' for item in alist] 
     s = ','.join(formatted_list)
@@ -48,8 +56,12 @@ class formation():
         if hasattr(frm,'equip_list'):
             del frm.equip_list
         os.makedirs(path, exist_ok=True)
+        # filter the filename so it's acceptable
+        filename = self.name
+        for c in r'[]/\;,><&*:%=+@!#^()|?^':
+            filename = filename.replace(c,'')
         # output the yaml file containing the equipment
-        with open("/{}{}.yml".format(path,self.name),'w+') as f:
+        with open("/{}{}.yml".format(path,filename),'w+') as f:
             yaml.dump(self, f, default_flow_style=False)
     
     def SITREP(self,loss_dict={"N/A": 0},activity='Attacking',
@@ -76,7 +88,7 @@ class formation():
                                 self.personnel/self.personnel_base*100, self.vehicles/self.vehicles_base*100,
                                 location,losses,current,self.personnel))
         if writefolder is not None:
-            filename = writefolder + '/{} {}.txt'.format(datestr,self.name)
+            filename = writefolder + '\\' + make_safe_filename('{} {}'.format(datestr,self.name)) + '.txt'
             with open(filename, 'w+') as f:
                 f.write(sitrep_string)
                 f.close()
@@ -141,7 +153,13 @@ class formation():
                 self.vehicles += qty
                 #print("{}: {}".format(equip,qty))
                 
-    def casualties(self,power_ratio,mission,day=True,duration=24):
+    def casualties(self,power_ratio,mission,day=True,duration=24,exposure=1):
+        # power_ratio is combat power ratio of friendly to enemy
+        # mission is mission string - attack, prepared defence, etc
+        # day is boolean - daytime or nighttime
+        # duration is hours of combat
+        # exposure is percentage of formation engaged 
+
         # calculate the strength/size factor
         factor_size = qjm_interps.casualty_size_factor(self.personnel)
         #op_pts = [1000, 3, 2.5, 1.5, 0.83, 0.6, 0.45, 0.35, 0.25, 0.2, 0.15]
@@ -162,7 +180,7 @@ class formation():
         
         duration_factor = duration/24
         
-        casualty_rate = casualty_base * factor_size * factor_opposition * factor_day * duration_factor
+        casualty_rate = casualty_base * factor_size * factor_opposition * factor_day * duration_factor * exposure
         print("Casualty rate: {:.1f}% for {}".format(casualty_rate*100,self.name))
         # create the losses dictionary
         loss_dict = Counter()

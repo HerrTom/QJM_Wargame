@@ -1,0 +1,14 @@
+!!python/object:db_formation.formation
+name: (DDR) 40th Security Btn
+type: inf
+CEV: 0.6
+personnel: 402
+faction: DDR
+equipment:
+    MPi-KM: 189
+    RPK: 36
+    RPG-7V: 24
+    SPG-9: 12
+    2B11: 27
+    BTR-152: 36
+    BRDM-2: 18

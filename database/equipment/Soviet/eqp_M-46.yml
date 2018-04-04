@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_infarty
+ammo_store: 40
+crew: 8
+name: M-46
+nation: Soviet
+weapons:
+- M-46

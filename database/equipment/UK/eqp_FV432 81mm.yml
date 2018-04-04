@@ -1,0 +1,12 @@
+!!python/object:db_equipment.equipment_sparty
+ammo_store: 160
+amphibious: false
+armour: steel
+crew: 4
+name: FV432 81mm
+nation: UK
+range: 580
+speed: 50.0
+weapons:
+- L16
+weight: 15.0

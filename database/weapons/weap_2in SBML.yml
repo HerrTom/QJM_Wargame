@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 194
+TLI: 60082.95801061482
+accuracy: 0.8
+ammo: 2 inch mortar
+barrels: 1
+calibre: 51.0
+muzzle_vel: 200.0
+name: 2in SBML
+range: 850
+rie: 1.0

@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_inf
+ammo_store: 300
+crew: 1
+name: MPi-KMS
+nation: DDR
+weapons:
+- MPi-KMS

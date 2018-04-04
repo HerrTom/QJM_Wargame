@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_infat
+ammo_store: 15
+crew: 3
+name: SPG-9
+nation: Soviet
+weapons:
+- SPG-9

@@ -37,8 +37,9 @@ class MatchingCombo(wx.ComboBox):
 
 # Equipment editor frame
 class EquipmentWindow(wx.Panel):
-    def __init__(self,parent):
+    def __init__(self,parent,gdb):
         wx.Panel.__init__(self,parent,)
+        self.gdb = gdb
         #wx.Frame.__init__(self,None,title="QJM Equipment Editor")
         
 
@@ -73,7 +74,7 @@ class EquipmentWindow(wx.Panel):
         lp_sizer.Add(lp_staticsizer, 1, wx.ALL, 3)
 
         # equipment list
-        self.equip_listbox = wx.ListBox(left_panel,-1, choices=self.GetTopLevelParent().gdb.equip_db.names,
+        self.equip_listbox = wx.ListBox(left_panel,-1, choices=self.gdb.equip_db.names,
                                         style=wx.LB_ALWAYS_SB,size=(180,-1))
         lp_staticsizer.Add(self.equip_listbox, 1, wx.ALL|wx.EXPAND, 3)
         
@@ -291,7 +292,7 @@ class EquipmentWindow(wx.Panel):
             self.crew.Enable(True)
     
     def populate_data(self,entry):
-        data = self.GetTopLevelParent().gdb.equip_db.equip_by_name(entry)
+        data = self.gdb.equip_db.equip_by_name(entry)
         self.equip_name.SetValue(data.name)
         self.nation.SetValue(data.nation)
         # new way to do this is to ENABLE the required data values
@@ -354,7 +355,7 @@ class EquipmentWindow(wx.Panel):
         # generates a list of comboboxes with rows rows
         self.weaps_box = list()
         self.weaps = list()
-        weapon_choices = [""] + self.GetTopLevelParent().gdb.weaps_db.names
+        weapon_choices = [""] + self.gdb.weaps_db.names
         for i in range(rows):
             try:
                 if not clear:
@@ -377,7 +378,7 @@ class EquipmentWindow(wx.Panel):
     #     rows = len(self.weaps_box)
     #     self.weapons_list(rows) # apparently the length is always one greater than before
     #     # self.weaps_box.append(wx.BoxSizer(wx.HORIZONTAL))
-    #     # self.weaps.append(wx.ComboBox(self.right_panel,-1,"",choices=self.GetTopLevelParent().gdb.weaps_db.names))
+    #     # self.weaps.append(wx.ComboBox(self.right_panel,-1,"",choices=self.gdb.weaps_db.names))
     #     # self.weaps_box[-1].Add(self.weaps[-1],1,wx.ALL,0)
     #     # self.weaps_subsizer.Add(self.weaps_box[-1],1,wx.ALL|wx.EXPAND,0)
     # 
@@ -418,7 +419,7 @@ class EquipmentWindow(wx.Panel):
         self.amph.SetValue(False)
         # clear the weapons list
         for i,weapon_entry in enumerate(self.weaps):
-            self.weaps[i].Set([""] + self.GetTopLevelParent().gdb.weaps_db.names) #update choices
+            self.weaps[i].Set([""] + self.gdb.weaps_db.names) #update choices
             self.weaps[i].SetValue("")
     
     def save_equipment(self,event):
@@ -502,8 +503,8 @@ class EquipmentWindow(wx.Panel):
         with open("{}eqp_{}.yml".format(path,name),'w+') as f:
             yaml.dump(new_equip, f, default_flow_style=False)
         # reload the data and update the listctrl
-        self.GetTopLevelParent().gdb.update_data() # reloads all the data
-        self.equip_listbox.Set(self.GetTopLevelParent().gdb.equip_db.names)
+        self.gdb.update_data() # reloads all the data
+        self.equip_listbox.Set(self.gdb.equip_db.names)
     
     def load_equipment(self,event):
         selected = self.equip_listbox.GetString(self.equip_listbox.GetSelection())
@@ -515,19 +516,19 @@ class EquipmentWindow(wx.Panel):
         weap_gui.Show()
     
     def on_reload_db(self,event):
-        self.GetTopLevelParent().gdb.update_data()
+        self.gdb.update_data()
         # update the weapons list available
         for i,weapon_entry in enumerate(self.weaps):
-            self.weaps[i].Set([""] + self.GetTopLevelParent().gdb.weaps_db.names) #update choices
+            self.weaps[i].Set([""] + self.gdb.weaps_db.names) #update choices
     
     def show_info(self,event):
         info = str()
-        #for form in self.GetTopLevelParent().gdb.forms:
+        #for form in self.gdb.forms:
         #    info = info + form.GetOLI() + "\n"
         # temporarily load in the gamemaster formations
         # should probably get rid of them
-        self.GetTopLevelParent().gdb.load_gm_formations("../database/_gamemaster/formations/")
-        info = "No equipment data found for following items:\n" + str(self.GetTopLevelParent().gdb.gm_forms_db.find_no_entries())
+        self.gdb.load_gm_formations("../database/_gamemaster/formations/")
+        info = "No equipment data found for following items:\n" + str(self.gdb.gm_forms_db.find_no_entries())
         infobox = InfoForm(self,info)
         infobox.Show()
     
@@ -537,6 +538,7 @@ class squad_dialog(wx.Frame):
         wx.Frame.__init__(self,parent,title="QJM Squad Dialog",
                             style = wx.DEFAULT_FRAME_STYLE & ~(wx.RESIZE_BORDER | wx.MAXIMIZE_BOX))
         panel = wx.Panel(self)
+        self.gdb = parent.gdb
         self.parent = parent
         
         frm_sizer = wx.BoxSizer(wx.VERTICAL)
@@ -547,7 +549,7 @@ class squad_dialog(wx.Frame):
         self.equip_pair_item = list()
         self.equip_pair_qty = list()
         # equipment available will be only infantry types
-        eqp = [""] + self.GetTopLevelParent().gdb.equip_db.names_by_types(["INF","AT","AD"])
+        eqp = [""] + self.gdb.equip_db.names_by_types(["INF","AT","AD"])
         for i in range(6):
             equip_pair_sizer.append(wx.BoxSizer(wx.HORIZONTAL))
             self.equip_pair_item.append(wx.Choice(panel,-1,choices=eqp))
@@ -581,7 +583,7 @@ class squad_dialog(wx.Frame):
             equipname = item.GetString(item.GetSelection())
             if equipname != "":
                 equipqty = int(self.equip_pair_qty[i].GetValue())
-                TLI += equipqty * self.GetTopLevelParent().gdb.equip_db.equip_by_name(equipname).TLI
+                TLI += equipqty * self.gdb.equip_db.equip_by_name(equipname).TLI
         self.tli_ctrl.SetValue("TLI: "+str(int(TLI)))
         self.parent.squad.SetValue(str(int(TLI))) # set the TLI on the bottom
 

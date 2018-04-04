@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 99
+TLI: 491505.00696232665
+accuracy: 0.7
+ammo: L2 HESH
+barrels: 1
+calibre: 120.0
+muzzle_vel: 462.0
+name: L6 WOMBAT
+range: 1000
+rie: 1.0

@@ -209,6 +209,20 @@ class GamemasterWindow(wx.Panel):
         datesizer.Add(self.time,0,wx.EXPAND|wx.ALL,3)
         datesizer.Add(self.location,1,wx.EXPAND|wx.ALL,3)
         mdata_sizer.Add(datesizer,1,wx.EXPAND|wx.ALL,3)
+        # river
+        river_sizer = wx.StaticBoxSizer(wx.HORIZONTAL,main_panel,"River:")
+        river_choices = ["no river","fordable, 20m","fordable, 50m","fordable, 100m","fordable, 500m",
+                         "unfordable, 20m","unfordable, 50m","unfordable, 100m","unfordable, 500m",]
+        self.river = wx.Choice(main_panel,-1,choices=river_choices)
+        self.river.SetSelection(0)
+        river_sizer.Add(self.river,1,wx.EXPAND|wx.ALL,3)
+        mdata_sizer.Add(river_sizer,1,wx.EXPAND|wx.ALL,3)
+
+        # frontage
+        frontage_sizer = wx.StaticBoxSizer(wx.HORIZONTAL,main_panel,"Frontage:")
+        self.frontage = wx.Slider(main_panel,-1,100,0,100,style=wx.SL_HORIZONTAL|wx.SL_LABELS)
+        frontage_sizer.Add(self.frontage,1,wx.EXPAND|wx.ALL,3)
+        mdata_sizer.Add(frontage_sizer,1,wx.EXPAND|wx.ALL,3)
 
 
         # buttons
@@ -326,9 +340,21 @@ class GamemasterWindow(wx.Panel):
         weather         = self.weather.GetString(self.weather.GetSelection())
         season_sel      = self.season.GetString(self.season.GetSelection())
         season_locale   = self.seasonloc.GetString(self.seasonloc.GetSelection())
-        
+        river           = self.river.GetString(self.river.GetSelection())
+        time_day        = self.time.GetValue()
+        print(time_day)
+        # determine if it is day or night
+        if time_day > "06:00" and time_day < "20:00":
+            daytime = True
+        else:
+            daytime = False
+
+
+        # get the frontage of the attack (% of defenders)
+        frontage = self.frontage.GetValue() / 100
+
         seasonstr = season_sel+', '+season_locale
-        print(seasonstr)
+        #print(seasonstr)
 
         # get the posture from the form
         def_posture = self.posture.GetString(self.posture.GetSelection())
@@ -378,7 +404,7 @@ class GamemasterWindow(wx.Panel):
         S_attacker = ((Wain + Waat)*rn + (Waar+Waad*wyg)*rwg*hwg*zwg + 
                             Watn*rwi*hwi + Waai*rwy*hwy*zwy*wyy)
         S_defender = ((Wdin + Wdat)*rn + (Wdar+Wdad*wyg)*rwg*hwg*zwg + 
-                            Wdtn*rwi*hwi + Wdai*rwy*hwy*zwy*wyy)
+                            Wdtn*rwi*hwi + Wdai*rwy*hwy*zwy*wyy) * frontage
         
         
         # get the combat power
@@ -421,6 +447,7 @@ class GamemasterWindow(wx.Panel):
         
         # vulnerability
         Vuln_attacker = N_attacker * uav / rau * (S_defender/S_attacker)**0.5 * vay * var
+        print("Vulnerability calcs:",N_attacker,uav,rau,S_defender,S_attacker,vay,var)
         Vuln_defender = N_defender * udv / rdu * (S_attacker/S_defender)**0.5 * vdy * vdr
         va_operational = (1-Vuln_attacker/S_attacker)
         vd_operational = (1-Vuln_defender/S_defender)
@@ -429,10 +456,14 @@ class GamemasterWindow(wx.Panel):
             va_operational = 0.8
         elif va_operational > 0.3:
             va_operational = 0.3 + 0.1 * (va_operational-0.3)
+        else:
+            va_operational = 0.3
         if vd_operational > 0.8:
             vd_operational = 0.8
         elif vd_operational > 0.3:
             vd_operational = 0.3 + 0.1 * (vd_operational-0.3)
+        else:
+            vd_operational = 0.3
         
         # note that the CEV is already contained in the OLI output
         Op_attacker = Faj * uas*rau*hau*zau
@@ -473,19 +504,20 @@ class GamemasterWindow(wx.Panel):
             adv_base = mc.advance_rate_base(P_ratio,unittype,def_posture)
             adv_roads = mc.advance_rate_road(road_quality,road_density)
             adv_terr = mc.advance_rate_terr(terrain,unittype)
-            adv_rate = adv_base * adv_roads * adv_terr
-            atk_losses = self.GetTopLevelParent().gdb.gm_forms_db.forms[index].casualties(P_ratio,'attack',day=True,
+            adv_river = mc.river_obstacle_factor(river)
+            adv_rate = adv_base * adv_roads * adv_terr * adv_river
+            atk_losses = self.GetTopLevelParent().gdb.gm_forms_db.forms[index].casualties(P_ratio,'attack',day=daytime,
                                             duration=self.duration.GetValue())
             print("{} advance rate: {:.1f} km/day".format(self.GetTopLevelParent().gdb.gm_forms_db.forms[index].name,adv_rate))
             print("---")
-            print(self.GetTopLevelParent().gdb.gm_forms_db.forms[index].SITREP(atk_losses,activity='Attacking',datestr="{} {}".format(dateval,timeval),location=location))
+            print(self.GetTopLevelParent().gdb.gm_forms_db.forms[index].SITREP(atk_losses,activity='Attacking',datestr="{} {}".format(dateval,timeval),location=location,writefolder=gmdir+"\\reports"))
         
         for name in defenders:
             index = self.GetTopLevelParent().gdb.gm_forms_db.names.index(name)
-            def_losses = self.GetTopLevelParent().gdb.gm_forms_db.forms[index].casualties(P_ratio,def_posture,day=True,
-                                            duration=self.duration.GetValue())
+            def_losses = self.GetTopLevelParent().gdb.gm_forms_db.forms[index].casualties(P_ratio,def_posture,day=daytime,
+                                            duration=self.duration.GetValue(),exposure=frontage)
             print("---")
-            print(self.GetTopLevelParent().gdb.gm_forms_db.forms[index].SITREP(def_losses,activity=def_posture+' defense',datestr="{} {}".format(dateval,timeval),location=location))
+            print(self.GetTopLevelParent().gdb.gm_forms_db.forms[index].SITREP(def_losses,activity=def_posture+' defense',datestr="{} {}".format(dateval,timeval),location=location,writefolder=gmdir+"\\reports"))
         
         # finish the report
         print("*** END REPORT ***")
@@ -497,7 +529,7 @@ class GamemasterWindow(wx.Panel):
         item = formlist.GetItemText(event.GetIndex(),col=0)
         # print a sitrep for the item
         form = self.GetTopLevelParent().gdb.gm_forms_db.formation_by_name(item)
-        infoframe = formation_info_form(self,form.SITREP()+
+        infoframe = formation_info_form(self,form.SITREP(activity='None')+
                                         "\nNo TLI data for:\n{}".format(form.NoTLIData),item)
         infoframe.Show()
 

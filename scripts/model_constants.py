@@ -1,6 +1,16 @@
 from scipy.interpolate import interp1d
+import csv
 
 # constants dictionaries/functions
+
+def dict_from_csv(file):
+    result = {}
+    reader = csv.reader(open(file))
+    next(reader) # skips the first row as a header
+    for row in reader:
+        key = row[0]
+        result[key] = float(row[1])
+    return result
 
 def terrain(terraintype,factor):
     # factors are:
@@ -132,4 +142,6 @@ def stren_posture_factor(posture):
                 "delay": 1.2}
     return pos_dict[posture]
     
-    
+def river_obstacle_factor(river):
+    obst_dict = dict_from_csv(r"../database/lookup_tables/river.csv")
+    return obst_dict[river]

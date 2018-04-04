@@ -1,0 +1,7 @@
+!!python/object:db_equipment.equipment_inf
+ammo_store: 48
+crew: 1
+name: P1
+nation: BRD
+weapons:
+- Pistole P1

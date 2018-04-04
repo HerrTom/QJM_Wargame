@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 144
+TLI: 207673.5510334258
+accuracy: 0.8
+ammo: L16 81mm
+barrels: 1
+calibre: 81.0
+muzzle_vel: 225.0
+name: L16
+range: 5650
+rie: 1.0

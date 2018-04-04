@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 90
+TLI: 1139590.2984727314
+accuracy: 0.7
+ammo: OF-43
+barrels: 1
+calibre: 130.0
+muzzle_vel: 930.0
+name: M-46
+range: 27500
+rie: 1.0

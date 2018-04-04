@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 111
+TLI: 427856.1218748002
+accuracy: 0.7
+ammo: NR 160
+barrels: 1
+calibre: 106.0
+muzzle_vel: 503.0
+name: M40A1
+range: 1350
+rie: 1.0

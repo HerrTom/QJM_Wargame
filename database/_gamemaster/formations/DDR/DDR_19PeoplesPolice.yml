@@ -1,0 +1,14 @@
+!!python/object:db_formation.formation
+name: (DDR) 19th People's Police
+type: inf
+CEV: 0.6
+personnel: 159
+faction: DDR
+equipment:
+    MPi-KM: 63
+    RPK: 12
+    RPG-7V: 8
+    SPG-9: 4
+    Granatwerfer 82: 9
+    BTR-152: 12
+    BRDM-2: 6

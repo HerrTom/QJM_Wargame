@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 2600
+TLI: 753622.4213225082
+accuracy: 0.7
+ammo: 30x173mm
+barrels: 1
+calibre: 30.0
+muzzle_vel: 1080.0
+name: HS-831A
+range: 3000
+rate_of_fire: 650
+rf_multiple: 4
+rie: 1.0

@@ -1,0 +1,14 @@
+!!python/object:db_formation.formation
+name: (DDR) Grenzregiment 33
+type: inf
+CEV: 0.7
+personnel: 901
+faction: DDR
+equipment:
+    BTR-152: 113
+    MPi-KM: 348
+    RPK: 48
+    PKM: 36
+    RPG-7V: 48
+    SPG-9: 21
+    2B11: 24

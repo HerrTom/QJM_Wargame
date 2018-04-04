@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 154
+TLI: 132459.88587262022
+accuracy: 0.7
+ammo: PG-9
+barrels: 1
+calibre: 73.0
+muzzle_vel: 350.0
+name: SPG-9
+range: 800
+rie: 1.0

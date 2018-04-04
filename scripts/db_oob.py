@@ -2,6 +2,8 @@ import yaml
 import os
 import glob
 
+from pubsub import pub
+
 # import custom scripts
 import db_formation
 import db_weapons
@@ -85,6 +87,7 @@ class oob_db():
             new_formation = grp.generate_formation(self.forms_db)
             with open('../database/new_formations/{}.yml'.format(grp.name), 'w+') as f:
                 yaml.dump(new_formation, f, default_flow_style=False)
+
 
 # if this is run on its own, lets grab all the data it loads
 if __name__ == "__main__":
