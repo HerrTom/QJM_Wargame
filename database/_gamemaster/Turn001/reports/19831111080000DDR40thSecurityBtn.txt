@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (DDR) 40th Security Btn
+ACTIVITY      Attacking
+EFFECTIVE     70% combat power
+DISPOSITION   78% PERSONNEL | 46% VEHICLES
+LOCATION      Neukoeln
+SITUATION
+              Losses:
+               -17   MPi-KM         
+                -4   RPK            
+                 0   RPG-7V         
+                 0   SPG-9          
+                 0   2B11           
+               -19   BTR-152        
+               -10   BRDM-2         
+               -89   PERSONNEL      
+
+              Current:
+               172   MPi-KM         
+                32   RPK            
+                24   RPG-7V         
+                12   SPG-9          
+                27   2B11           
+                17   BTR-152        
+                 8   BRDM-2         
+
+PERSONNEL:    313

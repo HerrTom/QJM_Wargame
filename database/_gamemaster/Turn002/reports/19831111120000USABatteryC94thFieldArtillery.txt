@@ -1,0 +1,19 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (USA) Battery C, 94th Field Artillery
+ACTIVITY      prepared defense
+EFFECTIVE     45977% combat power
+DISPOSITION   97% PERSONNEL | 800% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+                -1   M-16           
+                 0   M109           
+                -1   Truck          
+                -2   PERSONNEL      
+
+              Current:
+                17   M-16           
+                 8   M109           
+                 7   Truck          
+
+PERSONNEL:    56

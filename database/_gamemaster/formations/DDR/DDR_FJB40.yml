@@ -1,7 +1,7 @@
 !!python/object:db_formation.formation
 name: (DDR) FJB 40
 type: inf
-CEV: 2.3
+CEV: 1.90
 personnel: 359
 faction: DDR
 equipment:

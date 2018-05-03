@@ -1,0 +1,21 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (BRD) 1st West Berlin Police
+ACTIVITY      fortified defense
+EFFECTIVE     94% combat power
+DISPOSITION   90% PERSONNEL | 81% VEHICLES
+LOCATION      Zehlendorf
+SITUATION
+              Losses:
+               -15   G3A3           
+               -28   P1             
+                -2   M72A2 (BRD)    
+              -134   Golf Mk1       
+              -179   PERSONNEL      
+
+              Current:
+               285   G3A3           
+               632   P1             
+                64   M72A2 (BRD)    
+               586   Golf Mk1       
+
+PERSONNEL:    1,567

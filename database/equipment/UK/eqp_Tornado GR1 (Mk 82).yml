@@ -1,0 +1,16 @@
+!!python/object:db_equipment.equipment_aircraft
+ammo_store: 180
+ceiling: 50000
+crew: 2
+name: Tornado GR1 (Mk 82)
+nation: UK
+range: 1390
+speed: 2400.0
+weapons:
+- BK-27
+- Mark 82
+- Mark 82
+- Mark 82
+- Mark 82
+- Mark 82
+weight: 13.9

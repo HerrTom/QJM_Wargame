@@ -1,0 +1,21 @@
+DATE AND TIME 1983-11-11 16:00:00
+UNIT          (BRD) 5th West Berlin Police
+ACTIVITY      fortified defense
+EFFECTIVE     95% combat power
+DISPOSITION   94% PERSONNEL | 88% VEHICLES
+LOCATION      Wilmersdorf
+SITUATION
+              Losses:
+                -6   G3A3           
+               -11   P1             
+                -2   M72A2 (BRD)    
+               -86   Golf Mk1       
+              -105   PERSONNEL      
+
+              Current:
+               294   G3A3           
+               649   P1             
+                64   M72A2 (BRD)    
+               634   Golf Mk1       
+
+PERSONNEL:    1,641

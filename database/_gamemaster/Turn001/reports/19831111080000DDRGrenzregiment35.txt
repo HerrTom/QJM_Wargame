@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (DDR) Grenzregiment 35
+ACTIVITY      Attacking
+EFFECTIVE     95% combat power
+DISPOSITION   98% PERSONNEL | 94% VEHICLES
+LOCATION      Zehlendorf
+SITUATION
+              Losses:
+                -7   BTR-152        
+                -3   MPi-KM         
+                 0   RPK            
+                 0   PKM            
+                 0   RPG-7V         
+                -1   SPG-9          
+                 0   2B11           
+               -20   PERSONNEL      
+
+              Current:
+               106   BTR-152        
+               345   MPi-KM         
+                48   RPK            
+                36   PKM            
+                48   RPG-7V         
+                20   SPG-9          
+                24   2B11           
+
+PERSONNEL:    881

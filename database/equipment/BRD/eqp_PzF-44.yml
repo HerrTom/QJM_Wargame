@@ -1,0 +1,8 @@
+!!python/object:db_equipment.equipment_infat
+ammo_store: 5
+crew: 1
+name: PzF-44
+nation: BRD
+weapons:
+- Panzerfaust 44
+- G3A3

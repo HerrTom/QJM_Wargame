@@ -1,0 +1,48 @@
+!!python/object:db_formation.formation
+CEV: 1.9
+NoTLIData:
+- GAZ-66
+- URAL 375 POL
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  Npp7NpfA5kA=
+OLI_ad: 0
+OLI_afv: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  f3rkvUuw5kA=
+OLI_air: 0
+OLI_arty: 0
+OLI_at: 0
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  TJ5pVjOC50A=
+OLI_inf: 130.3584704989886
+equipment:
+  AK-74: 14
+  BRDM-2: 3
+  GAZ-66: 7
+  T-64A: 30
+  URAL 375 POL: 3
+faction: USSR
+name: (USSR) 65th Sep Tank Btn
+personnel: 120
+personnel_base: 123
+type: mech
+vehicles: 33
+vehicles_base: 34

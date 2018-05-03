@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (DDR) Grenzregiment 39
+ACTIVITY      Attacking
+EFFECTIVE     71% combat power
+DISPOSITION   85% PERSONNEL | 63% VEHICLES
+LOCATION      Reinickendorf
+SITUATION
+              Losses:
+               -42   BTR-152        
+               -24   MPi-KM         
+                -2   RPK            
+                -3   PKM            
+                -2   RPG-7V         
+                -4   SPG-9          
+                -1   2B11           
+              -138   PERSONNEL      
+
+              Current:
+                71   BTR-152        
+               324   MPi-KM         
+                46   RPK            
+                33   PKM            
+                46   RPG-7V         
+                17   SPG-9          
+                23   2B11           
+
+PERSONNEL:    763

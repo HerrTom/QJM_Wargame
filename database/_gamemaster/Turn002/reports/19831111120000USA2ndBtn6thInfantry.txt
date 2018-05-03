@@ -1,0 +1,31 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (USA) 2nd Btn, 6th Infantry
+ACTIVITY      delay defense
+EFFECTIVE     81% combat power
+DISPOSITION   89% PERSONNEL | 69% VEHICLES
+LOCATION      Neukoeln
+SITUATION
+              Losses:
+                 0   FIM-92 Stinger 
+                -6   M-16           
+                -1   M-60 MMG       
+                 0   M106           
+                -4   M113A1         
+                 0   M151 TOW       
+                 0   M47 Dragon     
+                -2   M72 LAW        
+                 0   Truck          
+               -17   PERSONNEL      
+
+              Current:
+                 2   FIM-92 Stinger 
+               280   M-16           
+                28   M-60 MMG       
+                 6   M106           
+                13   M113A1         
+                10   M151 TOW       
+                11   M47 Dragon     
+                48   M72 LAW        
+                13   Truck          
+
+PERSONNEL:    491

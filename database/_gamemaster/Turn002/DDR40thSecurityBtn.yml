@@ -1,0 +1,25 @@
+!!python/object:db_formation.formation
+CEV: 1.58
+NoTLIData: []
+OLI: 5781.57945205299
+OLI_ad: 0
+OLI_afv: 0
+OLI_arty: 2642.147818244318
+OLI_at: 1009.6603236805308
+OLI_base: 8434.625174891242
+OLI_inf: 2129.7713101281406
+equipment:
+  2B11: 27
+  BRDM-2: 7
+  BTR-152: 16
+  MPi-KM: 172
+  RPG-7V: 24
+  RPK: 32
+  SPG-9: 12
+faction: DDR
+name: (DDR) 40th Security Btn
+personnel: 308
+personnel_base: 402
+type: inf
+vehicles: 23
+vehicles_base: 54

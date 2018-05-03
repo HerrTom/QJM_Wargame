@@ -1,7 +1,7 @@
 !!python/object:db_formation.formation
 name: (DDR) Mot Schutzenregiment 1 "Hans Beimler"
 type: mech
-CEV: 1.0
+CEV: 1.58
 personnel: 2320
 faction: DDR
 equipment:

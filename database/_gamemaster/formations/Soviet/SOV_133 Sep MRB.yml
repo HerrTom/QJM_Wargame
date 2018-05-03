@@ -1,7 +1,7 @@
 !!python/object:db_formation.formation
 name: (USSR) 133rd Sep Motor Rifle Btn
 type: mech
-CEV: 1.2
+CEV: 1.90
 personnel: 456
 faction: USSR
 equipment:

@@ -1,0 +1,21 @@
+!!python/object:db_formation.formation
+CEV: 1.58
+NoTLIData: []
+OLI: 11233.172875188113
+OLI_ad: 0
+OLI_afv: 0
+OLI_air: 0
+OLI_arty: 11233.172875188113
+OLI_at: 0
+OLI_base: 11233.172875188113
+OLI_inf: 0
+equipment:
+  D-20: 18
+  M-46: 36
+faction: DDR
+name: (DDR) 40th Artillery Brigade
+personnel: 432
+personnel_base: 432
+type: inf
+vehicles: 0
+vehicles_base: 1

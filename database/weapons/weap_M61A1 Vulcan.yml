@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 26400
+TLI: 6001519.871057348
+accuracy: 0.7
+ammo: 20x102 mm
+barrels: 6
+calibre: 20.0
+muzzle_vel: 1050.0
+name: M61A1 Vulcan
+range: 2500
+rate_of_fire: 6600
+rf_multiple: 4
+rie: 1.0

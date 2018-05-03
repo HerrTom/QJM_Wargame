@@ -1,0 +1,58 @@
+!!python/object:db_formation.formation
+CEV: 1.9
+NoTLIData:
+- 9K32 Strela-2
+- UAZ-469
+- GAZ-66
+- URAL 375
+- URAL 375 POL
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  HLvcCtIcxEA=
+OLI_ad: 0
+OLI_afv: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  lx/eonBevkA=
+OLI_arty: 1140.449768182937
+OLI_at: 979.9885132471766
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  +aI3JkAKyUA=
+OLI_inf: 402.7626898954255
+equipment:
+  2B9: 8
+  9K32 Strela-2: 9
+  AGS-17: 6
+  AK-74: 178
+  BMP-1P: 25
+  BRDM-2: 3
+  GAZ-66: 15
+  PKM: 17
+  RPG-7V: 34
+  RPK-74: 26
+  UAZ-469: 2
+  URAL 375: 4
+  URAL 375 POL: 2
+faction: USSR
+name: (USSR) 154th Sep Motor Rifle Btn
+personnel: 423
+personnel_base: 456
+type: mech
+vehicles: 28
+vehicles_base: 36

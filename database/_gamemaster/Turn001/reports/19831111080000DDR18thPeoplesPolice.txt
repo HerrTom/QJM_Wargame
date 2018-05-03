@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (DDR) 18th People's Police
+ACTIVITY      Attacking
+EFFECTIVE     24% combat power
+DISPOSITION   47% PERSONNEL | 0% VEHICLES
+LOCATION      Reinickendorf
+SITUATION
+              Losses:
+               -28   MPi-KM         
+                -6   RPK            
+                -3   RPG-7V         
+                -2   SPG-9          
+                 0   Granatwerfer 82
+               -12   BTR-152        
+                -6   BRDM-2         
+               -85   PERSONNEL      
+
+              Current:
+                35   MPi-KM         
+                 6   RPK            
+                 5   RPG-7V         
+                 2   SPG-9          
+                 9   Granatwerfer 82
+                 0   BTR-152        
+                 0   BRDM-2         
+
+PERSONNEL:    74

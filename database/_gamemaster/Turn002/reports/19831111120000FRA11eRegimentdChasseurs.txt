@@ -1,0 +1,25 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (FRA) 11e Regiment d'Chasseurs
+ACTIVITY      delay defense
+EFFECTIVE     90% combat power
+DISPOSITION   88% PERSONNEL | 87% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                 0   AMX-10P        
+                 0   AMX-10PC       
+                 0   AMX-30B        
+                -5   FAMAS F-1      
+                 0   LRAC F1        
+                 0   NF-1           
+                -5   PERSONNEL      
+
+              Current:
+                10   AMX-10P        
+                 0   AMX-10PC       
+                48   AMX-30B        
+                81   FAMAS F-1      
+                11   LRAC F1        
+                16   NF-1           
+
+PERSONNEL:    342

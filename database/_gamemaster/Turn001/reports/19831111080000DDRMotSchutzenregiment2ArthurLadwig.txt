@@ -1,0 +1,73 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (DDR) Mot Schutzenregiment 2 "Arthur Ladwig"
+ACTIVITY      Attacking
+EFFECTIVE     96% combat power
+DISPOSITION   98% PERSONNEL | 93% VEHICLES
+LOCATION      Neukoeln
+SITUATION
+              Losses:
+                 0   T-55A          
+                 0   2S1 Gvozdika   
+                 0   2B11           
+                 0   9K31 Strela-1  
+                 0   ZSU-23-4       
+                 0   9K32 Strela-2  
+                 0   BRDM-2 9P111   
+                 0   9K14P Malyutka 
+                 0   SPG-9          
+                -4   RPG-7V         
+                 0   AGS-17         
+                -1   RPK            
+               -10   MPi-KM         
+                -1   PKM            
+                -1   BRDM-2         
+                 0   BRM-1          
+               -14   BTR-70         
+                 0   BTR-60PA (FAC) 
+                 0   PRP-3          
+                -1   BRDM-2U        
+                 0   BMP-1          
+                 0   UAZ-469        
+                -3   GAZ-66         
+                 0   ZIL-130        
+                -1   Ural 375       
+                -1   ZIL-131        
+                -1   Ural 375 POL   
+                 0   MT-55          
+                 0   TMM            
+                 0   Eng Vehicle    
+               -58   PERSONNEL      
+
+              Current:
+                40   T-55A          
+                18   2S1 Gvozdika   
+                24   2B11           
+                 4   9K31 Strela-1  
+                 4   ZSU-23-4       
+                30   9K32 Strela-2  
+                 9   BRDM-2 9P111   
+                12   9K14P Malyutka 
+                21   SPG-9          
+               144   RPG-7V         
+                18   AGS-17         
+               101   RPK            
+               796   MPi-KM         
+                26   PKM            
+                20   BRDM-2         
+                 1   BRM-1          
+               129   BTR-70         
+                 1   BTR-60PA (FAC) 
+                 1   PRP-3          
+                 3   BRDM-2U        
+                 3   BMP-1          
+                22   UAZ-469        
+                64   GAZ-66         
+                14   ZIL-130        
+                56   Ural 375       
+                35   ZIL-131        
+                25   Ural 375 POL   
+                 1   MT-55          
+                 4   TMM            
+                24   Eng Vehicle    
+
+PERSONNEL:    2,262

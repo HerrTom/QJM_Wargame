@@ -1,0 +1,23 @@
+DATE AND TIME 1983-11-11 16:00:00
+UNIT          (USSR) 10th Sep Tank Btn
+ACTIVITY      Attacking
+EFFECTIVE     100% combat power
+DISPOSITION   98% PERSONNEL | 100% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+                 0   BRDM-2         
+                 0   T-64A          
+                -1   AK-74          
+                 0   GAZ-66         
+                -1   URAL 375 POL   
+                -2   PERSONNEL      
+
+              Current:
+                 3   BRDM-2         
+                31   T-64A          
+                13   AK-74          
+                 7   GAZ-66         
+                 2   URAL 375 POL   
+
+PERSONNEL:    121

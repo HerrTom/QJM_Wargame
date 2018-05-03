@@ -1,0 +1,17 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (DDR) Berlin SAM defences
+ACTIVITY      attack defense
+EFFECTIVE     83% combat power
+DISPOSITION   86% PERSONNEL | 83% VEHICLES
+LOCATION      East Germany
+SITUATION
+              Losses:
+                -3   2K12 Kub       
+                -6   Truck          
+               -21   PERSONNEL      
+
+              Current:
+                20   2K12 Kub       
+               112   Truck          
+
+PERSONNEL:    172

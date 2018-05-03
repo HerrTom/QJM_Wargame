@@ -1,0 +1,26 @@
+!!python/object:db_formation.formation
+CEV: 1.18
+NoTLIData: []
+OLI: 2255.0255590547913
+OLI_ad: 0
+OLI_afv: 0
+OLI_air: 0
+OLI_arty: 324.1997735058165
+OLI_at: 336.5534412268436
+OLI_base: 2255.0255590547913
+OLI_inf: 1594.272344322131
+equipment:
+  BRDM-2: 6
+  BTR-152: 12
+  Granatwerfer 82: 9
+  MPi-KM: 63
+  RPG-7V: 8
+  RPK: 12
+  SPG-9: 4
+faction: DDR
+name: (DDR) 19th People's Police
+personnel: 159
+personnel_base: 159
+type: inf
+vehicles: 18
+vehicles_base: 18

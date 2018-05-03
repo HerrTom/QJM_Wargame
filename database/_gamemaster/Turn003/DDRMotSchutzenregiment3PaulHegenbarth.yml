@@ -1,0 +1,87 @@
+!!python/object:db_formation.formation
+CEV: 1.58
+NoTLIData:
+- 9K31 Strela-1
+- ZSU-23-4
+- PRP-3
+- UAZ-469
+- GAZ-66
+- ZIL-130
+- Ural 375
+- ZIL-131
+- Ural 375 POL
+- MT-55
+- TMM
+- Eng Vehicle
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  3vHzC3J85UA=
+OLI_ad: 5926.400536913525
+OLI_afv: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  vatgbkEI1UA=
+OLI_air: 0
+OLI_arty: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  dAd7Z82hwUA=
+OLI_at: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  BorUMWEvtEA=
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  k8vE23zC5UA=
+OLI_inf: 2345.1566731907965
+equipment:
+  2B11: 24
+  2S1 Gvozdika: 18
+  9K31 Strela-1: 4
+  9K32 Strela-2: 30
+  AGS-17: 18
+  BMP-1: 123
+  BRDM-2: 22
+  BRDM-2 9P111: 9
+  BRDM-2U: 4
+  BRM-1: 1
+  BTR-60PA (FAC): 1
+  BTR-70: 4
+  Eng Vehicle: 24
+  GAZ-66: 65
+  MPi-KM: 794
+  MT-55: 1
+  PKM: 53
+  PRP-3: 1
+  RPG-7V: 144
+  RPK: 101
+  T-55A: 40
+  TMM: 4
+  UAZ-469: 22
+  Ural 375: 57
+  Ural 375 POL: 26
+  ZIL-130: 14
+  ZIL-131: 36
+  ZSU-23-4: 4
+faction: DDR
+name: (DDR) Mot Schutzenregiment 3 "Paul Hegenbarth"
+personnel: 2178
+personnel_base: 2210
+type: mech
+vehicles: 222
+vehicles_base: 228

@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 163
+TLI: 85197.5227816338
+accuracy: 0.8
+ammo: PzF 44
+barrels: 1
+calibre: 67.0
+muzzle_vel: 210.0
+name: Panzerfaust 44
+range: 300
+rie: 1.0

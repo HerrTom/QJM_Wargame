@@ -1,0 +1,12 @@
+!!python/object:db_equipment.equipment_sparty
+ammo_store: 28
+amphibious: false
+armour: steel
+crew: 6
+name: M109
+nation: USA
+range: 350
+speed: 63.0
+weapons:
+- M126
+weight: 27.5

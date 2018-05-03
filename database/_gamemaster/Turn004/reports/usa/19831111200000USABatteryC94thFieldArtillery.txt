@@ -1,0 +1,19 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (USA) Battery C, 94th Field Artillery
+ACTIVITY      Attacking
+EFFECTIVE     100% combat power
+DISPOSITION   95% PERSONNEL | 100% VEHICLES
+LOCATION      Spandau
+SITUATION
+              Losses:
+                -2   M-16           
+                 0   M109           
+                 0   Truck          
+                -2   PERSONNEL      
+
+              Current:
+                15   M-16           
+                 8   M109           
+                 8   Truck          
+
+PERSONNEL:    55

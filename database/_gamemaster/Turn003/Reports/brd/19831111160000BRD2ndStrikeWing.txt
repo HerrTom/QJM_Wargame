@@ -1,0 +1,15 @@
+DATE AND TIME 1983-11-11 16:00:00
+UNIT          (BRD) 2nd Strike Wing
+ACTIVITY      Attacking
+EFFECTIVE     33% combat power
+DISPOSITION   33% PERSONNEL | 33% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+                -3   F-4F Phantom II (Mk 84)
+                -6   PERSONNEL      
+
+              Current:
+                 4   F-4F Phantom II (Mk 84)
+
+PERSONNEL:    8

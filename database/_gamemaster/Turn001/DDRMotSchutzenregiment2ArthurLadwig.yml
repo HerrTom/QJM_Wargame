@@ -1,0 +1,89 @@
+!!python/object:db_formation.formation
+CEV: 1.58
+NoTLIData:
+- 9K31 Strela-1
+- ZSU-23-4
+- 9K32 Strela-2
+- PRP-3
+- UAZ-469
+- GAZ-66
+- ZIL-130
+- Ural 375
+- ZIL-131
+- Ural 375 POL
+- MT-55
+- TMM
+- Eng Vehicle
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  yt8jOcqf5EA=
+OLI_ad: 0
+OLI_afv: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  +nlTZK6rxkA=
+OLI_arty: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  dAd7Z82hwUA=
+OLI_at: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  zl8MZFovuEA=
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  yjjbTH9u5UA=
+OLI_inf: 15411.999228811748
+equipment:
+  2B11: 24
+  2S1 Gvozdika: 18
+  9K14P Malyutka: 12
+  9K31 Strela-1: 4
+  9K32 Strela-2: 30
+  AGS-17: 18
+  BMP-1: 3
+  BRDM-2: 20
+  BRDM-2 9P111: 9
+  BRDM-2U: 3
+  BRM-1: 1
+  BTR-60PA (FAC): 1
+  BTR-70: 129
+  Eng Vehicle: 24
+  GAZ-66: 64
+  MPi-KM: 796
+  MT-55: 1
+  PKM: 26
+  PRP-3: 1
+  RPG-7V: 144
+  RPK: 101
+  SPG-9: 21
+  T-55A: 40
+  TMM: 4
+  UAZ-469: 22
+  Ural 375: 56
+  Ural 375 POL: 25
+  ZIL-130: 14
+  ZIL-131: 35
+  ZSU-23-4: 4
+faction: DDR
+name: (DDR) Mot Schutzenregiment 2 "Arthur Ladwig"
+personnel: 2262
+personnel_base: 2320
+type: mech
+vehicles: 224
+vehicles_base: 240

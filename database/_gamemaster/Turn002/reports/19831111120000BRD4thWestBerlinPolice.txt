@@ -1,0 +1,22 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (BRD) 4th West Berlin Police
+ACTIVITY      delay defense
+EFFECTIVE     96% combat power
+DISPOSITION   92% PERSONNEL | 85% VEHICLES
+LOCATION      Zehlendorf
+SITUATION
+			UNIT HAS BEEN OVERRUN!
+              Losses:
+               -12   G3A3           
+              -107   Golf Mk1       
+                -1   M72A2 (BRD)    
+               -17   P1             
+              -137   PERSONNEL      
+
+              Current:
+               288   G3A3           
+               613   Golf Mk1       
+                65   M72A2 (BRD)    
+               643   P1             
+
+PERSONNEL:    1,609

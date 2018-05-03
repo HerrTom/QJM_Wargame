@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-11 16:00:00
+UNIT          (DDR) Grenzregiment 44
+ACTIVITY      Attacking
+EFFECTIVE     98% combat power
+DISPOSITION   98% PERSONNEL | 97% VEHICLES
+LOCATION      Wilmersdorf
+SITUATION
+              Losses:
+                -3   BTR-152        
+                -2   MPi-KM         
+                 0   RPK            
+                -2   PKM            
+                 0   RPG-7V         
+                 0   SPG-9          
+                 0   2B11           
+               -14   PERSONNEL      
+
+              Current:
+               110   BTR-152        
+               346   MPi-KM         
+                48   RPK            
+                34   PKM            
+                48   RPG-7V         
+                21   SPG-9          
+                24   2B11           
+
+PERSONNEL:    887

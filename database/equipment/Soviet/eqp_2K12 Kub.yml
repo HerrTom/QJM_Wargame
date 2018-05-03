@@ -1,0 +1,15 @@
+!!python/object:db_equipment.equipment_spad
+ammo_store: 3
+amphibious: false
+armour: steel
+crew: 5
+fire_control: medium radar
+name: 2K12 Kub
+nation: Soviet
+range: 250
+speed: 45.0
+weapons:
+- 3M9
+- 3M9
+- 3M9
+weight: 20.0

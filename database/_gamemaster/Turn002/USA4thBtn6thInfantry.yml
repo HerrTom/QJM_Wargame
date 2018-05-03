@@ -1,0 +1,54 @@
+!!python/object:db_formation.formation
+CEV: 2.59
+NoTLIData:
+- FIM-92 Stinger
+- Truck
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  lc2WTKTDrUA=
+OLI_ad: 0
+OLI_afv: 0
+OLI_arty: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  s0428751hkA=
+OLI_at: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  7p7obgirp0A=
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  E2G3j7EIv0A=
+OLI_inf: 61.586188334387316
+equipment:
+  FIM-92 Stinger: 1
+  M-16: 184
+  M-60 MMG: 22
+  M106: 4
+  M113A1: 0
+  M151 TOW: 6
+  M47 Dragon: 10
+  M72 LAW: 27
+  Truck: 8
+faction: USA
+name: (USA) 4th Btn, 6th Infantry
+personnel: 322
+personnel_base: 554
+type: mech
+vehicles: 10
+vehicles_base: 42

@@ -1,7 +1,7 @@
 !!python/object:db_formation.formation
 name: (UK) 1st Btn, Royal Welch Fusiliers
 type: mech
-CEV: 1.8
+CEV: 2.33
 personnel: 472
 faction: UK
 equipment:

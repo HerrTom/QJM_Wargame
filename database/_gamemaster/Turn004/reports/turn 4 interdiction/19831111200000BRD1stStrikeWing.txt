@@ -1,0 +1,15 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (BRD) 1st Strike Wing
+ACTIVITY      Attacking
+EFFECTIVE     58% combat power
+DISPOSITION   58% PERSONNEL | 58% VEHICLES
+LOCATION      East Germany
+SITUATION
+              Losses:
+                -2   F-4F Phantom II (Mk 84)
+                -4   PERSONNEL      
+
+              Current:
+                 7   F-4F Phantom II (Mk 84)
+
+PERSONNEL:    14

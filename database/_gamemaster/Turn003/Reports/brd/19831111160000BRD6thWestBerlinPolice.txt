@@ -1,0 +1,21 @@
+DATE AND TIME 1983-11-11 16:00:00
+UNIT          (BRD) 6th West Berlin Police
+ACTIVITY      fortified defense
+EFFECTIVE     97% combat power
+DISPOSITION   95% PERSONNEL | 91% VEHICLES
+LOCATION      Wilmersdorf
+SITUATION
+              Losses:
+                -4   G3A3           
+               -19   P1             
+                -1   M72A2 (BRD)    
+               -67   Golf Mk1       
+               -91   PERSONNEL      
+
+              Current:
+               296   G3A3           
+               641   P1             
+                65   M72A2 (BRD)    
+               653   Golf Mk1       
+
+PERSONNEL:    1,655

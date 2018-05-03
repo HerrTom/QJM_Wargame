@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_aam
+RF: 156
+TLI: 985343.6907585035
+ammo: 9K32
+barrels: 1
+calibre: 72.0
+enhancement: 1.0
+guidance: IR
+min_range: 50.0
+muzzle_vel: 430.0
+name: 9K32
+range: 3700
+rie: 1

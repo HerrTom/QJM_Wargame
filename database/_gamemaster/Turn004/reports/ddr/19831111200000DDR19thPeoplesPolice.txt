@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (DDR) 19th People's Police
+ACTIVITY      Attacking
+EFFECTIVE     90% combat power
+DISPOSITION   97% PERSONNEL | 89% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                 0   BRDM-2         
+                -2   BTR-152        
+                 0   Granatwerfer 82
+                 0   MPi-KM         
+                 0   RPG-7V         
+                 0   RPK            
+                 0   SPG-9          
+                -4   PERSONNEL      
+
+              Current:
+                 6   BRDM-2         
+                10   BTR-152        
+                 9   Granatwerfer 82
+                63   MPi-KM         
+                 8   RPG-7V         
+                12   RPK            
+                 4   SPG-9          
+
+PERSONNEL:    155

@@ -1,0 +1,17 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (DDR) 40th Artillery Brigade
+ACTIVITY      attack defense
+EFFECTIVE     99% combat power
+DISPOSITION   98% PERSONNEL | 0% VEHICLES
+LOCATION      Spandau
+SITUATION
+              Losses:
+                -1   D-20           
+                 0   M-46           
+                -8   PERSONNEL      
+
+              Current:
+                17   D-20           
+                36   M-46           
+
+PERSONNEL:    424

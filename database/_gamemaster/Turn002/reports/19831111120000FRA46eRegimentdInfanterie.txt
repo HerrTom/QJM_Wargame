@@ -1,0 +1,33 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (FRA) 46e Regiment d'Infanterie
+ACTIVITY      fortified defense
+EFFECTIVE     71% combat power
+DISPOSITION   87% PERSONNEL | 59% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+               -18   FAMAS F-1      
+                 0   HS-831A        
+                -2   Hotchkiss M201 
+                -6   LRAC F1        
+                 0   M40A1 RR       
+                -1   MILAN          
+                 0   MO-120         
+                 0   NF-1           
+                 0   TDA 81mm       
+               -13   VAB            
+               -54   PERSONNEL      
+
+              Current:
+               389   FAMAS F-1      
+                 7   HS-831A        
+                20   Hotchkiss M201 
+                60   LRAC F1        
+                 2   M40A1 RR       
+                13   MILAN          
+                 6   MO-120         
+                79   NF-1           
+                 8   TDA 81mm       
+                40   VAB            
+
+PERSONNEL:    820

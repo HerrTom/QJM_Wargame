@@ -1,0 +1,33 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (FRA) 46e Regiment d'Infanterie
+ACTIVITY      fortified defense
+EFFECTIVE     85% combat power
+DISPOSITION   93% PERSONNEL | 78% VEHICLES
+LOCATION      Wedding
+SITUATION
+              Losses:
+               -15   VAB            
+               -19   FAMAS F-1      
+                -4   NF-1           
+                -2   LRAC F1        
+                 0   MILAN          
+                -1   Hotchkiss M201 
+                 0   M40A1 RR       
+                 0   TDA 81mm       
+                -1   HS-831A        
+                 0   MO-120         
+               -64   PERSONNEL      
+
+              Current:
+                53   VAB            
+               407   FAMAS F-1      
+                79   NF-1           
+                66   LRAC F1        
+                14   MILAN          
+                22   Hotchkiss M201 
+                 2   M40A1 RR       
+                 8   TDA 81mm       
+                 7   HS-831A        
+                 6   MO-120         
+
+PERSONNEL:    874

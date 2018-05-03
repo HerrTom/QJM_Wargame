@@ -1,0 +1,20 @@
+!!python/object:db_formation.formation
+CEV: 2.33
+NoTLIData: []
+OLI: 23745.19948155063
+OLI_ad: 0
+OLI_afv: 0
+OLI_air: 23745.19948155063
+OLI_arty: 0
+OLI_at: 0
+OLI_base: 24777.599459009354
+OLI_inf: 0
+equipment:
+  Tornado GR1 (Mk 82): 23
+faction: UK
+name: (UK) 1st Sqdn, RAF
+personnel: 46
+personnel_base: 48
+type: mech
+vehicles: 23
+vehicles_base: 24

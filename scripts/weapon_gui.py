@@ -7,6 +7,10 @@ import db_oob
 import db_weapons
 
 
+atgm_choices = ['SACLOS wire day','SACLOS wire day/night','SACLOS radio',
+                            'LOSLBR','F&F',]
+aam_choices = ['Optical','BR','IR','SARH','ARH']
+
 #class weap_gui_frame(wx.Frame):
 class WeaponWindow(wx.Panel):
     def __init__(self,parent):
@@ -60,7 +64,7 @@ class WeaponWindow(wx.Panel):
         self.weap_name.Bind(wx.EVT_TEXT, self.on_name_box)
         
         # type:
-        type_choices = ["Gun","Automatic gun","ATGM",]
+        type_choices = ["Gun","Automatic gun","ATGM","AAM","Bomb"]
         self.weap_type = wx.Choice(self.right_panel,-1,choices=type_choices)
         weap_type_static = wx.StaticBoxSizer(wx.VERTICAL,self.right_panel,"Weapon Type:")
         weap_type_static.Add(self.weap_type,0,wx.ALL|wx.EXPAND,3)
@@ -143,8 +147,7 @@ class WeaponWindow(wx.Panel):
         rp_sizer.Add(weap_min_range_static,0,wx.LEFT|wx.RIGHT|wx.EXPAND,3)
         
         # guidance:
-        guidance_choices = ['SACLOS wire day','SACLOS wire day/night','SACLOS radio',
-                            'LOSLBR','F&F',]
+        guidance_choices = atgm_choices
         self.weap_guidance = wx.Choice(self.right_panel,-1,choices=guidance_choices)
         weap_guidance_static = wx.StaticBoxSizer(wx.VERTICAL,self.right_panel,"Guidance:")
         weap_guidance_static.Add(self.weap_guidance,0,wx.ALL|wx.EXPAND,3)
@@ -175,6 +178,10 @@ class WeaponWindow(wx.Panel):
     
     def disable_all(self):
         # function to disable all non-common elements
+        self.weap_range.Enable(False)
+        self.weap_rie.Enable(False)
+        self.weap_barrels.Enable(False)
+        self.weap_muzzle_vel.Enable(False)
         self.weap_accuracy.Enable(False)
         self.weap_rof.Enable(False)
         self.weap_rf_mult.Enable(False)
@@ -188,16 +195,39 @@ class WeaponWindow(wx.Panel):
         # currently only atgm type enables disabled spaces
         weaptype = self.weap_type.GetString(self.weap_type.GetSelection())
         if weaptype == "ATGM":
+            self.weap_range.Enable(True)
+            self.weap_muzzle_vel.Enable(True)
+            self.weap_rie.Enable(True)
+            self.weap_barrels.Enable(True)
             self.weap_min_range.Enable(True)
             self.weap_penetration.Enable(True)
             self.weap_guidance.Enable(True)
             self.weap_enhancement.Enable(True)
+            self.weap_guidance.Set(atgm_choices)
+        elif weaptype == "AAM":
+            self.weap_range.Enable(True)
+            self.weap_muzzle_vel.Enable(True)
+            self.weap_barrels.Enable(True)
+            self.weap_min_range.Enable(True)
+            self.weap_guidance.Enable(True)
+            self.weap_enhancement.Enable(True)
+            self.weap_guidance.Set(aam_choices)
         elif weaptype == "Automatic gun":
+            self.weap_range.Enable(True)
+            self.weap_rie.Enable(True)
+            self.weap_barrels.Enable(True)
+            self.weap_muzzle_vel.Enable(True)
             self.weap_accuracy.Enable(True)
             self.weap_rof.Enable(True)
             self.weap_rf_mult.Enable(True)
+        elif weaptype == "Bomb":
+            self.weap_accuracy.Enable(True)
         else:
             self.weap_accuracy.Enable(True)
+            self.weap_range.Enable(True)
+            self.weap_rie.Enable(True)
+            self.weap_barrels.Enable(True)
+            self.weap_muzzle_vel.Enable(True)
     
     def clear_data(self,event):
         self.weap_name.SetValue("")
@@ -226,6 +256,10 @@ class WeaponWindow(wx.Panel):
             self.weap_type.SetSelection(self.weap_type.FindString("Automatic gun"))
         elif data.type == "ATGM":
             self.weap_type.SetSelection(self.weap_type.FindString("ATGM"))
+        elif data.type == "AAM":
+            self.weap_type.SetSelection(self.weap_type.FindString("AAM"))
+        elif data.type == "Bomb":
+            self.weap_type.SetSelection(self.weap_type.FindString("Bomb"))
         else: # default is GUN type
             self.weap_type.SetSelection(self.weap_type.FindString("Gun"))
         self.disable_by_type(None)
@@ -323,6 +357,16 @@ class WeaponWindow(wx.Panel):
                                                 penetration,
                                                 guidance,
                                                 enhancement,)
+        elif type == "AAM":
+            new_equip = db_weapons.weapon_aam(name,
+                                                range,
+                                                barrels,
+                                                calibre,
+                                                muzzle_vel,
+                                                ammo,
+                                                min_range,
+                                                guidance,
+                                                enhancement,)
         elif type == "Automatic gun":
             new_equip = db_weapons.weapon_autogun(name,
                                                 range,
@@ -343,6 +387,8 @@ class WeaponWindow(wx.Panel):
                                                 calibre,
                                                 muzzle_vel,
                                                 ammo,)
+        elif type == "Bomb":
+            new_equip = db_weapons.weapon_bomb(name,accuracy,calibre,ammo,)
         print(new_equip)
         path = "../database/weapons/"
         os.makedirs(path, exist_ok=True)

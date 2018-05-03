@@ -1,0 +1,20 @@
+!!python/object:db_formation.formation
+CEV: 1.6
+NoTLIData: []
+OLI: 11458.535068794521
+OLI_ad: 0
+OLI_afv: 0
+OLI_air: 11458.535068794521
+OLI_arty: 0
+OLI_at: 0
+OLI_base: 34375.60520638357
+OLI_inf: 0
+equipment:
+  F-4F Phantom II (Mk 84): 4
+faction: BRD
+name: (BRD) 2nd Strike Wing
+personnel: 8
+personnel_base: 24
+type: mech
+vehicles: 4
+vehicles_base: 12

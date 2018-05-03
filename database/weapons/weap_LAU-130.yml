@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 159
+TLI: 1030828.0554321117
+accuracy: 0.7
+ammo: Hydra 70
+barrels: 19
+calibre: 70.0
+muzzle_vel: 739.0
+name: LAU-130
+range: 8000
+rie: 1.0

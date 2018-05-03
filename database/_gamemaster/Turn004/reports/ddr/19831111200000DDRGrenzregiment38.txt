@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (DDR) Grenzregiment 38
+ACTIVITY      Attacking
+EFFECTIVE     97% combat power
+DISPOSITION   98% PERSONNEL | 96% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                 0   2B11           
+                -4   BTR-152        
+                -3   MPi-KM         
+                 0   PKM            
+                 0   RPG-7V         
+                -2   RPK            
+                -3   SPG-9          
+               -22   PERSONNEL      
+
+              Current:
+                24   2B11           
+               109   BTR-152        
+               345   MPi-KM         
+                36   PKM            
+                48   RPG-7V         
+                46   RPK            
+                18   SPG-9          
+
+PERSONNEL:    879

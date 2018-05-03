@@ -191,3 +191,100 @@ class weapon_atgm():
         EN = self.enhancement
         self.TLI = RF * PTS * RIE * RN * A * RL * \
             SME * MCE * AE * MBE * MRN * PEN * VEL * EN * GE
+
+class weapon_aam():
+    type = "AAM"
+    def __init__(
+            self,
+            name,
+            range,
+            barrels,
+            calibre,
+            muzzle_vel,
+            ammo,
+            min_range,
+            guidance,
+            enhancement):
+        self.name = name
+        self.range = range
+        self.rie = 1
+        self.barrels = barrels
+        self.calibre = calibre
+        self.muzzle_vel = muzzle_vel
+        self.ammo = ammo
+        self.min_range = min_range
+        self.guidance = guidance
+        self.enhancement = enhancement
+        
+        # if generated using __init__ also generate the TLI
+        self.GenTLI()
+
+    def __repr__(self):
+        return '{}({} @{:,.0f})'.format(self.__class__.__name__,self.name, self.TLI)
+
+    def GenTLI(self):
+        RF = qjm_interps.RF_From_Calibre(self.calibre)
+        PTS = qjm_interps.PTS_From_Calibre(self.calibre)
+        RIE = self.rie
+        # RN
+        RN_Range = 1 + (0.001 * self.range)**0.5
+        RN_MV = 0.007 * self.muzzle_vel * 0.1 * (self.calibre)**0.5
+        if RN_MV > RN_Range:
+            RN = RN_MV
+        else:
+            RN = (RN_Range + RN_MV) / 2
+        # derive accuracy from guidance value
+        acc = {'Optical': 1,
+               'BR': 1.2,
+               'IR': 1.8,
+               'SARH': 1.5,
+               'ARH': 2.0}
+
+        A = acc[self.guidance]
+        RL = 1
+        SME = 1
+        GE = 2 # guided weapons have a bonus effect
+        MCE = 1
+        AE = 1
+        MBE = qjm_interps.MBE(self.barrels)
+        self.RF = RF
+        MRN = 1 - 0.19 * ((self.min_range - 100) / 100)
+        VEL = 1 + .001 * (self.muzzle_vel - 400)
+        EN = self.enhancement
+        self.TLI = RF * PTS * RIE * RN * A * RL * \
+            SME * MCE * AE * MBE * MRN * VEL * EN * GE
+
+
+class weapon_bomb():
+    type = "Bomb"
+    def __init__(
+            self,
+            name,
+            accuracy,
+            calibre,
+            ammo):
+        self.name = name
+        self.accuracy = accuracy
+        self.calibre = calibre
+        self.ammo = ammo
+        
+        # if generated using __init__ also generate the TLI
+        self.GenTLI()
+
+    def __repr__(self):
+        return '{}({} @{:,.0f})'.format(self.__class__.__name__,self.name, self.TLI)
+
+    def GenTLI(self):
+        calibre_corrected = qjm_interps.Calibre_From_Weight(self.calibre)
+        RF = 1
+        PTS = qjm_interps.PTS_From_Calibre(calibre_corrected)
+        RIE = 1
+        RN = 1
+        A = self.accuracy
+        RL = 1
+        SME = 1
+        MCE = 1
+        AE = 1
+        MBE = 1
+        self.RF = RF
+        self.TLI = RF * PTS * RIE * RN * A * RL * SME * MCE * AE * MBE

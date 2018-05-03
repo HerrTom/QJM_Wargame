@@ -1,0 +1,21 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (BRD) 6th West Berlin Police
+ACTIVITY      fortified defense
+EFFECTIVE     91% combat power
+DISPOSITION   88% PERSONNEL | 77% VEHICLES
+LOCATION      Tiergarten
+SITUATION
+              Losses:
+               -14   G3A3           
+               -27   P1             
+                -4   M72A2 (BRD)    
+              -164   Golf Mk1       
+              -209   PERSONNEL      
+
+              Current:
+               286   G3A3           
+               633   P1             
+                62   M72A2 (BRD)    
+               556   Golf Mk1       
+
+PERSONNEL:    1,537

@@ -1,0 +1,29 @@
+DATE AND TIME 1983-11-11 16:00:00
+UNIT          (DDR) FJB 40
+ACTIVITY      hasty defense
+EFFECTIVE     100% combat power
+DISPOSITION   99% PERSONNEL | 0% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+                -5   MPi-KMS        
+                 0   RPK            
+                 0   RPG-7D         
+                 0   SPG-9          
+                 0   9K113 Konkurs  
+                 0   9K32 Strela-2  
+                 0   AGS-17         
+                 0   2B11           
+                -5   PERSONNEL      
+
+              Current:
+               214   MPi-KMS        
+                27   RPK            
+                27   RPG-7D         
+                 3   SPG-9          
+                 6   9K113 Konkurs  
+                 9   9K32 Strela-2  
+                 6   AGS-17         
+                 8   2B11           
+
+PERSONNEL:    354

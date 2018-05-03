@@ -1,7 +1,7 @@
 !!python/object:db_formation.formation
 name: (DDR) Grenzregiment 33
 type: inf
-CEV: 0.7
+CEV: 1.18
 personnel: 901
 faction: DDR
 equipment:

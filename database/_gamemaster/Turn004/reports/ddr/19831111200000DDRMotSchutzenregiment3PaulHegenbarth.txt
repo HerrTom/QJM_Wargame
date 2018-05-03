@@ -1,0 +1,69 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (DDR) Mot Schutzenregiment 3 "Paul Hegenbarth"
+ACTIVITY      attack defense
+EFFECTIVE     96% combat power
+DISPOSITION   97% PERSONNEL | 94% VEHICLES
+LOCATION      Spandau
+SITUATION
+              Losses:
+                 0   2B11           
+                -1   2S1 Gvozdika   
+                 0   9K31 Strela-1  
+                 0   9K32 Strela-2  
+                 0   AGS-17         
+                -5   BMP-1          
+                -1   BRDM-2         
+                 0   BRDM-2 9P111   
+                 0   BRDM-2U        
+                 0   BRM-1          
+                 0   BTR-60PA (FAC) 
+                 0   BTR-70         
+                -1   Eng Vehicle    
+                 0   GAZ-66         
+                -3   MPi-KM         
+                 0   MT-55          
+                -1   PKM            
+                 0   PRP-3          
+                -3   RPG-7V         
+                -1   RPK            
+                -1   T-55A          
+                 0   TMM            
+                 0   UAZ-469        
+                -1   Ural 375       
+                 0   Ural 375 POL   
+                 0   ZIL-130        
+                 0   ZIL-131        
+                 0   ZSU-23-4       
+               -33   PERSONNEL      
+
+              Current:
+                24   2B11           
+                17   2S1 Gvozdika   
+                 4   9K31 Strela-1  
+                30   9K32 Strela-2  
+                18   AGS-17         
+               118   BMP-1          
+                21   BRDM-2         
+                 9   BRDM-2 9P111   
+                 4   BRDM-2U        
+                 1   BRM-1          
+                 1   BTR-60PA (FAC) 
+                 4   BTR-70         
+                23   Eng Vehicle    
+                65   GAZ-66         
+               791   MPi-KM         
+                 1   MT-55          
+                52   PKM            
+                 1   PRP-3          
+               141   RPG-7V         
+               100   RPK            
+                39   T-55A          
+                 4   TMM            
+                22   UAZ-469        
+                56   Ural 375       
+                26   Ural 375 POL   
+                14   ZIL-130        
+                36   ZIL-131        
+                 4   ZSU-23-4       
+
+PERSONNEL:    2,145

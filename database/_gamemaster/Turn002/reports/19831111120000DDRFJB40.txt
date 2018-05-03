@@ -1,0 +1,29 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (DDR) FJB 40
+ACTIVITY      Attacking
+EFFECTIVE     90% combat power
+DISPOSITION   95% PERSONNEL | 0% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+                 0   2B11           
+                 0   9K113 Konkurs  
+                 0   9K32 Strela-2  
+                 0   AGS-17         
+                 0   MPi-KMS        
+                 0   RPG-7D         
+                 0   RPK            
+                 0   SPG-9          
+                 0   PERSONNEL      
+
+              Current:
+                 8   2B11           
+                 5   9K113 Konkurs  
+                 9   9K32 Strela-2  
+                 6   AGS-17         
+               205   MPi-KMS        
+                25   RPG-7D         
+                27   RPK            
+                 3   SPG-9          
+
+PERSONNEL:    340

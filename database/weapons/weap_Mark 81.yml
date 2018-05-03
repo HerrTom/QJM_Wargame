@@ -1,0 +1,7 @@
+!!python/object:db_weapons.weapon_bomb
+RF: 1
+TLI: 2478.8
+accuracy: 0.4
+ammo: Mk 81
+calibre: 113.0
+name: Mark 81

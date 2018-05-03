@@ -1,0 +1,31 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (USA) 4th Btn, 6th Infantry
+ACTIVITY      fortified defense
+EFFECTIVE     48% combat power
+DISPOSITION   58% PERSONNEL | 24% VEHICLES
+LOCATION      Tiergarten
+SITUATION
+              Losses:
+                 0   FIM-92 Stinger 
+                -3   M-16           
+                 0   M-60 MMG       
+                 0   M106           
+                 0   M113A1         
+                 0   M151 TOW       
+                 0   M47 Dragon     
+                -2   M72 LAW        
+                 0   Truck          
+                -5   PERSONNEL      
+
+              Current:
+                 1   FIM-92 Stinger 
+               184   M-16           
+                22   M-60 MMG       
+                 4   M106           
+                 0   M113A1         
+                 6   M151 TOW       
+                10   M47 Dragon     
+                27   M72 LAW        
+                 8   Truck          
+
+PERSONNEL:    322

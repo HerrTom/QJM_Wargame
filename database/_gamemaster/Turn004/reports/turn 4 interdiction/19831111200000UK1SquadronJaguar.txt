@@ -1,0 +1,15 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (UK) 1 Squadron, Jaguar
+ACTIVITY      Attacking
+EFFECTIVE     94% combat power
+DISPOSITION   94% PERSONNEL | 94% VEHICLES
+LOCATION      East Germany
+SITUATION
+              Losses:
+                -1   Jaguar GR1 (Mk 83)
+                -1   PERSONNEL      
+
+              Current:
+                17   Jaguar GR1 (Mk 83)
+
+PERSONNEL:    17

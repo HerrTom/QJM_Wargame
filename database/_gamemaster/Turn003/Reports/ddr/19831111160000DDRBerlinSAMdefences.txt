@@ -1,0 +1,17 @@
+DATE AND TIME 1983-11-11 16:00:00
+UNIT          (DDR) Berlin SAM defences
+ACTIVITY      hasty defense
+EFFECTIVE     96% combat power
+DISPOSITION   96% PERSONNEL | 96% VEHICLES
+LOCATION      DDR
+SITUATION
+              Losses:
+                -1   2K12 Kub       
+                -2   Truck          
+                -7   PERSONNEL      
+
+              Current:
+                23   2K12 Kub       
+               118   Truck          
+
+PERSONNEL:    193

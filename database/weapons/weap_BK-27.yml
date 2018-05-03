@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 6800
+TLI: 1561684.9044957566
+accuracy: 0.7
+ammo: 27x145 mm
+barrels: 1
+calibre: 27.0
+muzzle_vel: 1100.0
+name: BK-27
+range: 3200
+rate_of_fire: 1700
+rf_multiple: 4
+rie: 1.0

@@ -1,0 +1,23 @@
+!!python/object:db_formation.formation
+CEV: 0.66
+NoTLIData: []
+OLI: 1105.3562829270459
+OLI_ad: 0
+OLI_afv: 0
+OLI_air: 0
+OLI_arty: 0
+OLI_at: 809.312139685059
+OLI_base: 1203.2395374108369
+OLI_inf: 296.0441432419869
+equipment:
+  G3A3: 290
+  Golf Mk1: 591
+  M72A2 (BRD): 62
+  P1: 639
+faction: BRD
+name: (BRD) 1st West Berlin Police
+personnel: 1582
+personnel_base: 1746
+type: inf
+vehicles: 591
+vehicles_base: 720

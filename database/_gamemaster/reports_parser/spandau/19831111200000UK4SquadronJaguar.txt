@@ -1,0 +1,15 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (UK) 4 Squadron, Jaguar
+ACTIVITY      Attacking
+EFFECTIVE     83% combat power
+DISPOSITION   83% PERSONNEL | 83% VEHICLES
+LOCATION      Spandau
+SITUATION
+              Losses:
+                 0   Jaguar GR1 (Mk 83)
+                 0   PERSONNEL      
+
+              Current:
+                15   Jaguar GR1 (Mk 83)
+
+PERSONNEL:    15

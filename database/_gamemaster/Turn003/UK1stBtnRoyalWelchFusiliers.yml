@@ -1,0 +1,60 @@
+!!python/object:db_formation.formation
+CEV: 2.33
+NoTLIData:
+- LAAD Javelin
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  9JqUHbEYskA=
+OLI_ad: 0
+OLI_afv: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  TIeOMvIHd0A=
+OLI_air: 0
+OLI_arty: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  ai3Sn10TikA=
+OLI_at: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  sSiv5V/LpUA=
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  sQ5xyMGIskA=
+OLI_inf: 640.0872131494052
+equipment:
+  2in SBML: 6
+  Carl Gustav: 17
+  FN FAL: 249
+  FN MAG: 18
+  FV120 Spartan MCT: 4
+  FV432: 7
+  FV432 81mm: 8
+  FV432 RARDEN: 4
+  Fox CVR(W): 8
+  LAAD Javelin: 4
+  MILAN: 6
+  Wombat 120mm RR: 6
+faction: UK
+name: (UK) 1st Btn, Royal Welch Fusiliers
+personnel: 465
+personnel_base: 472
+type: mech
+vehicles: 31
+vehicles_base: 32

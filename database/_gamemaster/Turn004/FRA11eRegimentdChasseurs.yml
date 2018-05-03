@@ -1,0 +1,47 @@
+!!python/object:db_formation.formation
+CEV: 1.18
+NoTLIData: []
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  Bi8XBbGA5EA=
+OLI_ad: 0
+OLI_afv: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  05+M9nNG5EA=
+OLI_air: 0
+OLI_arty: 0
+OLI_at: 427.2670235205039
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  cJI0COhv5UA=
+OLI_inf: 38.64100153413109
+equipment:
+  AMX-10P: 11
+  AMX-10PC: 1
+  AMX-30B: 51
+  FAMAS F-1: 89
+  LRAC F1: 12
+  NF-1: 17
+faction: FRA
+name: (FRA) 11e Regiment d'Chasseurs
+personnel: 371
+personnel_base: 388
+type: arm
+vehicles: 63
+vehicles_base: 67

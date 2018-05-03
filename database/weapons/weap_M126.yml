@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 60
+TLI: 875424.7476134353
+accuracy: 0.8
+ammo: M102 HE
+barrels: 1
+calibre: 155.0
+muzzle_vel: 563.0
+name: M126
+range: 18000
+rie: 1.0

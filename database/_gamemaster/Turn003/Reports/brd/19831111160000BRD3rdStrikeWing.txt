@@ -1,0 +1,15 @@
+DATE AND TIME 1983-11-11 16:00:00
+UNIT          (BRD) 3rd Strike Wing
+ACTIVITY      fortified defense
+EFFECTIVE     58% combat power
+DISPOSITION   58% PERSONNEL | 58% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+                 0   F-4F Phantom II (Mk 84)
+                 0   PERSONNEL      
+
+              Current:
+                 7   F-4F Phantom II (Mk 84)
+
+PERSONNEL:    14

@@ -1,0 +1,45 @@
+!!python/object:db_formation.formation
+CEV: 2.59
+NoTLIData:
+- Truck
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  jd46JISrokA=
+OLI_ad: 0
+OLI_afv: 0
+OLI_air: 0
+OLI_arty: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  Egs4vLKhokA=
+OLI_at: 0
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  DPor/ResokA=
+OLI_inf: 4.908996666255287
+equipment:
+  M-16: 17
+  M109: 8
+  Truck: 8
+faction: USA
+name: (USA) Battery C, 94th Field Artillery
+personnel: 57
+personnel_base: 58
+type: mech
+vehicles: 8
+vehicles_base: 8

@@ -1,0 +1,54 @@
+!!python/object:db_formation.formation
+CEV: 2.59
+NoTLIData:
+- FIM-92 Stinger
+- Truck
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  KkkkBHUAu0A=
+OLI_ad: 0
+OLI_afv: 0
+OLI_arty: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  BrtoNk/YkEA=
+OLI_at: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  /Cc87007sUA=
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  E2G3j7EIv0A=
+OLI_inf: 1423.0753067700255
+equipment:
+  FIM-92 Stinger: 2
+  M-16: 286
+  M-60 MMG: 31
+  M106: 6
+  M113A1: 15
+  M151 TOW: 12
+  M47 Dragon: 11
+  M72 LAW: 50
+  Truck: 10
+faction: USA
+name: (USA) 3rd Btn, 6th Infantry
+personnel: 507
+personnel_base: 554
+type: mech
+vehicles: 33
+vehicles_base: 42

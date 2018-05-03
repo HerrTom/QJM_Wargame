@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (DDR) Grenzregiment 42
+ACTIVITY      Attacking
+EFFECTIVE     91% combat power
+DISPOSITION   96% PERSONNEL | 88% VEHICLES
+LOCATION      Zehlendorf
+SITUATION
+              Losses:
+                 0   2B11           
+                -8   BTR-152        
+                -4   MPi-KM         
+                 0   PKM            
+                -1   RPG-7V         
+                 0   RPK            
+                 0   SPG-9          
+               -21   PERSONNEL      
+
+              Current:
+                24   2B11           
+               100   BTR-152        
+               344   MPi-KM         
+                36   PKM            
+                47   RPG-7V         
+                47   RPK            
+                21   SPG-9          
+
+PERSONNEL:    869

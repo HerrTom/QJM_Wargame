@@ -1,7 +1,7 @@
 !!python/object:db_formation.formation
 name: (FRA) 46e Regiment d'Infanterie
 type: mech
-CEV: 1.8
+CEV: 1.18
 personnel: 938
 faction: FRA
 equipment:

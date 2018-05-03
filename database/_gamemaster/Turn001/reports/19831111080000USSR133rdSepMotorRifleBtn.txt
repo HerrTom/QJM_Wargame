@@ -1,0 +1,39 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (USSR) 133rd Sep Motor Rifle Btn
+ACTIVITY      Attacking
+EFFECTIVE     82% combat power
+DISPOSITION   93% PERSONNEL | 78% VEHICLES
+LOCATION      Tiergarten
+SITUATION
+              Losses:
+                -1   BRDM-2         
+                -7   BMP-1P         
+                 0   2B9            
+                 0   9K32 Strela-2  
+                -1   RPG-7V         
+                -1   AGS-17         
+                 0   RPK-74         
+                -7   AK-74          
+                -1   PKM            
+                 0   UAZ-469        
+                -1   GAZ-66         
+                -1   URAL 375       
+                 0   URAL 375 POL   
+               -33   PERSONNEL      
+
+              Current:
+                 2   BRDM-2         
+                26   BMP-1P         
+                 8   2B9            
+                 9   9K32 Strela-2  
+                34   RPG-7V         
+                 5   AGS-17         
+                27   RPK-74         
+               182   AK-74          
+                17   PKM            
+                 3   UAZ-469        
+                14   GAZ-66         
+                 3   URAL 375       
+                 2   URAL 375 POL   
+
+PERSONNEL:    423

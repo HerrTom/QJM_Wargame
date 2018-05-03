@@ -1,0 +1,16 @@
+!!python/object:db_equipment.equipment_aircraft
+ammo_store: 300
+ceiling: 60000.0
+crew: 2
+name: F-4E Phantom II (Mk 84)
+nation: USA
+range: 680
+speed: 2370.0
+weapons:
+- M61A1 Vulcan
+- Mark 84
+- Mark 84
+- Mark 84
+- Mark 84
+- Mark 84
+weight: 13.8

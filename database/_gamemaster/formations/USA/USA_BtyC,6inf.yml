@@ -1,0 +1,10 @@
+!!python/object:db_formation.formation
+name: (USA) Battery C, 94th Field Artillery
+type: mech
+CEV: 2.59
+personnel: 58
+faction: USA
+equipment:
+    M109: 8
+    M-16: 18
+    Truck: 8

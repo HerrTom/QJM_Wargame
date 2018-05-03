@@ -1,7 +1,7 @@
 !!python/object:db_formation.formation
 name: (DDR) 40th Security Btn
 type: inf
-CEV: 0.6
+CEV: 1.58
 personnel: 402
 faction: DDR
 equipment:

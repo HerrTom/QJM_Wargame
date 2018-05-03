@@ -1,0 +1,15 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (UK) 1st Sqdn, RAF
+ACTIVITY      Attacking
+EFFECTIVE     96% combat power
+DISPOSITION   96% PERSONNEL | 96% VEHICLES
+LOCATION      Spandau
+SITUATION
+              Losses:
+                -1   Tornado GR1 (Mk 82)
+                -2   PERSONNEL      
+
+              Current:
+                23   Tornado GR1 (Mk 82)
+
+PERSONNEL:    46

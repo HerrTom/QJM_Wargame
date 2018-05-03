@@ -1,0 +1,8 @@
+!!python/object:db_formation.formation
+name: (UK) 2 Squadron, Jaguar
+type: mech
+CEV: 2.33
+personnel: 18
+faction: BRD
+equipment:
+    Jaguar GR1 (Mk 83): 18

@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-11 16:00:00
+UNIT          (DDR) Grenzregiment 42
+ACTIVITY      Attacking
+EFFECTIVE     97% combat power
+DISPOSITION   98% PERSONNEL | 96% VEHICLES
+LOCATION      Wilmersdorf
+SITUATION
+              Losses:
+                -4   BTR-152        
+                -6   MPi-KM         
+                 0   RPK            
+                 0   PKM            
+                 0   RPG-7V         
+                 0   SPG-9          
+                 0   2B11           
+               -14   PERSONNEL      
+
+              Current:
+               109   BTR-152        
+               342   MPi-KM         
+                48   RPK            
+                36   PKM            
+                48   RPG-7V         
+                21   SPG-9          
+                24   2B11           
+
+PERSONNEL:    887

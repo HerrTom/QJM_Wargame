@@ -122,7 +122,7 @@ class EquipmentWindow(wx.Panel):
         # equip type choice box
         # equip type defines the data entry values
         equip_type_choices = ["Infantry", "APC", "IFV", "AFV","AT","SP AT",
-                                "Artillery","SP Artillery","AD","SP AD"] # defines available choices
+                                "Artillery","SP Artillery","AD","SP AD","Aircraft"] # defines available choices
         self.equip_type = wx.Choice(self.right_panel,-1,choices=equip_type_choices,)
         equip_type_static = wx.StaticBoxSizer(wx.VERTICAL,self.right_panel,"Equipment type:")
         equip_type_static.Add(self.equip_type,1,wx.ALL|wx.EXPAND,3)
@@ -197,7 +197,13 @@ class EquipmentWindow(wx.Panel):
         self.amph = wx.CheckBox(self.right_panel,-1,"Amphibious")
         misc_static.Add(self.amph,1,wx.ALL|wx.EXPAND,3)
         rp_sizer.Add(misc_static,0,wx.LEFT|wx.RIGHT|wx.EXPAND,3)
-        
+
+        # Aircraft ceiling
+        self.ceiling = wx.TextCtrl(self.right_panel,-1,'')
+        ceiling_static = wx.StaticBoxSizer(wx.VERTICAL,self.right_panel,"Ceiling (ft):")
+        ceiling_static.Add(self.ceiling,0,wx.ALL|wx.EXPAND,3)
+        rp_sizer.Add(ceiling_static,0,wx.LEFT|wx.RIGHT|wx.EXPAND,3)
+
         # disable everything by default
         self.disable_all()
         
@@ -222,6 +228,7 @@ class EquipmentWindow(wx.Panel):
         self.FCE.Enable(False)
         self.squad.Enable(False)
         self.amph.Enable(False)
+        self.ceiling.Enable(False)
         # reset the FCE choices
         FCE_choices = ["none", "stereoscopic rangefinder", "laser rangefinder", 
                         "early thermal optics", "thermal optics",]
@@ -287,6 +294,13 @@ class EquipmentWindow(wx.Panel):
             self.amph.Enable(True)
             FCE_choices = ["none", "optical", "small radar","medium radar","large radar"]
             self.FCE.Set(FCE_choices)
+        elif type == "Aircraft":
+            self.op_range.Enable(True)
+            self.weight.Enable(True)
+            self.speed.Enable(True)
+            self.ammo_store.Enable(True)
+            self.crew.Enable(True)
+            self.ceiling.Enable(True)
         else: # inf or inf AT or inf arty or inf AD
             self.ammo_store.Enable(True)
             self.crew.Enable(True)
@@ -317,6 +331,8 @@ class EquipmentWindow(wx.Panel):
             self.equip_type.SetSelection(self.equip_type.FindString("AD"))
         elif data.type == "SP AD":
             self.equip_type.SetSelection(self.equip_type.FindString("SP AD"))
+        elif data.type == "AIR":
+            self.equip_type.SetSelection(self.equip_type.FindString("Aircraft"))
         
         self.disable_by_type(None)
         
@@ -336,6 +352,8 @@ class EquipmentWindow(wx.Panel):
             self.FCE.SetSelection(self.FCE.FindString(data.fire_control))
         if self.squad.IsEnabled():
             self.squad.SetValue(str(data.squad))
+        if self.ceiling.IsEnabled():
+            self.ceiling.SetValue(str(data.ceiling))
         if self.amph.IsEnabled():
             if data.amphibious:
                 self.amph.SetValue(True)
@@ -417,6 +435,7 @@ class EquipmentWindow(wx.Panel):
         self.FCE.SetSelection(0)
         self.squad.SetValue("")
         self.amph.SetValue(False)
+        self.ceiling.SetValue("")
         # clear the weapons list
         for i,weapon_entry in enumerate(self.weaps):
             self.weaps[i].Set([""] + self.gdb.weaps_db.names) #update choices
@@ -462,6 +481,8 @@ class EquipmentWindow(wx.Panel):
             squad = float(self.squad.GetValue())
         if self.amph.IsEnabled():
             amphibious = self.amph.GetValue()
+        if self.ceiling.IsEnabled():
+            ceiling = float(self.ceiling.GetValue())
         # generate the new equipment entry
         if type == "Infantry":
             new_equip = db_equipment.equipment_inf(name, weapons, ammo_store, crew)
@@ -493,6 +514,8 @@ class EquipmentWindow(wx.Panel):
             new_equip = db_equipment.equipment_spad(name, weapons, range, weight, 
                                                     speed, ammo_store, crew, armour,
                                                     FCE, amphibious,)
+        elif type == "Aircraft":
+            new_equip = db_equipment.equipment_aircraft(name,weapons,range,weight,speed,ammo_store,crew,ceiling)
         else:
             return
         # make the directory in case it does not exist

@@ -1,7 +1,7 @@
 !!python/object:db_formation.formation
 name: (UK) C Sqdn, 14th Kings Hussars
 type: mech
-CEV: 1.8
+CEV: 2.33
 personnel: 76
 faction: UK
 equipment:

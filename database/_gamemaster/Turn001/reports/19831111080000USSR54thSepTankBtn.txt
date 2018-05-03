@@ -1,0 +1,23 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (USSR) 54th Sep Tank Btn
+ACTIVITY      Attacking
+EFFECTIVE     87% combat power
+DISPOSITION   84% PERSONNEL | 82% VEHICLES
+LOCATION      Wedding
+SITUATION
+              Losses:
+                -2   BRDM-2         
+                -4   T-64A          
+                -1   AK-74          
+                -1   GAZ-66         
+                 0   URAL 375 POL   
+               -20   PERSONNEL      
+
+              Current:
+                 1   BRDM-2         
+                27   T-64A          
+                13   AK-74          
+                 6   GAZ-66         
+                 3   URAL 375 POL   
+
+PERSONNEL:    103

@@ -1,0 +1,21 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (BRD) 1st West Berlin Police
+ACTIVITY      delay defense
+EFFECTIVE     91% combat power
+DISPOSITION   84% PERSONNEL | 70% VEHICLES
+LOCATION      Zehlendorf
+SITUATION
+              Losses:
+               -12   G3A3           
+               -79   Golf Mk1       
+                 0   M72A2 (BRD)    
+               -13   P1             
+              -104   PERSONNEL      
+
+              Current:
+               273   G3A3           
+               507   Golf Mk1       
+                64   M72A2 (BRD)    
+               619   P1             
+
+PERSONNEL:    1,463

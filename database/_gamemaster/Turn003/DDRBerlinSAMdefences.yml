@@ -1,0 +1,44 @@
+!!python/object:db_formation.formation
+CEV: 1.9
+NoTLIData:
+- Truck
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  JifnsIyt/UA=
+OLI_ad: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  JifnsIyt/UA=
+OLI_afv: 0
+OLI_air: 0
+OLI_arty: 0
+OLI_at: 0
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  2iiYuOD3/kA=
+OLI_inf: 0
+equipment:
+  2K12 Kub: 23
+  Truck: 118
+faction: DDR
+name: (DDR) Berlin SAM defences
+personnel: 193
+personnel_base: 200
+type: inf
+vehicles: 23
+vehicles_base: 24

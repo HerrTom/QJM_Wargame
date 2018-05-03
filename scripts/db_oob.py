@@ -61,7 +61,9 @@ class oob_db():
             with open(fid) as f:
                 self.forms.append(yaml.load(f))
             self.forms[-1].GenOLI(self.equip_db)
-            self.forms[-1].BaseStats()
+            # only run the base stats if they do not exist
+            if not hasattr(self.forms[-1],'personnel_base'):
+                self.forms[-1].BaseStats()
         
         self.forms_db = db_formation.formation_list(self.forms)
         
@@ -73,7 +75,9 @@ class oob_db():
             with open(fid) as f:
                 self.gm_forms.append(yaml.load(f))
             self.gm_forms[-1].GenOLI(self.equip_db)
-            self.gm_forms[-1].BaseStats()
+            # only run the base stats if they do not exist
+            if not hasattr(self.gm_forms[-1],'personnel_base'):
+                self.gm_forms[-1].BaseStats()
         self.gm_forms_db = db_formation.formation_list(self.gm_forms)
     
     def load_groups(self,):

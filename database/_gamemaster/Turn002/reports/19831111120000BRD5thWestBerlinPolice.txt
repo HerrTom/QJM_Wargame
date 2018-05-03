@@ -1,0 +1,21 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (BRD) 5th West Berlin Police
+ACTIVITY      prepared defense
+EFFECTIVE     99% combat power
+DISPOSITION   97% PERSONNEL | 94% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+                -4   G3A3           
+               -44   Golf Mk1       
+                 0   M72A2 (BRD)    
+                -7   P1             
+               -55   PERSONNEL      
+
+              Current:
+               296   G3A3           
+               676   Golf Mk1       
+                66   M72A2 (BRD)    
+               653   P1             
+
+PERSONNEL:    1,691

@@ -1,0 +1,37 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (UK) 1st Btn, Kings Regiment
+ACTIVITY      Attacking
+EFFECTIVE     90% combat power
+DISPOSITION   89% PERSONNEL | 91% VEHICLES
+LOCATION      Spandau
+SITUATION
+              Losses:
+                 0   2in SBML       
+                -5   Carl Gustav    
+               -28   FN FAL         
+                -2   FN MAG         
+                 0   FV120 Spartan MCT
+                -3   FV432          
+                 0   FV432 81mm     
+                 0   FV432 RARDEN   
+                 0   Fox CVR(W)     
+                 0   LAAD Javelin   
+                 0   MILAN          
+                -1   Wombat 120mm RR
+               -51   PERSONNEL      
+
+              Current:
+                 6   2in SBML       
+                13   Carl Gustav    
+               224   FN FAL         
+                16   FN MAG         
+                 4   FV120 Spartan MCT
+                 5   FV432          
+                 8   FV432 81mm     
+                 4   FV432 RARDEN   
+                 8   Fox CVR(W)     
+                 4   LAAD Javelin   
+                 6   MILAN          
+                 5   Wombat 120mm RR
+
+PERSONNEL:    421

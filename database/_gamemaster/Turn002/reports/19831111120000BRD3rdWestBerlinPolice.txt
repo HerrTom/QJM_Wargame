@@ -1,0 +1,21 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (BRD) 3rd West Berlin Police
+ACTIVITY      delay defense
+EFFECTIVE     84% combat power
+DISPOSITION   79% PERSONNEL | 60% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                -2   G3A3           
+               -41   Golf Mk1       
+                -2   M72A2 (BRD)    
+                -8   P1             
+               -53   PERSONNEL      
+
+              Current:
+               284   G3A3           
+               432   Golf Mk1       
+                59   M72A2 (BRD)    
+               602   P1             
+
+PERSONNEL:    1,377

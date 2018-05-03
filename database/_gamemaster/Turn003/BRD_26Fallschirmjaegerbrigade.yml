@@ -1,0 +1,17 @@
+!!python/object:db_formation.formation
+name: (BRD) Luftlandebrigade 26 "Saarland"
+type: inf
+CEV: 2.0
+personnel: 2500
+faction: BRD
+equipment:
+    G3A3: 1316
+    TOW: 82
+    Rh202: 48
+    MILAN: 24
+    Iltis: 92
+    Kraka: 112
+    120mm mortar: 8
+    PzF-44-1: 44
+    M72A2: 112
+    MG3: 104

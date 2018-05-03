@@ -1,0 +1,8 @@
+!!python/object:db_equipment.equipment_infad
+ammo_store: 2
+crew: 1
+name: 9K32 Strela-2
+nation: Soviet
+weapons:
+- 9K32
+- AK-74

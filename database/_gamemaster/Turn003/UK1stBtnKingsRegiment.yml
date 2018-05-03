@@ -1,0 +1,60 @@
+!!python/object:db_formation.formation
+CEV: 2.33
+NoTLIData:
+- LAAD Javelin
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  UNUlHIB2qUA=
+OLI_ad: 0
+OLI_afv: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  eeXqpfVFcUA=
+OLI_air: 0
+OLI_arty: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  3rtPNgMhhEA=
+OLI_at: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  dIkUcprooUA=
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  sQ5xyMGIskA=
+OLI_inf: 46.449522018457365
+equipment:
+  2in SBML: 6
+  Carl Gustav: 15
+  FN FAL: 202
+  FN MAG: 13
+  FV120 Spartan MCT: 4
+  FV432: 0
+  FV432 81mm: 6
+  FV432 RARDEN: 3
+  Fox CVR(W): 6
+  LAAD Javelin: 4
+  MILAN: 3
+  Wombat 120mm RR: 5
+faction: UK
+name: (UK) 1st Btn, Kings Regiment
+personnel: 364
+personnel_base: 472
+type: mech
+vehicles: 19
+vehicles_base: 32

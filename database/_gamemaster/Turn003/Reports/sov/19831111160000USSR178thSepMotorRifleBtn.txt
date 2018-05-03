@@ -1,0 +1,43 @@
+DATE AND TIME 1983-11-11 16:00:00
+UNIT          (USSR) 178th Sep Motor Rifle Btn
+ACTIVITY      Attacking
+EFFECTIVE     73% combat power
+DISPOSITION   83% PERSONNEL | 49% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                -1   BRDM-2         
+               -18   BTR-60PB       
+                 0   2B11           
+                -2   9K32 Strela-2  
+                -1   9K113 Konkurs  
+                 0   9K115 Metis    
+                -3   RPG-7V         
+                -2   AGS-17         
+                -5   RPK-74         
+               -18   AK-74          
+                 0   PKM            
+                 0   UAZ-469        
+                -1   GAZ-66         
+                -1   URAL 375       
+                -1   URAL 375 POL   
+               -79   PERSONNEL      
+
+              Current:
+                 2   BRDM-2         
+                16   BTR-60PB       
+                 8   2B11           
+                 7   9K32 Strela-2  
+                 3   9K113 Konkurs  
+                 9   9K115 Metis    
+                32   RPG-7V         
+                 4   AGS-17         
+                22   RPK-74         
+               171   AK-74          
+                 9   PKM            
+                 3   UAZ-469        
+                14   GAZ-66         
+                 3   URAL 375       
+                 1   URAL 375 POL   
+
+PERSONNEL:    399

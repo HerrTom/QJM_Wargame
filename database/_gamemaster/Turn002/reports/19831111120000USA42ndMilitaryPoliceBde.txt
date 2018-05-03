@@ -1,0 +1,23 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (USA) 42nd Military Police Bde
+ACTIVITY      prepared defense
+EFFECTIVE     93% combat power
+DISPOSITION   94% PERSONNEL | 0% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+               -15   M-16           
+                 0   M-60 MMG       
+                 0   M151           
+                -4   M72 LAW        
+                -2   Truck          
+               -21   PERSONNEL      
+
+              Current:
+             1,134   M-16           
+               120   M-60 MMG       
+                46   M151           
+               163   M72 LAW        
+               107   Truck          
+
+PERSONNEL:    1,740

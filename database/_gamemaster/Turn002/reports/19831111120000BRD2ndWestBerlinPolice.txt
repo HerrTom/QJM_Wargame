@@ -1,0 +1,22 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (BRD) 2nd West Berlin Police
+ACTIVITY      delay defense
+EFFECTIVE     97% combat power
+DISPOSITION   94% PERSONNEL | 88% VEHICLES
+LOCATION      Neukoeln
+SITUATION
+			UNIT HAS BEEN OVERRUN!
+              Losses:
+                -8   G3A3           
+               -86   Golf Mk1       
+                 0   M72A2 (BRD)    
+               -13   P1             
+              -107   PERSONNEL      
+
+              Current:
+               292   G3A3           
+               634   Golf Mk1       
+                66   M72A2 (BRD)    
+               647   P1             
+
+PERSONNEL:    1,639

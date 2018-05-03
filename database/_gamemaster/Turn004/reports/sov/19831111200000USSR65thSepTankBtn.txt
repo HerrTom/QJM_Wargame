@@ -1,0 +1,23 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (USSR) 65th Sep Tank Btn
+ACTIVITY      Attacking
+EFFECTIVE     97% combat power
+DISPOSITION   98% PERSONNEL | 97% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                 0   AK-74          
+                 0   BRDM-2         
+                 0   GAZ-66         
+                 0   T-64A          
+                 0   URAL 375 POL   
+                 0   PERSONNEL      
+
+              Current:
+                14   AK-74          
+                 3   BRDM-2         
+                 7   GAZ-66         
+                30   T-64A          
+                 3   URAL 375 POL   
+
+PERSONNEL:    120

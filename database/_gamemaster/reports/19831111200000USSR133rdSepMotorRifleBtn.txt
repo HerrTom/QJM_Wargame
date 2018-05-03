@@ -1,0 +1,39 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (USSR) 133rd Sep Motor Rifle Btn
+ACTIVITY      Attacking
+EFFECTIVE     85% combat power
+DISPOSITION   93% PERSONNEL | 81% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                 0   2B9            
+                 0   9K32 Strela-2  
+                 0   AGS-17         
+                -2   AK-74          
+                -1   BMP-1P         
+                 0   BRDM-2         
+                 0   GAZ-66         
+                 0   PKM            
+                 0   RPG-7V         
+                 0   RPK-74         
+                 0   UAZ-469        
+                 0   URAL 375       
+                 0   URAL 375 POL   
+                -4   PERSONNEL      
+
+              Current:
+                 8   2B9            
+                 9   9K32 Strela-2  
+                 6   AGS-17         
+               178   AK-74          
+                26   BMP-1P         
+                 3   BRDM-2         
+                15   GAZ-66         
+                17   PKM            
+                34   RPG-7V         
+                26   RPK-74         
+                 3   UAZ-469        
+                 3   URAL 375       
+                 2   URAL 375 POL   
+
+PERSONNEL:    425

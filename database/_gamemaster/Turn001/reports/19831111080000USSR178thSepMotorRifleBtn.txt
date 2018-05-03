@@ -1,0 +1,43 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (USSR) 178th Sep Motor Rifle Btn
+ACTIVITY      Attacking
+EFFECTIVE     81% combat power
+DISPOSITION   89% PERSONNEL | 65% VEHICLES
+LOCATION      Wedding
+SITUATION
+              Losses:
+                -1   BRDM-2         
+               -12   BTR-60PB       
+                 0   2B11           
+                 0   9K32 Strela-2  
+                -1   9K113 Konkurs  
+                 0   9K115 Metis    
+                -1   RPG-7V         
+                 0   AGS-17         
+                -5   RPK-74         
+               -14   AK-74          
+                 0   PKM            
+                 0   UAZ-469        
+                -2   GAZ-66         
+                -1   URAL 375       
+                 0   URAL 375 POL   
+               -53   PERSONNEL      
+
+              Current:
+                 2   BRDM-2         
+                22   BTR-60PB       
+                 8   2B11           
+                 9   9K32 Strela-2  
+                 3   9K113 Konkurs  
+                 9   9K115 Metis    
+                34   RPG-7V         
+                 6   AGS-17         
+                22   RPK-74         
+               175   AK-74          
+                 9   PKM            
+                 3   UAZ-469        
+                13   GAZ-66         
+                 3   URAL 375       
+                 2   URAL 375 POL   
+
+PERSONNEL:    425

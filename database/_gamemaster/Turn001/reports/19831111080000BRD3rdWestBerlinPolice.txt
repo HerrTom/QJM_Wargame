@@ -1,0 +1,21 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (BRD) 3rd West Berlin Police
+ACTIVITY      fortified defense
+EFFECTIVE     87% combat power
+DISPOSITION   82% PERSONNEL | 66% VEHICLES
+LOCATION      Reinickendorf
+SITUATION
+              Losses:
+               -14   G3A3           
+               -50   P1             
+                -5   M72A2 (BRD)    
+              -247   Golf Mk1       
+              -316   PERSONNEL      
+
+              Current:
+               286   G3A3           
+               610   P1             
+                61   M72A2 (BRD)    
+               473   Golf Mk1       
+
+PERSONNEL:    1,430

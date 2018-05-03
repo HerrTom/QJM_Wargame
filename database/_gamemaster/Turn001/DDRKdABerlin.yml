@@ -1,0 +1,24 @@
+!!python/object:db_formation.formation
+CEV: 0.66
+NoTLIData: []
+OLI: 5056.037857100867
+OLI_ad: 0
+OLI_afv: 0
+OLI_arty: 324.1997735058165
+OLI_at: 670.7756680621178
+OLI_base: 5056.037857100867
+OLI_inf: 4061.062415532933
+equipment:
+  BTR-152: 36
+  Granatwerfer 82: 9
+  MPi-KM: 240
+  RPG-7V: 15
+  RPK: 30
+  SPG-9: 9
+faction: DDR
+name: (DDR) KdA Berlin
+personnel: 402
+personnel_base: 402
+type: inf
+vehicles: 36
+vehicles_base: 36

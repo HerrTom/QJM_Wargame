@@ -1,0 +1,29 @@
+!!python/object:db_formation.formation
+CEV: 1.18
+NoTLIData:
+- Hotchkiss M201
+OLI: 15152.46272801875
+OLI_ad: 1055.0713898515116
+OLI_afv: 0
+OLI_arty: 935.1985900309212
+OLI_at: 4118.409733877121
+OLI_base: 17892.208112229666
+OLI_inf: 9043.783014259197
+equipment:
+  FAMAS F-1: 407
+  HS-831A: 7
+  Hotchkiss M201: 22
+  LRAC F1: 66
+  M40A1 RR: 2
+  MILAN: 14
+  MO-120: 6
+  NF-1: 79
+  TDA 81mm: 8
+  VAB: 53
+faction: FRA
+name: (FRA) 46e Regiment d'Infanterie
+personnel: 874
+personnel_base: 938
+type: mech
+vehicles: 53
+vehicles_base: 68

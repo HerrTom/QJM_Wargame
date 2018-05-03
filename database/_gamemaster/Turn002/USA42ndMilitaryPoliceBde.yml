@@ -1,0 +1,25 @@
+!!python/object:db_formation.formation
+CEV: 1.8
+NoTLIData:
+- M151
+- Truck
+OLI: 2497.5985741461923
+OLI_ad: 0
+OLI_afv: 0
+OLI_arty: 0
+OLI_at: 2124.029518956432
+OLI_base: 2694.1343432977
+OLI_inf: 373.5690551897601
+equipment:
+  M-16: 1134
+  M-60 MMG: 120
+  M151: 46
+  M72 LAW: 163
+  Truck: 107
+faction: USA
+name: (USA) 42nd Military Police Bde
+personnel: 1740
+personnel_base: 1860
+type: inf
+vehicles: 0
+vehicles_base: 1

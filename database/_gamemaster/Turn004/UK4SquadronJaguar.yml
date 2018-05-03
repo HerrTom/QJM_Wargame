@@ -1,0 +1,20 @@
+!!python/object:db_formation.formation
+CEV: 2.33
+NoTLIData: []
+OLI: 10508.03087771454
+OLI_ad: 0
+OLI_afv: 0
+OLI_air: 10508.03087771454
+OLI_arty: 0
+OLI_at: 0
+OLI_base: 12609.637053257447
+OLI_inf: 0
+equipment:
+  Jaguar GR1 (Mk 83): 15
+faction: BRD
+name: (UK) 4 Squadron, Jaguar
+personnel: 15
+personnel_base: 18
+type: mech
+vehicles: 15
+vehicles_base: 18

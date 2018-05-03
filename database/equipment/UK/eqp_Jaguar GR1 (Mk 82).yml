@@ -1,0 +1,16 @@
+!!python/object:db_equipment.equipment_aircraft
+ammo_store: 5
+ceiling: 45900.0
+crew: 1
+name: Jaguar GR1 (Mk 82)
+nation: UK
+range: 908
+speed: 1700.0
+weapons:
+- Mark 82
+- Mark 82
+- Mark 82
+- Mark 82
+- Mark 82
+- DEFA
+weight: 7.0

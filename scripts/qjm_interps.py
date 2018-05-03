@@ -178,6 +178,15 @@ def MBE(barrels):
         return 4.18
 
 
+def Calibre_From_Weight(weight):
+    data = loadtxt("../database/lookup_tables/weight_calibre.csv",delimiter=',',
+            skiprows=1)
+    weight_pts = data[:,0]
+    calibre_pts = data[:,1]
+    calibre_interp = interp1d(weight_pts,calibre_pts,'slinear',fill_value='extrapolate')
+    return calibre_interp(weight)
+
+
 def ASE(AmmoRatio):
     InterpAmmo = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 1, 100]
     InterpASE = [0, 0.2, 0.5, 0.75, 0.85, 0.9, 0.95, 1, 1]

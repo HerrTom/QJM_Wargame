@@ -1,0 +1,22 @@
+!!python/object:db_formation.formation
+CEV: 0.66
+NoTLIData: []
+OLI: 1151.1598675755808
+OLI_ad: 0
+OLI_afv: 0
+OLI_arty: 0
+OLI_at: 848.4724045085296
+OLI_base: 1203.2395374108369
+OLI_inf: 302.68746306705117
+equipment:
+  G3A3: 288
+  Golf Mk1: 613
+  M72A2 (BRD): 65
+  P1: 643
+faction: BRD
+name: (BRD) 4th West Berlin Police
+personnel: 1609
+personnel_base: 1746
+type: inf
+vehicles: 613
+vehicles_base: 720

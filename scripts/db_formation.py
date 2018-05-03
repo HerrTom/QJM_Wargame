@@ -11,10 +11,12 @@ import qjm_interps
 
 def make_safe_filename(s):
     def safe_char(c):
+        if c == '"':
+            return ""
         if c.isalnum():
             return c
         else:
-            return "_"
+            return ""
     return "".join(safe_char(c) for c in s).rstrip("_")
 
 def ListToFormattedString(alist):
@@ -57,11 +59,9 @@ class formation():
             del frm.equip_list
         os.makedirs(path, exist_ok=True)
         # filter the filename so it's acceptable
-        filename = self.name
-        for c in r'[]/\;,><&*:%=+@!#^()|?^':
-            filename = filename.replace(c,'')
+        filename = make_safe_filename(self.name)
         # output the yaml file containing the equipment
-        with open("/{}{}.yml".format(path,filename),'w+') as f:
+        with open("{}\\{}.yml".format(path,filename),'w+') as f:
             yaml.dump(self, f, default_flow_style=False)
     
     def SITREP(self,loss_dict={"N/A": 0},activity='Attacking',
@@ -103,8 +103,9 @@ class formation():
         "Anti-tank:   {:,.0f}\n"
         "Artillery:   {:,.0f}\n"
         "Air defense: {:,.0f}\n"
+        "Aircraft:    {:,.0f}\n"
         "No TLI for: {}\n").format(self.name,self.OLI,self.OLI_inf,self.OLI_afv,self.OLI_at,
-                                        self.OLI_arty,self.OLI_ad,
+                                        self.OLI_arty,self.OLI_ad,self.OLI_air,
                                         ListToFormattedString(self.NoTLIData))
     
     def BaseStats(self):
@@ -120,6 +121,7 @@ class formation():
         self.OLI_at     = 0 # anti tank
         self.OLI_arty   = 0 # artillery
         self.OLI_ad     = 0 # air defense
+        self.OLI_air    = 0 # aircraft
         
         self.vehicles = 0
         
@@ -147,13 +149,15 @@ class formation():
                 self.OLI_arty += qty * equip_TLI
             elif equip_type in ["AD", "SP AD"]:
                 self.OLI_ad += qty * equip_TLI
+            elif equip_type in ["AIR"]:
+                self.OLI_air += qty * equip_TLI
             # while we're at it, let's also calculate the vehicles in the unit
             # classify the equipment by category
-            if equip_type in ["APC", "IFV", "AFV", "SP AT", "SP Artillery", "SP AD"]:
+            if equip_type in ["APC", "IFV", "AFV", "SP AT", "SP Artillery", "SP AD", "AIR"]:
                 self.vehicles += qty
                 #print("{}: {}".format(equip,qty))
                 
-    def casualties(self,power_ratio,mission,day=True,duration=24,exposure=1):
+    def casualties(self,power_ratio,mission,day=True,duration=24,exposure=1,pers=None):
         # power_ratio is combat power ratio of friendly to enemy
         # mission is mission string - attack, prepared defence, etc
         # day is boolean - daytime or nighttime
@@ -161,7 +165,10 @@ class formation():
         # exposure is percentage of formation engaged 
 
         # calculate the strength/size factor
-        factor_size = qjm_interps.casualty_size_factor(self.personnel)
+        if pers is None:
+            factor_size = qjm_interps.casualty_size_factor(self.personnel)
+        else:
+            factor_size = qjm_interps.casualty_size_factor(pers)
         #op_pts = [1000, 3, 2.5, 1.5, 0.83, 0.6, 0.45, 0.35, 0.25, 0.2, 0.15]
         #op_factor_pts = [0, 0.7, 0.8, 0.9, 1.0 ,1.1, 1.2, 1.3, 1.4, 1.5, 1.6]
         #op_interp = interp1d(op_pts, op_factor_pts, fill_value='extrapolate')
@@ -178,10 +185,11 @@ class formation():
         else:
             factor_day = 0.5
         
-        duration_factor = duration/24
-        
-        casualty_rate = casualty_base * factor_size * factor_opposition * factor_day * duration_factor * exposure
+        base_rate = casualty_base * factor_size * factor_opposition * factor_day * exposure
+        casualty_rate = 1-(1-(base_rate))**(duration/24) # 1-(1-R)^d for modifying time based probability, default is per day
         print("Casualty rate: {:.1f}% for {}".format(casualty_rate*100,self.name))
+        print("Base daily rate: {:.1f}%".format(base_rate*100))
+        print("Factors: base:{} size:{} opp:{} day:{}".format(casualty_base,factor_size,factor_opposition,factor_day))
         # create the losses dictionary
         loss_dict = Counter()
         pers_losses = 0
@@ -284,14 +292,15 @@ class formation_list():
         if name_list is str: # handle if there is only a string input
             name_list = [name_list]
         for name in name_list:
-            formation = self.formation_by_name(name)
-            CEV = formation.CEV
-            OLI.total += formation.OLI
-            OLI.inf += formation.OLI_inf
-            OLI.afv += formation.OLI_afv
-            OLI.at += formation.OLI_at
-            OLI.arty += formation.OLI_arty
-            OLI.ad += formation.OLI_ad
+            form = self.formation_by_name(name)
+            CEV = form.CEV
+            OLI.total += form.OLI
+            OLI.inf += form.OLI_inf
+            OLI.afv += form.OLI_afv
+            OLI.at += form.OLI_at
+            OLI.arty += form.OLI_arty
+            OLI.ad += form.OLI_ad
+            OLI.air += form.OLI_air
         return OLI
     
     def find_no_entries(self,):

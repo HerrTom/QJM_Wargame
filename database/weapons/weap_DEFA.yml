@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 5200
+TLI: 1137411.617366378
+accuracy: 0.7
+ammo: 30x113mm
+barrels: 1
+calibre: 30.0
+muzzle_vel: 815.0
+name: DEFA
+range: 2500
+rate_of_fire: 1300
+rf_multiple: 4
+rie: 1.0

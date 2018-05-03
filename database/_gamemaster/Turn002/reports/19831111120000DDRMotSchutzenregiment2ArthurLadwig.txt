@@ -1,0 +1,73 @@
+DATE AND TIME 1983-11-11 12:00:00
+UNIT          (DDR) Mot Schutzenregiment 2 "Arthur Ladwig"
+ACTIVITY      Attacking
+EFFECTIVE     95% combat power
+DISPOSITION   97% PERSONNEL | 91% VEHICLES
+LOCATION      Neukoeln
+SITUATION
+              Losses:
+                 0   2B11           
+                 0   2S1 Gvozdika   
+                 0   9K14P Malyutka 
+                 0   9K31 Strela-1  
+                 0   9K32 Strela-2  
+                 0   AGS-17         
+                 0   BMP-1          
+                 0   BRDM-2         
+                 0   BRDM-2 9P111   
+                 0   BRDM-2U        
+                 0   BRM-1          
+                 0   BTR-60PA (FAC) 
+                -5   BTR-70         
+                 0   Eng Vehicle    
+                 0   GAZ-66         
+                -6   MPi-KM         
+                 0   MT-55          
+                 0   PKM            
+                 0   PRP-3          
+                -1   RPG-7V         
+                -1   RPK            
+                 0   SPG-9          
+                 0   T-55A          
+                 0   TMM            
+                 0   UAZ-469        
+                 0   Ural 375       
+                 0   Ural 375 POL   
+                 0   ZIL-130        
+                -1   ZIL-131        
+                 0   ZSU-23-4       
+               -19   PERSONNEL      
+
+              Current:
+                24   2B11           
+                18   2S1 Gvozdika   
+                12   9K14P Malyutka 
+                 4   9K31 Strela-1  
+                30   9K32 Strela-2  
+                18   AGS-17         
+                 3   BMP-1          
+                20   BRDM-2         
+                 9   BRDM-2 9P111   
+                 3   BRDM-2U        
+                 1   BRM-1          
+                 1   BTR-60PA (FAC) 
+               124   BTR-70         
+                24   Eng Vehicle    
+                64   GAZ-66         
+               790   MPi-KM         
+                 1   MT-55          
+                26   PKM            
+                 1   PRP-3          
+               143   RPG-7V         
+               100   RPK            
+                21   SPG-9          
+                40   T-55A          
+                 4   TMM            
+                22   UAZ-469        
+                56   Ural 375       
+                25   Ural 375 POL   
+                14   ZIL-130        
+                34   ZIL-131        
+                 4   ZSU-23-4       
+
+PERSONNEL:    2,243

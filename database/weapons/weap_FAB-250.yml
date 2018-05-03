@@ -1,0 +1,7 @@
+!!python/object:db_weapons.weapon_bomb
+RF: 1
+TLI: 2773.2000000000003
+accuracy: 0.4
+ammo: FAB-250
+calibre: 250.0
+name: FAB-250

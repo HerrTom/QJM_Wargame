@@ -1,0 +1,25 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (FRA) 11e Regiment d'Chasseurs
+ACTIVITY      fortified defense
+EFFECTIVE     90% combat power
+DISPOSITION   89% PERSONNEL | 87% VEHICLES
+LOCATION      Reinickendorf
+SITUATION
+              Losses:
+                -5   AMX-30B        
+                -1   AMX-10PC       
+                -3   AMX-10P        
+                -5   FAMAS F-1      
+                -1   NF-1           
+                -2   LRAC F1        
+               -41   PERSONNEL      
+
+              Current:
+                48   AMX-30B        
+                 0   AMX-10PC       
+                10   AMX-10P        
+                86   FAMAS F-1      
+                16   NF-1           
+                11   LRAC F1        
+
+PERSONNEL:    347

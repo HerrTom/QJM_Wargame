@@ -1,0 +1,8 @@
+!!python/object:db_formation.formation
+name: (BRD) 4th Strike Wing
+type: mech
+CEV: 1.6
+personnel: 24
+faction: BRD
+equipment:
+    F-4F Phantom II (Mk 84): 12

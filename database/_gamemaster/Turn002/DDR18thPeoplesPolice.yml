@@ -1,0 +1,25 @@
+!!python/object:db_formation.formation
+CEV: 1.18
+NoTLIData: []
+OLI: 538.7294333501379
+OLI_ad: 0
+OLI_afv: 0
+OLI_arty: 324.1997735058165
+OLI_at: 197.09991217951523
+OLI_base: 2255.0255590547913
+OLI_inf: 17.4297476648062
+equipment:
+  BRDM-2: 0
+  BTR-152: 0
+  Granatwerfer 82: 9
+  MPi-KM: 34
+  RPG-7V: 5
+  RPK: 6
+  SPG-9: 2
+faction: DDR
+name: (DDR) 18th People's Police
+personnel: 73
+personnel_base: 159
+type: inf
+vehicles: 0
+vehicles_base: 18

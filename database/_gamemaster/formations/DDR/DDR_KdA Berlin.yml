@@ -1,7 +1,7 @@
 !!python/object:db_formation.formation
 name: (DDR) KdA Berlin
 type: inf
-CEV: 0.4
+CEV: 0.66
 personnel: 402
 faction: DDR
 equipment:

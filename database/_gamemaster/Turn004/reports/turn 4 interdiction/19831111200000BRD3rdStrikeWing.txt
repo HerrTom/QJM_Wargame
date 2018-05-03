@@ -1,0 +1,15 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (BRD) 3rd Strike Wing
+ACTIVITY      Attacking
+EFFECTIVE     50% combat power
+DISPOSITION   50% PERSONNEL | 50% VEHICLES
+LOCATION      East Germany
+SITUATION
+              Losses:
+                -1   F-4F Phantom II (Mk 84)
+                -2   PERSONNEL      
+
+              Current:
+                 6   F-4F Phantom II (Mk 84)
+
+PERSONNEL:    12

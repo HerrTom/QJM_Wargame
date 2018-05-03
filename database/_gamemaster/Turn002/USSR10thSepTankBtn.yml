@@ -1,0 +1,47 @@
+!!python/object:db_formation.formation
+CEV: 1.9
+NoTLIData:
+- GAZ-66
+- URAL 375 POL
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  IauVFqb55UA=
+OLI_ad: 0
+OLI_afv: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  anb2na/u5UA=
+OLI_arty: 0
+OLI_at: 0
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  TJ5pVjOC50A=
+OLI_inf: 87.70222435279817
+equipment:
+  AK-74: 11
+  BRDM-2: 2
+  GAZ-66: 6
+  T-64A: 29
+  URAL 375 POL: 3
+faction: USSR
+name: (USSR) 10th Sep Tank Btn
+personnel: 110
+personnel_base: 123
+type: mech
+vehicles: 31
+vehicles_base: 34

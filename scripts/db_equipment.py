@@ -528,3 +528,53 @@ class equipment_apc():
         CL = 1
         self.TLI = (((WEAP+WEAP_SQUAD) * MOF * RA) + PF * ARMF) * AME * CL
 
+class equipment_aircraft():
+    type = "AIR"
+    def __init__(self, name, weapons, range, weight, speed, ammo_store, crew, ceiling):
+        self.name = name
+        self.weapons = weapons
+        self.range = range
+        self.weight = weight
+        self.speed = speed
+        self.ammo_store = ammo_store
+        self.crew = crew
+        self.ceiling = ceiling
+        self.nation = ""
+
+    def __repr__(self):
+        return '{}({} @{:,.0f})'.format(self.__class__.__name__,self.name, self.TLI)
+
+    def GenTLI(self, weapdb):
+        # get the weapons
+        WEAP = 0
+
+        for i, weapname in enumerate(self.weapons):
+            idx = weapdb.names.index(weapname)
+            if i == 0:
+                factor = 1
+                weapRF = weapdb.weapons[idx].RF
+            elif i == 1:
+                factor = 0.5
+            elif i == 3:
+                factor = 0.33
+            else:
+                factor = i / 4
+            WEAP += weapdb.weapons[idx].TLI / Di * factor * 0.25 # all aircraft weapons degraded by .25
+            #WEAP += weapdb.weapons[idx].TLI / Di * 0.25 # all aircraft weapons degraded by .25 - remove degradation of redundant weapons?
+            
+        MOF = 0.15 * (500 + 0.1*(max(0,self.speed-500)) + 0.01*(max(0,self.speed-1500)))**0.5 # max clips the value at zero
+        RA = 0.08 * (self.range)**0.5
+        PF = self.weight / 4 * (2 * self.weight)**0.5 / 2 # half PF for aircraft
+        # parse the armour value
+        FCE = 1
+        RFE = 1
+        ASE = 1
+        CL = 1 + 0.02*min(0,(self.ceiling-30000)/1000) + 0.005*max(0,(self.ceiling-30000)/1000) # +.005 for each 1k ft above 30k, -0.02 for each 1k ft below 30k
+
+        #print("Aircraft | WEAP",WEAP,"| CL",CL,"| MOF",MOF,"| RA",RA)
+
+        self.TLI = ((WEAP * MOF * RA) + PF) * RFE * FCE * ASE * CL
+
+        #print('---',self.name,'---')
+        #printvars(WEAP,MOF,RA,PF,ARMF,RFE,FCE,ASE,AME,CL)
+        #print('TLI',self.TLI)

@@ -1,0 +1,39 @@
+DATE AND TIME 1983-11-11 16:00:00
+UNIT          (USSR) 133rd Sep Motor Rifle Btn
+ACTIVITY      Attacking
+EFFECTIVE     87% combat power
+DISPOSITION   94% PERSONNEL | 83% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+                 0   BRDM-2         
+                -6   BMP-1P         
+                 0   2B9            
+                 0   9K32 Strela-2  
+                -1   RPG-7V         
+                 0   AGS-17         
+                -1   RPK-74         
+                -9   AK-74          
+                -1   PKM            
+                 0   UAZ-469        
+                 0   GAZ-66         
+                -1   URAL 375       
+                 0   URAL 375 POL   
+               -27   PERSONNEL      
+
+              Current:
+                 3   BRDM-2         
+                27   BMP-1P         
+                 8   2B9            
+                 9   9K32 Strela-2  
+                34   RPG-7V         
+                 6   AGS-17         
+                26   RPK-74         
+               180   AK-74          
+                17   PKM            
+                 3   UAZ-469        
+                15   GAZ-66         
+                 3   URAL 375       
+                 2   URAL 375 POL   
+
+PERSONNEL:    429

@@ -1,0 +1,53 @@
+!!python/object:db_formation.formation
+CEV: 1.9
+NoTLIData:
+- GAZ-66
+- PRP-3
+- UAZ-469
+- URAL 375 POL
+- Ural 375
+- ZIL-131
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  J53EwvijuEA=
+OLI_ad: 0
+OLI_afv: 0
+OLI_arty: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  J53EwvijuEA=
+OLI_at: 0
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  7S3QZAcXukA=
+OLI_inf: 0
+equipment:
+  2S1 Gvozdika: 17
+  GAZ-66: 10
+  PRP-3: 1
+  UAZ-469: 1
+  URAL 375 POL: 2
+  Ural 375: 31
+  ZIL-131: 3
+faction: USSR
+name: (USSR) 79th Sep Artillery Btn
+personnel: 118
+personnel_base: 128
+type: mech
+vehicles: 17
+vehicles_base: 18

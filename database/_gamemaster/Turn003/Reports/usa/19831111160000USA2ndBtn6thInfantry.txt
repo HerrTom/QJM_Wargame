@@ -1,0 +1,31 @@
+DATE AND TIME 1983-11-11 16:00:00
+UNIT          (USA) 2nd Btn, 6th Infantry
+ACTIVITY      delay defense
+EFFECTIVE     100% combat power
+DISPOSITION   99% PERSONNEL | 100% VEHICLES
+LOCATION      Wilmersdorf
+SITUATION
+              Losses:
+                 0   M113A1         
+                -2   M-16           
+                 0   M-60 MMG       
+                -2   M72 LAW        
+                 0   M106           
+                 0   M151 TOW       
+                 0   M47 Dragon     
+                 0   FIM-92 Stinger 
+                 0   Truck          
+                -4   PERSONNEL      
+
+              Current:
+                24   M113A1         
+               301   M-16           
+                33   M-60 MMG       
+                52   M72 LAW        
+                 6   M106           
+                12   M151 TOW       
+                12   M47 Dragon     
+                 2   FIM-92 Stinger 
+                14   Truck          
+
+PERSONNEL:    550

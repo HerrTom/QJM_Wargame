@@ -1,7 +1,7 @@
 !!python/object:db_formation.formation
 name: (USA) F Company, 40th Armor
 type: mech
-CEV: 1.8
+CEV: 2.59
 personnel: 96
 faction: USA
 equipment:

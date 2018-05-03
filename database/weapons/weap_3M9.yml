@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_aam
+RF: 10
+TLI: 5746637.4
+ammo: 3M9
+barrels: 1
+calibre: 400.0
+enhancement: 1.0
+guidance: SARH
+min_range: 15.0
+muzzle_vel: 950.0
+name: 3M9
+range: 30000
+rie: 1

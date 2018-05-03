@@ -1,7 +1,7 @@
 !!python/object:db_formation.formation
 name: (DDR) 19th People's Police
 type: inf
-CEV: 0.6
+CEV: 1.18
 personnel: 159
 faction: DDR
 equipment:

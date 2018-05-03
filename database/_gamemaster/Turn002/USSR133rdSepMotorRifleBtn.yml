@@ -1,0 +1,58 @@
+!!python/object:db_formation.formation
+CEV: 1.9
+NoTLIData:
+- 9K32 Strela-2
+- GAZ-66
+- UAZ-469
+- URAL 375
+- URAL 375 POL
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  3YzyH5F9wUA=
+OLI_ad: 0
+OLI_afv: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  74AMk4eCuUA=
+OLI_arty: 1140.449768182937
+OLI_at: 979.9885132471766
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  +aI3JkAKyUA=
+OLI_inf: 304.16591849178235
+equipment:
+  2B9: 8
+  9K32 Strela-2: 9
+  AGS-17: 4
+  AK-74: 179
+  BMP-1P: 21
+  BRDM-2: 2
+  GAZ-66: 14
+  PKM: 17
+  RPG-7V: 34
+  RPK-74: 26
+  UAZ-469: 3
+  URAL 375: 3
+  URAL 375 POL: 2
+faction: USSR
+name: (USSR) 133rd Sep Motor Rifle Btn
+personnel: 406
+personnel_base: 456
+type: mech
+vehicles: 23
+vehicles_base: 36

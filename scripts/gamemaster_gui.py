@@ -189,7 +189,7 @@ class GamemasterWindow(wx.Panel):
         roads_sizer.Add(self.road_quality,1,wx.EXPAND|wx.ALL,3)
         datar2_sizer.Add(roads_sizer,1,wx.EXPAND|wx.ALL,5)
         # posture
-        def_pos_choices = ["hasty","prepared","fortified"]
+        def_pos_choices = ["hasty","prepared","fortified", "delay","attack"]
         posture_sizer = wx.StaticBoxSizer(wx.VERTICAL,main_panel,"Defender posture:")
         self.posture = wx.Choice(main_panel,-1,choices=def_pos_choices)
         self.posture.SetSelection(0)
@@ -267,6 +267,9 @@ class GamemasterWindow(wx.Panel):
         self.defender_oli.SetLabel("Total defender OLI: {:>9,.0f}".format(self.oli_def))
     
     def OnAttackerSide(self,event):
+        # set both OLI values to zero
+        self.attacker_oli.SetLabel("Total attacker OLI: {:>9,.0f}".format(0))
+        self.defender_oli.SetLabel("Total defender OLI: {:>9,.0f}".format(0))
         self.attacker_list.DeleteAllItems() # clear items
         side = self.attacker_side.GetString(self.attacker_side.GetSelection())
         if side == "":
@@ -378,6 +381,9 @@ class GamemasterWindow(wx.Panel):
         wyg = 1
         wyy = 1
         
+        print(attacker_oli.air, attacker_oli.ad)
+        print(defender_oli.air, defender_oli.ad)
+
         # attacker data:
         Wain = attacker_oli.inf
         Waat = attacker_oli.at
@@ -507,7 +513,7 @@ class GamemasterWindow(wx.Panel):
             adv_river = mc.river_obstacle_factor(river)
             adv_rate = adv_base * adv_roads * adv_terr * adv_river
             atk_losses = self.GetTopLevelParent().gdb.gm_forms_db.forms[index].casualties(P_ratio,'attack',day=daytime,
-                                            duration=self.duration.GetValue())
+                                            duration=self.duration.GetValue(),pers=N_attacker)
             print("{} advance rate: {:.1f} km/day".format(self.GetTopLevelParent().gdb.gm_forms_db.forms[index].name,adv_rate))
             print("---")
             print(self.GetTopLevelParent().gdb.gm_forms_db.forms[index].SITREP(atk_losses,activity='Attacking',datestr="{} {}".format(dateval,timeval),location=location,writefolder=gmdir+"\\reports"))
@@ -515,7 +521,7 @@ class GamemasterWindow(wx.Panel):
         for name in defenders:
             index = self.GetTopLevelParent().gdb.gm_forms_db.names.index(name)
             def_losses = self.GetTopLevelParent().gdb.gm_forms_db.forms[index].casualties(P_ratio,def_posture,day=daytime,
-                                            duration=self.duration.GetValue(),exposure=frontage)
+                                            duration=self.duration.GetValue(),exposure=frontage,pers=N_defender)
             print("---")
             print(self.GetTopLevelParent().gdb.gm_forms_db.forms[index].SITREP(def_losses,activity=def_posture+' defense',datestr="{} {}".format(dateval,timeval),location=location,writefolder=gmdir+"\\reports"))
         

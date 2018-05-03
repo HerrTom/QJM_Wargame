@@ -1,0 +1,23 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (USSR) 65th Sep Tank Btn
+ACTIVITY      Attacking
+EFFECTIVE     94% combat power
+DISPOSITION   93% PERSONNEL | 94% VEHICLES
+LOCATION      Tiergarten
+SITUATION
+              Losses:
+                 0   BRDM-2         
+                -2   T-64A          
+                -2   AK-74          
+                 0   GAZ-66         
+                 0   URAL 375 POL   
+                -8   PERSONNEL      
+
+              Current:
+                 3   BRDM-2         
+                29   T-64A          
+                12   AK-74          
+                 7   GAZ-66         
+                 3   URAL 375 POL   
+
+PERSONNEL:    115

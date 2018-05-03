@@ -1,0 +1,25 @@
+!!python/object:db_formation.formation
+CEV: 1.18
+NoTLIData: []
+OLI: 16416.25552497246
+OLI_ad: 0
+OLI_afv: 0
+OLI_arty: 2348.575838439394
+OLI_at: 1939.8447158374893
+OLI_base: 16855.68361518751
+OLI_inf: 12127.834970695578
+equipment:
+  2B11: 24
+  BTR-152: 109
+  MPi-KM: 345
+  PKM: 36
+  RPG-7V: 48
+  RPK: 48
+  SPG-9: 21
+faction: DDR
+name: (DDR) Grenzregiment 44
+personnel: 890
+personnel_base: 901
+type: inf
+vehicles: 109
+vehicles_base: 113

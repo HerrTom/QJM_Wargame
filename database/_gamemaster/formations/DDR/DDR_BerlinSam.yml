@@ -1,0 +1,9 @@
+!!python/object:db_formation.formation
+name: (DDR) Berlin SAM defences
+type: inf
+CEV: 1.9
+personnel: 200
+faction: DDR
+equipment:
+    2K12 Kub: 24
+    Truck: 120

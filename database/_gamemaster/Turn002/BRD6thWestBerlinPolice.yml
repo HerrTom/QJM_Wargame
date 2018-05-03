@@ -1,0 +1,22 @@
+!!python/object:db_formation.formation
+CEV: 0.66
+NoTLIData: []
+OLI: 1055.710263170846
+OLI_ad: 0
+OLI_afv: 0
+OLI_arty: 0
+OLI_at: 796.2587180772355
+OLI_base: 1203.2395374108369
+OLI_inf: 259.45154509361066
+equipment:
+  G3A3: 271
+  Golf Mk1: 498
+  M72A2 (BRD): 61
+  P1: 624
+faction: BRD
+name: (BRD) 6th West Berlin Police
+personnel: 1454
+personnel_base: 1746
+type: inf
+vehicles: 498
+vehicles_base: 720

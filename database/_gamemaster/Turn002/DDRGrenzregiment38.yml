@@ -1,0 +1,25 @@
+!!python/object:db_formation.formation
+CEV: 1.18
+NoTLIData: []
+OLI: 15069.538498093778
+OLI_ad: 0
+OLI_afv: 0
+OLI_arty: 2348.575838439394
+OLI_at: 1911.0215242713962
+OLI_base: 16855.68361518751
+OLI_inf: 10809.94113538299
+equipment:
+  2B11: 24
+  BTR-152: 97
+  MPi-KM: 338
+  PKM: 35
+  RPG-7V: 47
+  RPK: 48
+  SPG-9: 21
+faction: DDR
+name: (DDR) Grenzregiment 38
+personnel: 855
+personnel_base: 901
+type: inf
+vehicles: 97
+vehicles_base: 113

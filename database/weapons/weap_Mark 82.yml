@@ -1,0 +1,7 @@
+!!python/object:db_weapons.weapon_bomb
+RF: 1
+TLI: 2725.2000000000003
+accuracy: 0.4
+ammo: Mk 83
+calibre: 227.0
+name: Mark 82

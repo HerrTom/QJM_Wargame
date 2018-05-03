@@ -1,0 +1,37 @@
+DATE AND TIME 1983-11-11 20:00:00
+UNIT          (UK) 1st Btn, Royal Welch Fusiliers
+ACTIVITY      Attacking
+EFFECTIVE     97% combat power
+DISPOSITION   97% PERSONNEL | 97% VEHICLES
+LOCATION      Spandau
+SITUATION
+              Losses:
+                 0   2in SBML       
+                -1   Carl Gustav    
+                -3   FN FAL         
+                -1   FN MAG         
+                 0   FV120 Spartan MCT
+                 0   FV432          
+                 0   FV432 81mm     
+                 0   FV432 RARDEN   
+                 0   Fox CVR(W)     
+                 0   LAAD Javelin   
+                 0   MILAN          
+                 0   Wombat 120mm RR
+                -7   PERSONNEL      
+
+              Current:
+                 6   2in SBML       
+                16   Carl Gustav    
+               246   FN FAL         
+                17   FN MAG         
+                 4   FV120 Spartan MCT
+                 7   FV432          
+                 8   FV432 81mm     
+                 4   FV432 RARDEN   
+                 8   Fox CVR(W)     
+                 4   LAAD Javelin   
+                 6   MILAN          
+                 6   Wombat 120mm RR
+
+PERSONNEL:    458

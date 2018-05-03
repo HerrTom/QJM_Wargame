@@ -1,7 +1,7 @@
 !!python/object:db_formation.formation
 name: (FRA) 11e Regiment d'Chasseurs
 type: arm
-CEV: 1.8
+CEV: 1.18
 personnel: 388
 faction: FRA
 equipment:

@@ -1,0 +1,17 @@
+DATE AND TIME 1983-11-11 08:00:00
+UNIT          (DDR) 40th Artillery Brigade
+ACTIVITY      Attacking
+EFFECTIVE     99% combat power
+DISPOSITION   98% PERSONNEL | 0% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+                 0   M-46           
+                -1   D-20           
+                -8   PERSONNEL      
+
+              Current:
+                36   M-46           
+                17   D-20           
+
+PERSONNEL:    424

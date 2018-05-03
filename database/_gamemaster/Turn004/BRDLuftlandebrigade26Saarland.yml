@@ -1,0 +1,37 @@
+!!python/object:db_formation.formation
+CEV: 2.0
+NoTLIData:
+- TOW
+- Rh202
+- Iltis
+- Kraka
+- 120mm mortar
+- PzF-44-1
+- M72A2
+- MG3
+OLI: 3147.936774804945
+OLI_ad: 0
+OLI_afv: 0
+OLI_air: 0
+OLI_arty: 0
+OLI_at: 2738.2262670247364
+OLI_base: 3147.936774804945
+OLI_inf: 409.7105077802086
+equipment:
+  120mm mortar: 8
+  G3A3: 1316
+  Iltis: 92
+  Kraka: 112
+  M72A2: 112
+  MG3: 104
+  MILAN: 24
+  PzF-44-1: 44
+  Rh202: 48
+  TOW: 82
+faction: BRD
+name: (BRD) Luftlandebrigade 26 "Saarland"
+personnel: 2500
+personnel_base: 2500
+type: inf
+vehicles: 0
+vehicles_base: 0

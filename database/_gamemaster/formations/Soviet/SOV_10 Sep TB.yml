@@ -1,7 +1,7 @@
 !!python/object:db_formation.formation
 name: (USSR) 10th Sep Tank Btn
 type: mech
-CEV: 1.2
+CEV: 1.90
 personnel: 123
 faction: USSR
 equipment:
