@@ -1,0 +1,23 @@
+!!python/object:db_formation.formation
+CEV: 2.59
+NoTLIData:
+- Truck
+OLI: 2705.026922209685
+OLI_ad: 0
+OLI_afv: 0
+OLI_air: 0
+OLI_arty: 2699.82916103365
+OLI_at: 0
+OLI_base: 2705.026922209685
+OLI_inf: 5.1977611760350095
+equipment:
+  M-16: 18
+  M109: 8
+  Truck: 8
+faction: USA
+name: (USA) Battery C, 94th Field Artillery
+personnel: 58
+personnel_base: 58
+type: mech
+vehicles: 8
+vehicles_base: 8

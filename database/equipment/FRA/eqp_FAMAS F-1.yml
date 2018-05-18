@@ -1,0 +1,9 @@
+!!python/object:db_equipment.equipment_inf
+ammo:
+- 300
+ammo_store: 150
+crew: 1
+name: FAMAS F-1
+nation: FRA
+weapons:
+- FAMAS F-1

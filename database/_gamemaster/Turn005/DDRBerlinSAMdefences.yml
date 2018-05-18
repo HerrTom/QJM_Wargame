@@ -1,0 +1,22 @@
+!!python/object:db_formation.formation
+CEV: 1.9
+NoTLIData:
+- Truck
+OLI: 112954.42582979362
+OLI_ad: 112954.42582979362
+OLI_afv: 0
+OLI_air: 0
+OLI_arty: 0
+OLI_at: 0
+OLI_base: 112954.42582979362
+OLI_inf: 0
+equipment:
+  2K12 Kub: 24
+  Truck: 120
+faction: DDR
+name: (DDR) Berlin SAM defences
+personnel: 200
+personnel_base: 200
+type: inf
+vehicles: 24
+vehicles_base: 24

@@ -1,0 +1,33 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (BRD) Luftlandebrigade 26 "Saarland"
+ACTIVITY      fortified defense
+EFFECTIVE     100% combat power
+DISPOSITION   100% PERSONNEL | 0% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                 0   120mm mortar   
+                -9   G3A3           
+                -1   Iltis          
+                 0   Kraka          
+                 0   M72A2          
+                 0   MG3            
+                 0   MILAN          
+                 0   PzF-44-1       
+                 0   Rh202          
+                 0   TOW            
+               -10   PERSONNEL      
+
+              Current:
+                 8   120mm mortar   
+             1,307   G3A3           
+                91   Iltis          
+               112   Kraka          
+               112   M72A2          
+               104   MG3            
+                24   MILAN          
+                44   PzF-44-1       
+                48   Rh202          
+                82   TOW            
+
+PERSONNEL:    2,490

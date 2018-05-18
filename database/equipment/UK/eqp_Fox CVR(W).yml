@@ -1,4 +1,7 @@
 !!python/object:db_equipment.equipment_afv
+ammo:
+- 162
+- 2000
 ammo_store: 162
 amphibious: false
 armour: aluminium

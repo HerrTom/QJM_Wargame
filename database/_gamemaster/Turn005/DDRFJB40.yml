@@ -1,0 +1,27 @@
+!!python/object:db_formation.formation
+CEV: 1.9
+NoTLIData: []
+OLI: 5537.717055073959
+OLI_ad: 1775.7694022196818
+OLI_afv: 0
+OLI_air: 0
+OLI_arty: 782.8586128131312
+OLI_at: 2703.5524680826293
+OLI_base: 5537.717055073959
+OLI_inf: 275.5365719585175
+equipment:
+  2B11: 8
+  9K113 Konkurs: 6
+  9K32 Strela-2: 9
+  AGS-17: 6
+  MPi-KMS: 219
+  RPG-7D: 27
+  RPK: 27
+  SPG-9: 3
+faction: DDR
+name: (DDR) FJB 40
+personnel: 359
+personnel_base: 359
+type: inf
+vehicles: 0
+vehicles_base: 0

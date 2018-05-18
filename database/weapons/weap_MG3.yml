@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 4800
+TLI: 4566.552212923187
+accuracy: 0.7
+ammo: 7.62x51
+barrels: 1
+calibre: 7.62
+muzzle_vel: 840.0
+name: MG3
+range: 600
+rate_of_fire: 1200
+rf_multiple: 4
+rie: 0.8

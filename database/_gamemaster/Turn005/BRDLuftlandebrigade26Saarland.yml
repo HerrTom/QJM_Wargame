@@ -1,0 +1,56 @@
+!!python/object:db_formation.formation
+CEV: 2.0
+NoTLIData:
+- Rh202
+- Iltis
+- Kraka
+- M252
+- MG3
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  a4VtuSZP0UA=
+OLI_ad: 0
+OLI_afv: 0
+OLI_air: 0
+OLI_arty: 0
+OLI_at: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  iOV3QLno0EA=
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  a4VtuSZP0UA=
+OLI_inf: 409.7105077802086
+equipment:
+  G3A3: 1316
+  Iltis: 92
+  Kraka: 112
+  M151 TOW: 82
+  M252: 8
+  M72 LAW: 112
+  MG3: 104
+  MILAN: 24
+  PzF-44: 44
+  Rh202: 48
+faction: BRD
+name: (BRD) Luftlandebrigade 26 "Saarland"
+personnel: 2500
+personnel_base: 2500
+type: inf
+vehicles: 82
+vehicles_base: 82

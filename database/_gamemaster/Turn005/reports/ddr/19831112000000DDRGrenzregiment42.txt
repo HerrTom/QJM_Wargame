@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (DDR) Grenzregiment 42
+ACTIVITY      Attacking
+EFFECTIVE     93% combat power
+DISPOSITION   97% PERSONNEL | 91% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+                 0   2B11           
+                -6   BTR-152        
+                 0   MPi-KM         
+                 0   PKM            
+                 0   RPG-7V         
+                 0   RPK            
+                 0   SPG-9          
+               -12   PERSONNEL      
+
+              Current:
+                24   2B11           
+               103   BTR-152        
+               342   MPi-KM         
+                36   PKM            
+                48   RPG-7V         
+                48   RPK            
+                21   SPG-9          
+
+PERSONNEL:    875

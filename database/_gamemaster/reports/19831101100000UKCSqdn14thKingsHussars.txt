@@ -1,0 +1,19 @@
+DATE AND TIME 1983-11-01 10:00:00
+UNIT          (UK) C Sqdn, 14th Kings Hussars
+ACTIVITY      prepared defense
+EFFECTIVE     78% combat power
+DISPOSITION   76% PERSONNEL | 75% VEHICLES
+LOCATION      Mölln
+SITUATION
+              Losses:
+                -1   FV432          
+                 0   FV120 Spartan MCT
+                -4   Chieftain Mk VI
+               -18   PERSONNEL      
+
+              Current:
+                 0   FV432          
+                 1   FV120 Spartan MCT
+                14   Chieftain Mk VI
+
+PERSONNEL:    58

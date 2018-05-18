@@ -1,0 +1,19 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (UK) C Sqdn, 14th Kings Hussars
+ACTIVITY      fortified defense
+EFFECTIVE     65% combat power
+DISPOSITION   66% PERSONNEL | 65% VEHICLES
+LOCATION       Spandau
+SITUATION
+              Losses:
+                -1   Chieftain Mk VI
+                 0   FV120 Spartan MCT
+                 0   FV432          
+                -4   PERSONNEL      
+
+              Current:
+                12   Chieftain Mk VI
+                 1   FV120 Spartan MCT
+                 0   FV432          
+
+PERSONNEL:    50

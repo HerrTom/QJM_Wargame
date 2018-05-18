@@ -1,0 +1,31 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (USA) 2nd Btn, 6th Infantry
+ACTIVITY      fortified defense
+EFFECTIVE     259% combat power
+DISPOSITION   95% PERSONNEL | 88% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                 0   FIM-92 Stinger 
+                -1   M-16           
+                 0   M-60 MMG       
+                 0   M106           
+                 0   M113A1         
+                 0   M151 TOW       
+                 0   M47 Dragon     
+                 0   M72 LAW        
+                 0   Truck          
+                -1   PERSONNEL      
+
+              Current:
+                 2   FIM-92 Stinger 
+               291   M-16           
+                32   M-60 MMG       
+                 5   M106           
+                20   M113A1         
+                12   M151 TOW       
+                11   M47 Dragon     
+                51   M72 LAW        
+                14   Truck          
+
+PERSONNEL:    526

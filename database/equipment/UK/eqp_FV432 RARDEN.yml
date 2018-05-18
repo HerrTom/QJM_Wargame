@@ -1,9 +1,12 @@
 !!python/object:db_equipment.equipment_afv
+ammo:
+- 162
+- 2000
 ammo_store: 162
 amphibious: false
 armour: aluminium
 crew: 3
-fire_control: ''
+fire_control: stereoscopic rangefinder
 name: FV432 RARDEN
 nation: UK
 range: 580

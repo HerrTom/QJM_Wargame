@@ -1,0 +1,55 @@
+!!python/object:db_formation.formation
+CEV: 2.59
+NoTLIData:
+- FIM-92 Stinger
+- Truck
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  1L4JlaYEv0A=
+OLI_ad: 0
+OLI_afv: 0
+OLI_air: 0
+OLI_arty: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  z2D3wonckEA=
+OLI_at: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  gCTIA54bskA=
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  1L4JlaYEv0A=
+OLI_inf: 2225.8989336346567
+equipment:
+  FIM-92 Stinger: 2
+  M-16: 303
+  M-60 MMG: 33
+  M106: 6
+  M113A1: 24
+  M151 TOW: 12
+  M47 Dragon: 12
+  M72 LAW: 54
+  Truck: 14
+faction: USA
+name: (USA) 2nd Btn, 6th Infantry
+personnel: 554
+personnel_base: 554
+type: mech
+vehicles: 42
+vehicles_base: 42

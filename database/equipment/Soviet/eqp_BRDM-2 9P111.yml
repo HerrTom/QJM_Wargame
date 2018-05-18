@@ -1,5 +1,10 @@
 !!python/object:db_equipment.equipment_spat
-ammo_store: 10
+ammo:
+- 4
+- 4
+- 4
+- 4
+ammo_store: 16
 amphibious: false
 armour: steel
 crew: 3

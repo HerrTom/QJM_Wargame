@@ -1,0 +1,7 @@
+!!python/object:db_weapons.weapon_bomb
+RF: 1
+TLI: 904060.0
+accuracy: 0.4
+ammo: B61
+calibre: 15000000.0
+name: B61 (15 kT)

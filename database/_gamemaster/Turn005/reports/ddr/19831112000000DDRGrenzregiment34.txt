@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (DDR) Grenzregiment 34
+ACTIVITY      Attacking
+EFFECTIVE     88% combat power
+DISPOSITION   94% PERSONNEL | 84% VEHICLES
+LOCATION       Spandau
+SITUATION
+              Losses:
+                 0   2B11           
+                -1   BTR-152        
+                -3   MPi-KM         
+                 0   PKM            
+                 0   RPG-7V         
+                 0   RPK            
+                 0   SPG-9          
+                -5   PERSONNEL      
+
+              Current:
+                24   2B11           
+                95   BTR-152        
+               341   MPi-KM         
+                35   PKM            
+                47   RPG-7V         
+                48   RPK            
+                20   SPG-9          
+
+PERSONNEL:    851

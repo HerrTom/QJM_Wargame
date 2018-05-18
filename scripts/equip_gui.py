@@ -12,7 +12,7 @@ import weapon_gui
 
 # GUI script for creating database entries
 
-weap_list_rows = 6
+weap_list_rows = 8
 
 class MatchingCombo(wx.ComboBox):
     def __init__(self,*args, **kwargs):
@@ -366,6 +366,12 @@ class EquipmentWindow(wx.Panel):
             except:
                 self.weaps[i].SetValue("")
                 pass
+            # populate the ammo list
+            try:
+                self.weaps_ammo[i].SetValue(str(data.ammo[i]))
+            except:
+                self.weaps_ammo[i].SetValue("")
+                pass
         # update the OLI display for the selected value
         self.OLIDisplay.SetLabel("OLI: {:>5,.0f}".format(data.TLI))
         
@@ -373,13 +379,19 @@ class EquipmentWindow(wx.Panel):
         # generates a list of comboboxes with rows rows
         self.weaps_box = list()
         self.weaps = list()
+        self.weaps_ammo = list()
         weapon_choices = [""] + self.gdb.weaps_db.names
         for i in range(rows):
             try:
                 if not clear:
                     entry = self.weaps[i].GetValue()
+                    try:
+                        ammo = self.ammo[i].GetValue
+                    except:
+                        ammo = -1
                 else:
                     entry = ""
+                    ammo = ""
             except:
                 entry = ""
                 pass
@@ -387,7 +399,9 @@ class EquipmentWindow(wx.Panel):
             #self.weaps.append(wx.ComboBox(self.right_panel,-1,entry,choices=weapon_choices))
             self.weaps.append(MatchingCombo(self.right_panel,-1,entry,choices=weapon_choices,
                                             style=wx.TE_PROCESS_ENTER))
+            self.weaps_ammo.append(wx.TextCtrl(self.right_panel,-1,ammo))
             self.weaps_box[-1].Add(self.weaps[-1],1,wx.ALL,0)
+            self.weaps_box[-1].Add(self.weaps_ammo[-1],0,wx.ALL,0)
             self.weaps_static.Add(self.weaps_box[-1],1,wx.ALL|wx.EXPAND,0)
         self.SendSizeEvent() # forces everything to be repainted
     
@@ -451,6 +465,11 @@ class EquipmentWindow(wx.Panel):
             potential_weap = item.GetValue()
             if potential_weap != "":
                 weapons.append(potential_weap)
+        ammo = list()
+        for item in self.weaps_ammo:
+            potential_ammo = item.GetValue()
+            if potential_ammo != "":
+                ammo.append(int(potential_ammo))
         
         # check if we are going to overwrite anything
         if self.equip_listbox.FindString(name) != -1: # returns -1 if NOT_FOUND
@@ -485,37 +504,38 @@ class EquipmentWindow(wx.Panel):
             ceiling = float(self.ceiling.GetValue())
         # generate the new equipment entry
         if type == "Infantry":
-            new_equip = db_equipment.equipment_inf(name, weapons, ammo_store, crew)
+            new_equip = db_equipment.equipment_inf(name, weapons, ammo_store, ammo, crew)
         elif type == "AFV":
             new_equip = db_equipment.equipment_afv(name, weapons, range, weight, 
-                                                    speed, ammo_store, crew, armour,
+                                                    speed, ammo_store, ammo, crew, armour,
                                                     FCE, amphibious,)
         elif type == "APC":
             new_equip = db_equipment.equipment_apc(name, weapons, range, weight, speed, ammo_store,
-                                                    crew, armour, squad, amphibious,)
+                                                   ammo, crew, armour, squad, amphibious,)
         elif type == "IFV":
             new_equip = db_equipment.equipment_ifv(name, weapons, range, weight, speed, ammo_store,
-                                                    crew, armour, FCE, squad, amphibious,)
+                                                    ammo, crew, armour, FCE, squad, amphibious,)
         elif type == "AT":
-            new_equip = db_equipment.equipment_infat(name, weapons, ammo_store, crew)
+            new_equip = db_equipment.equipment_infat(name, weapons, ammo_store, ammo, crew)
         elif type == "SP AT":
             new_equip = new_equip = db_equipment.equipment_spat(name, weapons, range, weight, 
-                                                    speed, ammo_store, crew, armour,
+                                                    speed, ammo_store, ammo, crew, armour,
                                                     amphibious,)
         elif type == "Artillery":
-            new_equip = db_equipment.equipment_infarty(name, weapons, ammo_store, crew)
+            new_equip = db_equipment.equipment_infarty(name, weapons, ammo_store, ammo, crew)
         elif type == "SP Artillery":
             new_equip = db_equipment.equipment_sparty(name, weapons, range, weight, 
-                                                    speed, ammo_store, crew, armour,
+                                                    speed, ammo_store, ammo, crew, armour,
                                                     amphibious,)
         elif type == "AD":
-            new_equip = db_equipment.equipment_infad(name, weapons, ammo_store, crew)
+            new_equip = db_equipment.equipment_infad(name, weapons, ammo_store, ammo, crew)
         elif type == "SP AD":
             new_equip = db_equipment.equipment_spad(name, weapons, range, weight, 
-                                                    speed, ammo_store, crew, armour,
+                                                    speed, ammo_store, ammo, crew, armour,
                                                     FCE, amphibious,)
         elif type == "Aircraft":
-            new_equip = db_equipment.equipment_aircraft(name,weapons,range,weight,speed,ammo_store,crew,ceiling)
+            new_equip = db_equipment.equipment_aircraft(name, weapons, range, weight, speed, 
+                                                        ammo_store, ammo, crew, ceiling)
         else:
             return
         # make the directory in case it does not exist

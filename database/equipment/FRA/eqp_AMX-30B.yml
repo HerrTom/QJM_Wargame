@@ -1,4 +1,8 @@
 !!python/object:db_equipment.equipment_afv
+ammo:
+- 50
+- 600
+- 2000
 ammo_store: 56
 amphibious: false
 armour: steel

@@ -1,0 +1,73 @@
+DATE AND TIME 1983-11-01 10:00:00
+UNIT          (DDR) Mot Schutzenregiment 1 "Hans Beimler"
+ACTIVITY      Attacking
+EFFECTIVE     77% combat power
+DISPOSITION   83% PERSONNEL | 56% VEHICLES
+LOCATION      Mölln
+SITUATION
+              Losses:
+                -3   T-55A          
+                 0   2S1 Gvozdika   
+                 0   2B11           
+                -1   9K31 Strela-1  
+                -1   ZSU-23-4       
+                -2   9K32 Strela-2  
+                -1   BRDM-2 9P111   
+                -1   9K14P Malyutka 
+                -3   SPG-9          
+               -21   RPG-7V         
+                 0   AGS-17         
+               -11   RPK            
+               -81   MPi-KM         
+                -1   PKM            
+               -11   BRDM-2         
+                 0   BRM-1          
+               -86   BTR-70         
+                 0   BTR-60PA (FAC) 
+                 0   PRP-3          
+                -3   BRDM-2U        
+                -1   BMP-1          
+                -4   UAZ-469        
+               -16   GAZ-66         
+                 0   ZIL-130        
+                -6   Ural 375       
+                -4   ZIL-131        
+                -3   Ural 375 POL   
+                 0   MT-55          
+                -1   TMM            
+                -3   Eng Vehicle    
+              -399   PERSONNEL      
+
+              Current:
+                37   T-55A          
+                18   2S1 Gvozdika   
+                24   2B11           
+                 3   9K31 Strela-1  
+                 3   ZSU-23-4       
+                28   9K32 Strela-2  
+                 8   BRDM-2 9P111   
+                11   9K14P Malyutka 
+                18   SPG-9          
+               127   RPG-7V         
+                18   AGS-17         
+                91   RPK            
+               725   MPi-KM         
+                26   PKM            
+                10   BRDM-2         
+                 1   BRM-1          
+                57   BTR-70         
+                 1   BTR-60PA (FAC) 
+                 1   PRP-3          
+                 1   BRDM-2U        
+                 2   BMP-1          
+                18   UAZ-469        
+                51   GAZ-66         
+                14   ZIL-130        
+                51   Ural 375       
+                32   ZIL-131        
+                23   Ural 375 POL   
+                 1   MT-55          
+                 3   TMM            
+                21   Eng Vehicle    
+
+PERSONNEL:    1,921

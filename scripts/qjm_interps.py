@@ -76,7 +76,7 @@ def PTS_From_Calibre(calibre):
         10500,
         10750,
         10900]
-    interp = interp1d(InterpCalibre, InterpPTS)
+    interp = interp1d(InterpCalibre, InterpPTS, fill_value='extrapolate')
     # return int(pchip_interpolate(InterpCalibre,InterpPTS,calibre))
     return int(interp(calibre))
 
@@ -144,7 +144,9 @@ def RF_From_Calibre(calibre):
         2,
         2,
         2]
-    return int(pchip_interpolate(InterpCalibre, InterpRF, calibre))
+    interp = interp1d(InterpCalibre, InterpRF, fill_value='extrapolate')
+    #return int(pchip_interpolate(InterpCalibre, InterpRF, calibre))
+    return int(interp(calibre))
 
 
 def MBE(barrels):

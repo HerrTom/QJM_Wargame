@@ -1,0 +1,37 @@
+DATE AND TIME 1983-11-01 10:00:00
+UNIT          (UK) 1st Btn, Kings Regiment
+ACTIVITY      prepared defense
+EFFECTIVE     89% combat power
+DISPOSITION   90% PERSONNEL | 81% VEHICLES
+LOCATION      Mölln
+SITUATION
+              Losses:
+                -4   FV432          
+                -1   Fox CVR(W)     
+                 0   FV432 RARDEN   
+                -1   FV432 81mm     
+                 0   MILAN          
+                 0   FV120 Spartan MCT
+               -26   FN FAL         
+                -2   FN MAG         
+                 0   2in SBML       
+                 0   Carl Gustav    
+                 0   Wombat 120mm RR
+                -1   LAAD Javelin   
+               -46   PERSONNEL      
+
+              Current:
+                 4   FV432          
+                 7   Fox CVR(W)     
+                 4   FV432 RARDEN   
+                 7   FV432 81mm     
+                 6   MILAN          
+                 4   FV120 Spartan MCT
+               226   FN FAL         
+                16   FN MAG         
+                 6   2in SBML       
+                18   Carl Gustav    
+                 6   Wombat 120mm RR
+                 3   LAAD Javelin   
+
+PERSONNEL:    426

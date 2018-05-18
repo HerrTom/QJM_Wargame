@@ -1,0 +1,37 @@
+DATE AND TIME 1983-11-01 10:00:00
+UNIT          (UK) 1st Btn, Light Infantry
+ACTIVITY      prepared defense
+EFFECTIVE     89% combat power
+DISPOSITION   91% PERSONNEL | 81% VEHICLES
+LOCATION      Mölln
+SITUATION
+              Losses:
+                -4   FV432          
+                -1   Fox CVR(W)     
+                -1   FV432 RARDEN   
+                 0   FV432 81mm     
+                 0   MILAN          
+                 0   FV120 Spartan MCT
+               -22   FN FAL         
+                -2   FN MAG         
+                 0   2in SBML       
+                -1   Carl Gustav    
+                 0   Wombat 120mm RR
+                 0   LAAD Javelin   
+               -42   PERSONNEL      
+
+              Current:
+                 4   FV432          
+                 7   Fox CVR(W)     
+                 3   FV432 RARDEN   
+                 8   FV432 81mm     
+                 6   MILAN          
+                 4   FV120 Spartan MCT
+               230   FN FAL         
+                16   FN MAG         
+                 6   2in SBML       
+                17   Carl Gustav    
+                 6   Wombat 120mm RR
+                 4   LAAD Javelin   
+
+PERSONNEL:    430

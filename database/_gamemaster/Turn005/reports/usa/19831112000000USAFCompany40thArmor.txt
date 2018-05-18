@@ -1,0 +1,19 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (USA) F Company, 40th Armor
+ACTIVITY      fortified defense
+EFFECTIVE     95% combat power
+DISPOSITION   92% PERSONNEL | 91% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+                 0   M-16           
+                 0   M113A1         
+                 0   M60A1          
+                 0   PERSONNEL      
+
+              Current:
+                 6   M-16           
+                 1   M113A1         
+                20   M60A1          
+
+PERSONNEL:    88

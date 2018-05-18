@@ -1,0 +1,15 @@
+!!python/object:db_equipment.equipment_aircraft
+ammo:
+- 1
+- 300
+ammo_store: 1
+ceiling: 60000.0
+crew: 2
+name: F-4E Phantom II (15 kt B61)
+nation: USA
+range: 680
+speed: 2370.0
+weapons:
+- B61 (15 kT)
+- M61A1 Vulcan
+weight: 13.8

@@ -1,16 +1,21 @@
 !!python/object:db_equipment.equipment_afv
-name: T-80B
-weapons:
-    - 2A46M
-    - 9K112 Kobra
-    - PKT
-    - DShK
-range: 360
-weight: 42.5
-speed: 70
+ammo:
+- 28
+- 8
+- 2000
+- 300
 ammo_store: 36
-crew: 3
+amphibious: false
 armour: reactive
-fire_control: 'laser rangefinder'
-amphibious: False
-nation: "Soviet"
+crew: 3
+fire_control: laser rangefinder
+name: T-80B
+nation: Soviet
+range: 360
+speed: 70.0
+weapons:
+- 2A46M
+- 9K112 Kobra
+- PKT
+- DShK
+weight: 42.5

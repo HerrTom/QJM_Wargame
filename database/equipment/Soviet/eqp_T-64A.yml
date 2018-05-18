@@ -1,9 +1,13 @@
 !!python/object:db_equipment.equipment_afv
+ammo:
+- 36
+- 2000
+- 300
 ammo_store: 36
+amphibious: false
 armour: early composite
 crew: 3
 fire_control: laser rangefinder
-amphibious: False
 name: T-64A
 nation: Soviet
 range: 500

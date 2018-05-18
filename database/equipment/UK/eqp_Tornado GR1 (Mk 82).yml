@@ -1,6 +1,13 @@
 !!python/object:db_equipment.equipment_aircraft
+ammo:
+- 180
+- 1
+- 1
+- 1
+- 1
+- 1
 ammo_store: 180
-ceiling: 50000
+ceiling: 50000.0
 crew: 2
 name: Tornado GR1 (Mk 82)
 nation: UK

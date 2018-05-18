@@ -1,0 +1,37 @@
+DATE AND TIME 1983-11-01 10:00:00
+UNIT          (UK) 1st Btn, Royal Welch Fusiliers
+ACTIVITY      prepared defense
+EFFECTIVE     81% combat power
+DISPOSITION   88% PERSONNEL | 78% VEHICLES
+LOCATION      Mölln
+SITUATION
+              Losses:
+                -7   FV432          
+                 0   Fox CVR(W)     
+                 0   FV432 RARDEN   
+                 0   FV432 81mm     
+                -1   MILAN          
+                 0   FV120 Spartan MCT
+               -30   FN FAL         
+                -1   FN MAG         
+                 0   2in SBML       
+                -3   Carl Gustav    
+                 0   Wombat 120mm RR
+                -1   LAAD Javelin   
+               -55   PERSONNEL      
+
+              Current:
+                 1   FV432          
+                 8   Fox CVR(W)     
+                 4   FV432 RARDEN   
+                 8   FV432 81mm     
+                 5   MILAN          
+                 4   FV120 Spartan MCT
+               222   FN FAL         
+                17   FN MAG         
+                 6   2in SBML       
+                15   Carl Gustav    
+                 6   Wombat 120mm RR
+                 3   LAAD Javelin   
+
+PERSONNEL:    417

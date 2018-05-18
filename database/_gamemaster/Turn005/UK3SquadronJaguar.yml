@@ -1,0 +1,42 @@
+!!python/object:db_formation.formation
+CEV: 2.33
+NoTLIData: []
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  5Gllw11N20A=
+OLI_ad: 0
+OLI_afv: 0
+OLI_air: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  5Gllw11N20A=
+OLI_arty: 0
+OLI_at: 0
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  5Gllw11N20A=
+OLI_inf: 0
+equipment:
+  Jaguar GR1 (Mk 83): 18
+faction: BRD
+name: (UK) 3 Squadron, Jaguar
+personnel: 18
+personnel_base: 18
+type: mech
+vehicles: 18
+vehicles_base: 18

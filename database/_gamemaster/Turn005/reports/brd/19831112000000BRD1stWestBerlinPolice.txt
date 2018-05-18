@@ -1,0 +1,21 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (BRD) 1st West Berlin Police
+ACTIVITY      fortified defense
+EFFECTIVE     91% combat power
+DISPOSITION   90% PERSONNEL | 81% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+                -1   G3A3           
+                -9   Golf Mk1       
+                 0   M72A2 (BRD)    
+                -5   P1             
+               -15   PERSONNEL      
+
+              Current:
+               289   G3A3           
+               582   Golf Mk1       
+                62   M72A2 (BRD)    
+               634   P1             
+
+PERSONNEL:    1,567

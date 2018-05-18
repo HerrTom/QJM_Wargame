@@ -1,0 +1,19 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (USA) Battery C, 94th Field Artillery
+ACTIVITY      fortified defense
+EFFECTIVE     113% combat power
+DISPOSITION   93% PERSONNEL | 100% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                -1   M-16           
+                 0   M109           
+                 0   Truck          
+                -1   PERSONNEL      
+
+              Current:
+                14   M-16           
+                 8   M109           
+                 8   Truck          
+
+PERSONNEL:    54

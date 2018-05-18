@@ -1,4 +1,6 @@
 !!python/object:db_equipment.equipment_spat
+ammo:
+- 5
 ammo_store: 5
 amphibious: false
 armour: steel

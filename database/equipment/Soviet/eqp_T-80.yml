@@ -1,7 +1,11 @@
 !!python/object:db_equipment.equipment_afv
+ammo:
+- 36
+- 2000
+- 300
 ammo_store: 36
 amphibious: false
-armour: early composite
+armour: composite
 crew: 3
 fire_control: stereoscopic rangefinder
 name: T-80

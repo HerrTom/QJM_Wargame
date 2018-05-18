@@ -276,9 +276,10 @@ class weapon_bomb():
 
     def GenTLI(self):
         calibre_corrected = qjm_interps.Calibre_From_Weight(self.calibre)
-        RF = 1
+        #RF = 2 # caps at  for large calibres
+        RF = qjm_interps.RF_From_Calibre(calibre_corrected)
         PTS = qjm_interps.PTS_From_Calibre(calibre_corrected)
-        RIE = 1
+        RIE = 100
         RN = 1
         A = self.accuracy
         RL = 1

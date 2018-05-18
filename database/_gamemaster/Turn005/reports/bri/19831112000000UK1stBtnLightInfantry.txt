@@ -1,0 +1,37 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (UK) 1st Btn, Light Infantry
+ACTIVITY      fortified defense
+EFFECTIVE     58% combat power
+DISPOSITION   75% PERSONNEL | 53% VEHICLES
+LOCATION       Spandau
+SITUATION
+              Losses:
+                 0   2in SBML       
+                -1   Carl Gustav    
+                -9   FN FAL         
+                 0   FN MAG         
+                 0   FV120 Spartan MCT
+                 0   FV432          
+                 0   FV432 81mm     
+                 0   FV432 RARDEN   
+                 0   Fox CVR(W)     
+                 0   LAAD Javelin   
+                 0   MILAN          
+                 0   Wombat 120mm RR
+               -11   PERSONNEL      
+
+              Current:
+                 6   2in SBML       
+                13   Carl Gustav    
+               191   FN FAL         
+                16   FN MAG         
+                 2   FV120 Spartan MCT
+                 0   FV432          
+                 6   FV432 81mm     
+                 3   FV432 RARDEN   
+                 6   Fox CVR(W)     
+                 3   LAAD Javelin   
+                 5   MILAN          
+                 6   Wombat 120mm RR
+
+PERSONNEL:    355

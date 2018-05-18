@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (DDR) Grenzregiment 35
+ACTIVITY      Attacking
+EFFECTIVE     97% combat power
+DISPOSITION   99% PERSONNEL | 96% VEHICLES
+LOCATION      Charlottenburg
+SITUATION
+              Losses:
+                 0   2B11           
+                -1   BTR-152        
+                 0   MPi-KM         
+                 0   PKM            
+                -1   RPG-7V         
+                -1   RPK            
+                 0   SPG-9          
+                -4   PERSONNEL      
+
+              Current:
+                24   2B11           
+               109   BTR-152        
+               348   MPi-KM         
+                36   PKM            
+                47   RPG-7V         
+                47   RPK            
+                21   SPG-9          
+
+PERSONNEL:    891

@@ -1,0 +1,50 @@
+!!python/object:db_formation.formation
+CEV: 2.33
+NoTLIData: []
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  ccs9A5+11EA=
+OLI_ad: 0
+OLI_afv: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  xQud3eON1EA=
+OLI_air: 0
+OLI_arty: 0
+OLI_at: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  PnxJjeL6UkA=
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  ccs9A5+11EA=
+OLI_inf: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  Vy92E0PAVEA=
+equipment:
+  Chieftain Mk VI: 18
+  FV120 Spartan MCT: 1
+  FV432: 1
+faction: UK
+name: (UK) C Sqdn, 14th Kings Hussars
+personnel: 76
+personnel_base: 76
+type: mech
+vehicles: 20
+vehicles_base: 20

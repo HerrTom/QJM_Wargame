@@ -1,0 +1,21 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (BRD) 3rd West Berlin Police
+ACTIVITY      fortified defense
+EFFECTIVE     98% combat power
+DISPOSITION   97% PERSONNEL | 94% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                 0   G3A3           
+               -33   Golf Mk1       
+                 0   M72A2 (BRD)    
+                -2   P1             
+               -35   PERSONNEL      
+
+              Current:
+               299   G3A3           
+               676   Golf Mk1       
+                66   M72A2 (BRD)    
+               655   P1             
+
+PERSONNEL:    1,696

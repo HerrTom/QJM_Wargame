@@ -1,5 +1,13 @@
 !!python/object:db_equipment.equipment_aircraft
-ammo_store: 5
+ammo:
+- 1
+- 1
+- 1
+- 1
+- 1
+- 150
+- 150
+ammo_store: 1
 ceiling: 45900.0
 crew: 1
 name: Jaguar GR1 (Mk 82)
@@ -12,5 +20,6 @@ weapons:
 - Mark 82
 - Mark 82
 - Mark 82
+- DEFA
 - DEFA
 weight: 7.0

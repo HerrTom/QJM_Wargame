@@ -1,4 +1,8 @@
 !!python/object:db_equipment.equipment_ifv
+ammo:
+- 40
+- 4
+- 2000
 ammo_store: 40
 amphibious: true
 armour: steel

@@ -1,0 +1,44 @@
+!!python/object:db_formation.formation
+CEV: 2.59
+NoTLIData: []
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  2PhEqE6Sx0A=
+OLI_ad: 0
+OLI_afv: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  CuNfsidlx0A=
+OLI_air: 0
+OLI_arty: 0
+OLI_at: 0
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  2PhEqE6Sx0A=
+OLI_inf: 90.30437911572098
+equipment:
+  M-16: 6
+  M113A1: 1
+  M60A1: 22
+faction: USA
+name: (USA) F Company, 40th Armor
+personnel: 96
+personnel_base: 96
+type: mech
+vehicles: 23
+vehicles_base: 23

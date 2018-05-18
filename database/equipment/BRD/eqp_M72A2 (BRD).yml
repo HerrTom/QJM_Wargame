@@ -1,4 +1,7 @@
 !!python/object:db_equipment.equipment_infat
+ammo:
+- 1
+- 200
 ammo_store: 1
 crew: 1
 name: M72A2 (BRD)

@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (USSR) 79th Sep Artillery Btn
+ACTIVITY      Attacking
+EFFECTIVE     110% combat power
+DISPOSITION   95% PERSONNEL | 94% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                -1   2S1 Gvozdika   
+                 0   GAZ-66         
+                 0   PRP-3          
+                 0   UAZ-469        
+                 0   URAL 375 POL   
+                -2   Ural 375       
+                 0   ZIL-131        
+                -6   PERSONNEL      
+
+              Current:
+                17   2S1 Gvozdika   
+                12   GAZ-66         
+                 1   PRP-3          
+                 1   UAZ-469        
+                 3   URAL 375 POL   
+                31   Ural 375       
+                 3   ZIL-131        
+
+PERSONNEL:    121

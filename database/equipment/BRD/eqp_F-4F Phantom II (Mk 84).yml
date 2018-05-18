@@ -1,4 +1,11 @@
 !!python/object:db_equipment.equipment_aircraft
+ammo:
+- 640
+- 1
+- 1
+- 1
+- 1
+- 1
 ammo_store: 640
 ceiling: 60000.0
 crew: 2

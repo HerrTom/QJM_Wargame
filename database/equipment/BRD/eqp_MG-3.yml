@@ -1,0 +1,11 @@
+!!python/object:db_equipment.equipment_inf
+ammo:
+- 2000
+- 200
+ammo_store: 2000
+crew: 2
+name: MG-3
+nation: BRD
+weapons:
+- MG3
+- G3A3

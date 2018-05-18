@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (DDR) Grenzregiment 36
+ACTIVITY      Attacking
+EFFECTIVE     98% combat power
+DISPOSITION   99% PERSONNEL | 97% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                 0   2B11           
+                -3   BTR-152        
+                -1   MPi-KM         
+                 0   PKM            
+                 0   RPG-7V         
+                 0   RPK            
+                 0   SPG-9          
+                -7   PERSONNEL      
+
+              Current:
+                24   2B11           
+               110   BTR-152        
+               347   MPi-KM         
+                36   PKM            
+                48   RPG-7V         
+                48   RPK            
+                21   SPG-9          
+
+PERSONNEL:    894

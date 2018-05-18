@@ -1,4 +1,6 @@
 !!python/object:db_equipment.equipment_inf
+ammo:
+- 200
 ammo_store: 200
 crew: 1
 name: G3A3

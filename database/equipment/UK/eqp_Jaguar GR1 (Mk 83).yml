@@ -1,4 +1,12 @@
 !!python/object:db_equipment.equipment_aircraft
+ammo:
+- 1
+- 1
+- 1
+- 1
+- 1
+- 150
+- 150
 ammo_store: 5
 ceiling: 45900.0
 crew: 1
@@ -12,5 +20,6 @@ weapons:
 - Mark 83
 - Mark 83
 - Mark 83
+- DEFA
 - DEFA
 weight: 7.0

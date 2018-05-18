@@ -1,0 +1,42 @@
+!!python/object:db_formation.formation
+CEV: 1.6
+NoTLIData: []
+OLI: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  7dePlKU92EA=
+OLI_ad: 0
+OLI_afv: 0
+OLI_air: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  7dePlKU92EA=
+OLI_arty: 0
+OLI_at: 0
+OLI_base: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  7dePlKU92EA=
+OLI_inf: 0
+equipment:
+  F-4F Phantom II (Mk 84): 12
+faction: BRD
+name: (BRD) 2nd Strike Wing
+personnel: 24
+personnel_base: 24
+type: mech
+vehicles: 12
+vehicles_base: 12

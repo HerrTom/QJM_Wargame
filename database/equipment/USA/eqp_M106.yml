@@ -1,4 +1,6 @@
 !!python/object:db_equipment.equipment_sparty
+ammo:
+- 88
 ammo_store: 88
 amphibious: true
 armour: aluminium

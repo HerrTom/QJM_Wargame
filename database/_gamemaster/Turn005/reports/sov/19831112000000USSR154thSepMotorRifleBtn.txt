@@ -1,0 +1,39 @@
+DATE AND TIME 1983-11-12 00:00:00
+UNIT          (USSR) 154th Sep Motor Rifle Btn
+ACTIVITY      Attacking
+EFFECTIVE     50% combat power
+DISPOSITION   94% PERSONNEL | 86% VEHICLES
+LOCATION      Tegel
+SITUATION
+              Losses:
+                 0   2B9            
+                 0   9K32 Strela-2  
+                 0   AGS-17         
+                -4   AK-74          
+                -3   BMP-1P         
+                 0   BRDM-2         
+                 0   GAZ-66         
+                -1   PKM            
+                 0   RPG-7V         
+                -2   RPK-74         
+                 0   UAZ-469        
+                 0   URAL 375       
+                 0   URAL 375 POL   
+               -15   PERSONNEL      
+
+              Current:
+                 8   2B9            
+                 9   9K32 Strela-2  
+                 5   AGS-17         
+               181   AK-74          
+                28   BMP-1P         
+                 3   BRDM-2         
+                14   GAZ-66         
+                17   PKM            
+                34   RPG-7V         
+                25   RPK-74         
+                 3   UAZ-469        
+                 4   URAL 375       
+                 2   URAL 375 POL   
+
+PERSONNEL:    428

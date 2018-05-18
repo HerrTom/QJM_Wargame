@@ -1,0 +1,31 @@
+DATE AND TIME 1983-11-01 10:00:00
+UNIT          (USA) 2nd Btn, 6th Infantry
+ACTIVITY      prepared defense
+EFFECTIVE     95% combat power
+DISPOSITION   99% PERSONNEL | 95% VEHICLES
+LOCATION      Mölln
+SITUATION
+              Losses:
+                -1   M113A1         
+                 0   M-16           
+                 0   M-60 MMG       
+                -1   M72 LAW        
+                 0   M106           
+                -1   M151 TOW       
+                -1   M47 Dragon     
+                 0   FIM-92 Stinger 
+                 0   Truck          
+                -7   PERSONNEL      
+
+              Current:
+                23   M113A1         
+               303   M-16           
+                33   M-60 MMG       
+                53   M72 LAW        
+                 6   M106           
+                11   M151 TOW       
+                11   M47 Dragon     
+                 2   FIM-92 Stinger 
+                14   Truck          
+
+PERSONNEL:    547

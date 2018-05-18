@@ -91,10 +91,11 @@ class equip_list():
 
 class equipment_inf():
     type = "INF"
-    def __init__(self, name, weapons, ammo_store, crew):
+    def __init__(self, name, weapons, ammo_store, ammo,  crew):
         self.name = name
         self.weapons = weapons
         self.ammo_store = ammo_store
+        self.ammo = ammo
         self.crew = crew
         self.nation = ""
 
@@ -108,25 +109,27 @@ class equipment_inf():
 
         for i, weapname in enumerate(self.weapons):
             idx = weapdb.names.index(weapname)
+            # ASE is just the MBE for infantry weapons
             if i == 0:
-                factor = 1
-                weapRF = weapdb.weapons[idx].RF
+                weap_ASE = 1
+                weap_RF = weapdb.weapons[idx].RF
             elif i == 1:
-                factor = 0.5
+                weap_ASE = 0.5
             elif i == 3:
-                factor = 0.33
+                weap_ASE = 0.33
             else:
-                factor = i / 4
-            WEAP += weapdb.weapons[idx].TLI / Di
+                weap_ASE = i / 4
+            WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
 
         self.TLI = WEAP
 
 class equipment_infat():
     type = "AT"
-    def __init__(self, name, weapons, ammo_store, crew):
+    def __init__(self, name, weapons, ammo_store, ammo,  crew):
         self.name = name
         self.weapons = weapons
         self.ammo_store = ammo_store
+        self.ammo = ammo
         self.crew = crew
         self.nation = ""
 
@@ -140,25 +143,27 @@ class equipment_infat():
 
         for i, weapname in enumerate(self.weapons):
             idx = weapdb.names.index(weapname)
+            # ASE is just the MBE for infantry weapons
             if i == 0:
-                factor = 1
-                weapRF = weapdb.weapons[idx].RF
+                weap_ASE = 1
+                weap_RF = weapdb.weapons[idx].RF
             elif i == 1:
-                factor = 0.5
+                weap_ASE = 0.5
             elif i == 3:
-                factor = 0.33
+                weap_ASE = 0.33
             else:
-                factor = i / 4
-            WEAP += weapdb.weapons[idx].TLI / Di
+                weap_ASE = i / 4
+            WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
 
         self.TLI = WEAP
 
 class equipment_infarty():
     type = "Artillery"
-    def __init__(self, name, weapons, ammo_store, crew):
+    def __init__(self, name, weapons, ammo_store, ammo,  crew):
         self.name = name
         self.weapons = weapons
         self.ammo_store = ammo_store
+        self.ammo = ammo
         self.crew = crew
         self.nation = ""
 
@@ -172,25 +177,27 @@ class equipment_infarty():
 
         for i, weapname in enumerate(self.weapons):
             idx = weapdb.names.index(weapname)
+            # ASE is just the MBE for infantry weapons
             if i == 0:
-                factor = 1
-                weapRF = weapdb.weapons[idx].RF
+                weap_ASE = 1
+                weap_RF = weapdb.weapons[idx].RF
             elif i == 1:
-                factor = 0.5
+                weap_ASE = 0.5
             elif i == 3:
-                factor = 0.33
+                weap_ASE = 0.33
             else:
-                factor = i / 4
-            WEAP += weapdb.weapons[idx].TLI / Di
+                weap_ASE = i / 4
+            WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
 
         self.TLI = WEAP
         
 class equipment_infad():
     type = "AD"
-    def __init__(self, name, weapons, ammo_store, crew):
+    def __init__(self, name, weapons, ammo_store, ammo,  crew):
         self.name = name
         self.weapons = weapons
         self.ammo_store = ammo_store
+        self.ammo = ammo
         self.crew = crew
         self.nation = ""
 
@@ -204,28 +211,30 @@ class equipment_infad():
 
         for i, weapname in enumerate(self.weapons):
             idx = weapdb.names.index(weapname)
+            # ASE is just the MBE for infantry weapons
             if i == 0:
-                factor = 1
-                weapRF = weapdb.weapons[idx].RF
+                weap_ASE = 1
+                weap_RF = weapdb.weapons[idx].RF
             elif i == 1:
-                factor = 0.5
+                weap_ASE = 0.5
             elif i == 3:
-                factor = 0.33
+                weap_ASE = 0.33
             else:
-                factor = i / 4
-            WEAP += weapdb.weapons[idx].TLI / Di
+                weap_ASE = i / 4
+            WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
 
         self.TLI = WEAP
         
 class equipment_spat():
     type = "SP AT"
-    def __init__(self, name, weapons, range, weight, speed, ammo_store, crew, armour, amphibious):
+    def __init__(self, name, weapons, range, weight, speed, ammo_store, ammo,  crew, armour, amphibious):
         self.name = name
         self.weapons = weapons
         self.range = range
         self.weight = weight
         self.speed = speed
         self.ammo_store = ammo_store
+        self.ammo = ammo
         self.crew = crew
         self.armour = armour
         self.amphibious = False
@@ -240,16 +249,21 @@ class equipment_spat():
 
         for i, weapname in enumerate(self.weapons):
             idx = weapdb.names.index(weapname)
-            if i == 0:
-                factor = 1
-                weapRF = weapdb.weapons[idx].RF
-            elif i == 1:
-                factor = 0.5
-            elif i == 3:
-                factor = 0.33
-            else:
-                factor = i / 4
-            WEAP += weapdb.weapons[idx].TLI / Di
+            # try the ammo supply factor
+            try:
+                weap_ASE = qjm_interps.ASE(self.ammo[i] / weapdb.weapons[idx].RF)
+            except:
+                if i == 0:
+                    weap_ASE = 1
+                    weap_RF = weapdb.weapons[idx].RF
+                elif i == 1:
+                    weap_ASE = 0.5
+                elif i == 3:
+                    weap_ASE = 0.33
+                else:
+                    weap_ASE = i / 4
+                pass
+            WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
             
         MOF = 0.15 * (self.speed)**0.5
         RA = 0.08 * (self.range)**0.5
@@ -258,7 +272,7 @@ class equipment_spat():
         ARMF = armour_factor(self)
         #FCE = fire_control_factor(self)
         RFE = 1
-        ASE = qjm_interps.ASE(self.ammo_store / weapRF)
+        ASE = 1
         AME = 1
         if self.amphibious:
             AME = 1.1
@@ -268,7 +282,7 @@ class equipment_spat():
 
 class equipment_spad():
     type = "SP AD" # self propelled air defense
-    def __init__(self, name, weapons, range, weight, speed, ammo_store, crew, armour,
+    def __init__(self, name, weapons, range, weight, speed, ammo_store, ammo,  crew, armour,
                     FCE, amphibious):
         self.name = name
         self.weapons = weapons
@@ -276,6 +290,7 @@ class equipment_spad():
         self.weight = weight
         self.speed = speed
         self.ammo_store = ammo_store
+        self.ammo = ammo
         self.crew = crew
         self.armour = armour
         self.fire_control = FCE
@@ -291,16 +306,21 @@ class equipment_spad():
 
         for i, weapname in enumerate(self.weapons):
             idx = weapdb.names.index(weapname)
-            if i == 0:
-                factor = 1
-                weapRF = weapdb.weapons[idx].RF
-            elif i == 1:
-                factor = 0.5
-            elif i == 3:
-                factor = 0.33
-            else:
-                factor = i / 4
-            WEAP += weapdb.weapons[idx].TLI / Di
+            # try the ammo supply factor
+            try:
+                weap_ASE = qjm_interps.ASE(self.ammo[i] / weapdb.weapons[idx].RF)
+            except:
+                if i == 0:
+                    weap_ASE = 1
+                    weap_RF = weapdb.weapons[idx].RF
+                elif i == 1:
+                    weap_ASE = 0.5
+                elif i == 3:
+                    weap_ASE = 0.33
+                else:
+                    weap_ASE = i / 4
+                pass
+            WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
             
         MOF = 0.15 * (self.speed)**0.5
         RA = 0.08 * (self.range)**0.5
@@ -309,7 +329,7 @@ class equipment_spad():
         ARMF = armour_factor(self)
         FCE = fire_control_factor_airdef(self)
         RFE = 1
-        ASE = qjm_interps.ASE(self.ammo_store / weapRF)
+        ASE = 1
         AME = 1
         if self.amphibious:
             AME = 1.1
@@ -319,7 +339,7 @@ class equipment_spad():
         
 class equipment_afv():
     type = "AFV"
-    def __init__(self, name, weapons, range, weight, speed, ammo_store, crew, armour,
+    def __init__(self, name, weapons, range, weight, speed, ammo_store, ammo,  crew, armour,
                 FCE, amphibious,):
         self.name = name
         self.weapons = weapons
@@ -327,6 +347,7 @@ class equipment_afv():
         self.weight = weight
         self.speed = speed
         self.ammo_store = ammo_store
+        self.ammo = ammo
         self.crew = crew
         self.armour = armour
         self.fire_control = FCE
@@ -342,16 +363,21 @@ class equipment_afv():
 
         for i, weapname in enumerate(self.weapons):
             idx = weapdb.names.index(weapname)
-            if i == 0:
-                factor = 1
-                weapRF = weapdb.weapons[idx].RF
-            elif i == 1:
-                factor = 0.5
-            elif i == 3:
-                factor = 0.33
-            else:
-                factor = i / 4
-            WEAP += weapdb.weapons[idx].TLI / Di * factor
+            # try the ammo supply factor
+            try:
+                weap_ASE = qjm_interps.ASE(self.ammo[i] / weapdb.weapons[idx].RF)
+            except:
+                if i == 0:
+                    weap_ASE = 1
+                    weap_RF = weapdb.weapons[idx].RF
+                elif i == 1:
+                    weap_ASE = 0.5
+                elif i == 3:
+                    weap_ASE = 0.33
+                else:
+                    weap_ASE = i / 4
+                pass
+            WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
             
         MOF = 0.15 * (self.speed)**0.5
         RA = 0.08 * (self.range)**0.5
@@ -360,7 +386,7 @@ class equipment_afv():
         ARMF = armour_factor(self)
         FCE = fire_control_factor(self)
         RFE = 1
-        ASE = qjm_interps.ASE(self.ammo_store / weapRF)
+        ASE = 1
         AME = 1
         if self.amphibious:
             AME = 1.1
@@ -374,7 +400,7 @@ class equipment_afv():
 
 class equipment_sparty():
     type = "SP Artillery"
-    def __init__(self, name, weapons, range, weight, speed, ammo_store, crew, armour,
+    def __init__(self, name, weapons, range, weight, speed, ammo_store, ammo,  crew, armour,
                 amphibious,):
         self.name = name
         self.weapons = weapons
@@ -382,6 +408,7 @@ class equipment_sparty():
         self.weight = weight
         self.speed = speed
         self.ammo_store = ammo_store
+        self.ammo = ammo
         self.crew = crew
         self.armour = armour
         self.amphibious = amphibious
@@ -396,16 +423,21 @@ class equipment_sparty():
 
         for i, weapname in enumerate(self.weapons):
             idx = weapdb.names.index(weapname)
-            if i == 0:
-                factor = 1
-                weapRF = weapdb.weapons[idx].RF
-            elif i == 1:
-                factor = 0.5
-            elif i == 3:
-                factor = 0.33
-            else:
-                factor = i / 4
-            WEAP += weapdb.weapons[idx].TLI / Di
+            # try the ammo supply factor
+            try:
+                weap_ASE = qjm_interps.ASE(self.ammo[i] / weapdb.weapons[idx].RF)
+            except:
+                if i == 0:
+                    weap_ASE = 1
+                    weap_RF = weapdb.weapons[idx].RF
+                elif i == 1:
+                    weap_ASE = 0.5
+                elif i == 3:
+                    weap_ASE = 0.33
+                else:
+                    weap_ASE = i / 4
+                pass
+            WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
             
         MOF = 0.15 * (self.speed)**0.5
         RA = 0.08 * (self.range)**0.5
@@ -413,7 +445,7 @@ class equipment_sparty():
         # parse the armour value
         ARMF = armour_factor(self)
         RFE = 1
-        ASE = qjm_interps.ASE(self.ammo_store / weapRF)
+        ASE = 1
         AME = 1
         if self.amphibious:
             AME = 1.1
@@ -423,7 +455,7 @@ class equipment_sparty():
 
 class equipment_ifv():
     type = "IFV"
-    def __init__(self, name, weapons, range, weight, speed, ammo_store, crew,
+    def __init__(self, name, weapons, range, weight, speed, ammo_store, ammo,  crew,
             armour, FCE, squad, amphibious,):
         self.name = name
         self.weapons = weapons
@@ -431,6 +463,7 @@ class equipment_ifv():
         self.weight = weight
         self.speed = speed
         self.ammo_store = ammo_store
+        self.ammo = ammo
         self.crew = crew
         self.armour = armour
         self.fire_control = FCE
@@ -449,16 +482,21 @@ class equipment_ifv():
 
         for i, weapname in enumerate(self.weapons):
             idx = weapdb.names.index(weapname)
-            if i == 0:
-                factor = 1
-                weapRF = weapdb.weapons[idx].RF
-            elif i == 1:
-                factor = 0.5
-            elif i == 3:
-                factor = 0.33
-            else:
-                factor = i / 4
-            WEAP += weapdb.weapons[idx].TLI / Di
+            # try the ammo supply factor
+            try:
+                weap_ASE = qjm_interps.ASE(self.ammo[i] / weapdb.weapons[idx].RF)
+            except:
+                if i == 0:
+                    weap_ASE = 1
+                    weap_RF = weapdb.weapons[idx].RF
+                elif i == 1:
+                    weap_ASE = 0.5
+                elif i == 3:
+                    weap_ASE = 0.33
+                else:
+                    weap_ASE = i / 4
+                pass
+            WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
 
             
         # weapons from squad
@@ -470,7 +508,7 @@ class equipment_ifv():
         ARMF = armour_factor(self)
         FCE = fire_control_factor(self)
         RFE = 1
-        ASE = qjm_interps.ASE(self.ammo_store / weapRF)
+        ASE = 1
         AME = 1
         if self.amphibious:
             AME = 1.1
@@ -479,7 +517,7 @@ class equipment_ifv():
         
 class equipment_apc():
     type = "APC"
-    def __init__(self, name, weapons, range, weight, speed, ammo_store, crew,
+    def __init__(self, name, weapons, range, weight, speed, ammo_store, ammo,  crew,
             armour, squad, amphibious):
         self.name = name
         self.weapons = weapons
@@ -487,6 +525,7 @@ class equipment_apc():
         self.weight = weight
         self.speed = speed
         self.ammo_store = ammo_store
+        self.ammo = ammo
         self.crew = crew
         self.armour = armour
         self.amphibious = amphibious
@@ -503,16 +542,21 @@ class equipment_apc():
 
         for i, weapname in enumerate(self.weapons):
             idx = weapdb.names.index(weapname)
-            if i == 0:
-                factor = 1
-                weapRF = weapdb.weapons[idx].RF
-            elif i == 1:
-                factor = 0.5
-            elif i == 3:
-                factor = 0.33
-            else:
-                factor = i / 4
-            WEAP += weapdb.weapons[idx].TLI / Di
+            # try the ammo supply factor
+            try:
+                weap_ASE = qjm_interps.ASE(self.ammo[i] / weapdb.weapons[idx].RF)
+            except:
+                if i == 0:
+                    weap_ASE = 1
+                    weap_RF = weapdb.weapons[idx].RF
+                elif i == 1:
+                    weap_ASE = 0.5
+                elif i == 3:
+                    weap_ASE = 0.33
+                else:
+                    weap_ASE = i / 4
+                pass
+            WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
 
             
         # weapons from squad
@@ -530,13 +574,14 @@ class equipment_apc():
 
 class equipment_aircraft():
     type = "AIR"
-    def __init__(self, name, weapons, range, weight, speed, ammo_store, crew, ceiling):
+    def __init__(self, name, weapons, range, weight, speed, ammo_store, ammo,  crew, ceiling):
         self.name = name
         self.weapons = weapons
         self.range = range
         self.weight = weight
         self.speed = speed
         self.ammo_store = ammo_store
+        self.ammo = ammo
         self.crew = crew
         self.ceiling = ceiling
         self.nation = ""
@@ -548,18 +593,25 @@ class equipment_aircraft():
         # get the weapons
         WEAP = 0
 
+        #print("WEAPS -",self.name)
         for i, weapname in enumerate(self.weapons):
             idx = weapdb.names.index(weapname)
-            if i == 0:
-                factor = 1
-                weapRF = weapdb.weapons[idx].RF
-            elif i == 1:
-                factor = 0.5
-            elif i == 3:
-                factor = 0.33
-            else:
-                factor = i / 4
-            WEAP += weapdb.weapons[idx].TLI / Di * factor * 0.25 # all aircraft weapons degraded by .25
+            # try the ammo supply factor
+            try:
+                weap_ASE = qjm_interps.ASE(self.ammo[i] / weapdb.weapons[idx].RF)
+            except:
+                if i == 0:
+                    weap_ASE = 1
+                    weapRF = weapdb.weapons[idx].RF
+                elif i == 1:
+                    weap_ASE = 0.5
+                elif i == 3:
+                    weap_ASE = 0.33
+                else:
+                    weap_ASE = i / 4
+            WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di *0.25 # all aircraft weapons degraded by .25
+            #print("{} {:,.0f}".format(weapdb.weapons[idx].name,weapdb.weapons[idx].TLI))
+            #WEAP += weapdb.weapons[idx].TLI / Di * factor * 0.25 # all aircraft weapons degraded by .25
             #WEAP += weapdb.weapons[idx].TLI / Di * 0.25 # all aircraft weapons degraded by .25 - remove degradation of redundant weapons?
             
         MOF = 0.15 * (500 + 0.1*(max(0,self.speed-500)) + 0.01*(max(0,self.speed-1500)))**0.5 # max clips the value at zero
@@ -571,7 +623,7 @@ class equipment_aircraft():
         ASE = 1
         CL = 1 + 0.02*min(0,(self.ceiling-30000)/1000) + 0.005*max(0,(self.ceiling-30000)/1000) # +.005 for each 1k ft above 30k, -0.02 for each 1k ft below 30k
 
-        #print("Aircraft | WEAP",WEAP,"| CL",CL,"| MOF",MOF,"| RA",RA)
+        #print("Aircraft ",self.name,"| WEAP",WEAP,"| CL",CL,"| MOF",MOF,"| RA",RA)
 
         self.TLI = ((WEAP * MOF * RA) + PF) * RFE * FCE * ASE * CL
 
