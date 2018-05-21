@@ -1,17 +1,21 @@
 !!python/object:db_formation.formation
-name: (SOV) 9 TD, 302 Gds MRR
+name: (USSR) 249th Guards Motor Rifle Regiment
+shortname: 249.MRR
+command: 11.GTD
 type: mech
+SIDC: SFGPUCIZ---G
+coords: [51.106368, 13.757598]
 CEV: 1.90
-personnel: 2523
+personnel: 2320
 faction: USSR
 equipment:
-    T-64B: 40
+    T-80B: 40
     2S1 Gvozdika: 18
     2B11: 24
     SA-9: 4
-    ZSU-23-4: 4
+    2S6: 4
     SA-7: 30
-    BRDM-2 9P148: 9
+    BRDM-2 AT-5: 9
     RPG-7V: 146
     AGS-17: 18
     RPK-74: 102
@@ -23,7 +27,7 @@ equipment:
     BTR-60PA (FAC): 1
     PRP-3: 1
     BRDM-2: 4
-    BMP-1P: 129
+    BMP-2: 129
     UAZ-469: 22
     GAZ-66: 62
     ZIL-131: 14
@@ -32,4 +36,3 @@ equipment:
     Ural-375 POL: 26
     MT-55: 1
     TMM Bridging Truck: 4
-    Engineer Vehicle: 24
