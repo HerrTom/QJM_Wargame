@@ -1,0 +1,12 @@
+#!!python/object:db_formation.formation
+name: (USSR) 7th Guards Tank Division
+shortname: 7.GTD
+command: 3.CAA
+type: mech
+SIDC: SFGPUCA----I
+coords: [51.885055, 12.222091]
+CEV: 1.90
+personnel: 0
+faction: USSR
+equipment:
+    None: 0

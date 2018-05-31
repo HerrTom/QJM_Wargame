@@ -1,0 +1,12 @@
+#!!python/object:db_formation.formation
+name: (USSR) 79th Guards Tank Division
+shortname: 79.GTD
+command: 8.GCAA
+type: armour
+SIDC: SFGPUCA----G
+coords: [50.964685, 11.626683]
+CEV: 1.90
+personnel: 0
+faction: USSR
+equipment:
+    None: 0

@@ -1,0 +1,237 @@
+Motor rifle regiment (BMP) - 2424
+T-80: 40
+2S1 Gvozdika: 18
+2B11: 24
+9K31 Strela-1: 4
+2S6 Tunguska: 4
+9K32 Strela-2: 30
+BRDM-2 9P148: 9
+RPG-7V: 146
+AGS-17: 18
+RPK-74: 102
+AK-74: 806
+PKM: 54
+BRDM-2U: 22
+BRM-1: 1
+BTR-60PB: 4
+BTR-60PA (FAC): 1
+PRP-3: 1
+BRDM-2: 4
+BMP-2: 129
+UAZ-469: 22
+GAZ-66: 62
+ZIL-131: 14
+Ural-375: 23
+ZIL-130: 36
+Ural-375 POL: 26
+MT-55: 1
+TMM: 4
+
+Motor rifle regiment (BTR) - 2523
+T-64B: 40
+D-30: 18
+2B11: 24
+9K31 Strela-1: 4
+ZSU-23-4 Shilka: 4
+9K32 Strela-2: 30
+BRDM-2 9P148: 9
+9K111 Fagot: 12
+9K115 Metis: 27
+SPG-9: 6
+RPG-7V: 148
+AGS-17: 18
+RPK-74: 102
+AK-74: 806
+PKM: 27
+BRDM-2U: 21
+BRM-1: 1
+BTR-60PB: 143
+BTR-60PA (FAC): 1
+PRP-3: 1
+BRDM-2: 4
+BMP-1P: 3
+UAZ-469: 22
+GAZ-66: 67
+ZIL-131: 14
+Ural-375: 57
+ZIL-130: 36
+Ural-375 POL: 26
+MT-55: 1
+TMM: 4
+Engineer Vehicle: 24
+
+Tank regiment - 1143
+T-80B: 94
+2S1 Gvozdika: 18
+9K35 Strela-10: 4
+2S6 Tunguska: 4
+9K32 Strela-2: 3
+RPG-7V: 36
+RPK-74: 21
+AK-74: 275
+BRDM-2U: 12
+BRM-1: 1
+BTR-60PB: 4
+BTR-60PA (FAC): 1
+PRP-3: 1
+BRDM-2: 4
+BMP-2: 3
+UAZ-469: 13
+GAZ-66: 17
+ZIL-131: 73
+Ural-375: 22
+ZIL-130: 9
+Van Truck: 25
+Ural-375 POL: 26
+MT-55: 1
+TMM: 4
+Engineer Vehicle: 24
+
+Arty regiment (TD) 1062
+2S3 Akatsiya: 36
+BM-21: 18
+RPG-7V: 40
+RPK-74: 36
+AK-74: 252
+1V18 ACRV: 8
+1V12 ACRV: 16
+BTR-60PB: 6
+MT-LB: 1
+PRP-3: 3
+UAZ-469: 21
+GAZ-66: 31
+ZIL-130: 49
+ZIL-131: 8
+Ural-375: 72
+Van Truck: 13
+Ural-375 POL: 14
+
+Arty regiment (MRD) 1292
+2S3 Akatsiya: 54
+BM-21: 18
+RPG-7V: 58
+RPK-74: 54
+AK-74: 378
+1V18 ACRV: 8
+1V12 ACRV: 24
+BTR-60PB: 6
+MT-LB: 1
+PRP-3: 4
+UAZ-469: 22
+GAZ-66: 38
+ZIL-130: 51
+ZIL-131: 8
+Ural-375: 90
+Van Truck: 15
+Ural-375 POL: 16
+
+Independent reconnaisance btn 285
+RPG-7V: 13
+RPK-74: 25
+AK-74: 122
+BRDM-2U: 1
+BTR-60PA: 2
+BRM-1: 3
+BMP-2: 12
+T-64B: 6
+BRDM-2: 6
+BTR-60PB: 5
+UAZ-469: 19
+GAZ-66: 17
+ZIL-131: 11
+Ural-375 POL: 2
+
+
+Tank divional HQ - 3144
+T-64A: 6
+9K52 Luna-M: 4
+2K12 Kub: 20
+9K32 Strela-2: 27
+AK-74: 1658
+RPG-7V: 51
+RPK-74: 28
+Mi-2: 6
+Mi-8T: 6
+Mi-24: 6
+BTR-60PB: 33
+BRM-1: 3
+BMP-1: 12
+BRDM-2: 6
+UAZ-469: 62
+GAZ-66: 133
+ZIL-131: 232
+Ural-375: 147
+ZIL-151: 62
+Ural-375 POL: 112
+NBC Truck: 22
+BRDM-2rkh: 11
+Ambulance: 29
+Engineering Truck: 40
+TMM: 8
+IMR: 2
+
+Motor Rifle division HQ 3,320 
+T-64A: 6
+9K52 Luna-M: 4
+2K12 Kub: 20
+9K32 Strela-2: 27
+BRDM-2 9P148: 9
+MT-12: 12
+AK-74: 1667
+RPG-7V: 63
+RPK-74: 28
+Mi-2: 6
+Mi-17: 4
+Mi-8T: 2
+Mi-24: 6
+BTR-60PB: 36
+BRM-1: 3
+BMP-1P: 12
+MT-LB: 14
+BRDM-2: 6
+UAZ-469: 65
+GAZ-66: 137
+ZIL-131: 242
+Ural-375: 148
+ZIL-151: 66
+Ural-375 POL: 1
+NBC Truck: 112
+BRDM-2rkh: 22
+Ambulance: 11
+Engineering Truck: 29
+TMM: 40
+IMR: 8
+
+
+
+###################################### WEST GERMAN ##########################################
+Panzerbrigade - 1346
+Leopard 2: 67
+Marder: 83
+M113A2: 32
+MILAN: 27
+M113 M252: 12
+M109G: 18
+Jaguar 2: 12
+SpPz Luchs: 12
+G3A3: 270
+MG-3: 54
+PzF-44: 54
+G3-SG1: 54
+Truck: 294
+
+Panzergrenadierbrigade - 1583
+Leopard 1A3: 67
+Marder: 79
+M113A2: 32
+MILAN: 27
+M113 M252: 12
+M109G: 18
+Jaguar 2: 12
+SpPz Luchs: 12
+G3A3: 270
+MG-3: 54
+PzF-44: 54
+G3-SG1: 54
+Truck: 294
+

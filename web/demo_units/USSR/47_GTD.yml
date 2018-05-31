@@ -1,0 +1,12 @@
+#!!python/object:db_formation.formation
+name: (USSR) 47th Guards Tank Division
+shortname: 47.GTD
+command: 3.CAA
+type: mech
+SIDC: SFGPUCA----I
+coords: [52.292804, 11.506651]
+CEV: 1.90
+personnel: 0
+faction: USSR
+equipment:
+    None: 0

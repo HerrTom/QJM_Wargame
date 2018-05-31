@@ -1,0 +1,12 @@
+#!!python/object:db_formation.formation
+name: (USSR) 16th Guards Tank Division
+shortname: 16.GTD
+command: 2.GTA
+type: mech
+SIDC: SFGPUCA----I
+coords: [53.413301, 13.126235]
+CEV: 1.90
+personnel: 0
+faction: USSR
+equipment:
+    None: 0

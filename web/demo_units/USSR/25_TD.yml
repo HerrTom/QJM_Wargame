@@ -1,0 +1,12 @@
+#!!python/object:db_formation.formation
+name: (USSR) 25th Tank Division
+shortname: 25.TD
+command: 20.GCAA
+type: mech
+SIDC: SFGPUCA----G
+coords: [53.058436, 13.358484]
+CEV: 1.90
+personnel: 0
+faction: USSR
+equipment:
+    None: 0

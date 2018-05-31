@@ -1,0 +1,12 @@
+#!!python/object:db_formation.formation
+name: (USSR) 6th Guards Motor Rifle Division
+shortname: 6.GMRD
+command: 20.GCAA
+type: mech
+SIDC: SFGPUCIZ---I
+coords: [52.670000, 13.581944]
+CEV: 1.90
+personnel: 0
+faction: USSR
+equipment:
+    None: 0

@@ -1,0 +1,12 @@
+#!!python/object:db_formation.formation
+name: (USSR) 57th Guards Motor Rifle Division
+shortname: 57.GMRD
+command: 8.GCAA
+type: mech
+SIDC: SFGPUCIZ---I
+coords: [51.141389, 11.780833]
+CEV: 1.90
+personnel: 0
+faction: USSR
+equipment:
+    None: 0

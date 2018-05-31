@@ -1,0 +1,12 @@
+#!!python/object:db_formation.formation
+name: (USSR) 28th Guards Motor Rifle Division
+shortname: 39.GMRD
+command: 8.GCAA
+type: mech
+SIDC: SFGPUCIZ---I
+coords: [50.833611, 10.751944]
+CEV: 1.90
+personnel: 0
+faction: USSR
+equipment:
+    None: 0

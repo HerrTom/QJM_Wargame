@@ -1,0 +1,12 @@
+#!!python/object:db_formation.formation
+name: (USSR) 35th Motor Rifle Division
+shortname: 35.MRD
+command: 20.GCAA
+type: mech
+SIDC: SFGPUCIZ---I
+coords: [52.538889, 13.047222]
+CEV: 1.90
+personnel: 0
+faction: USSR
+equipment:
+    None: 0
