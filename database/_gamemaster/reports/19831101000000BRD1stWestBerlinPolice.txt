@@ -1,0 +1,21 @@
+DATE AND TIME 1983-11-01 00:00:00
+UNIT          (BRD) 1st West Berlin Police
+ACTIVITY      Attacking
+EFFECTIVE     100% combat power
+DISPOSITION   99% PERSONNEL | 99% VEHICLES
+LOCATION      
+SITUATION
+              Losses:
+                -1   G3A3           
+                -1   P1             
+                 0   M72A2 (BRD)    
+                -9   Golf Mk1       
+               -11   PERSONNEL      
+
+              Current:
+               299   G3A3           
+               659   P1             
+                66   M72A2 (BRD)    
+               711   Golf Mk1       
+
+PERSONNEL:    1,735

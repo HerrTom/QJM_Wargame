@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-01 00:00:00
+UNIT          (DDR) 19th People's Police
+ACTIVITY      hasty defense
+EFFECTIVE     87% combat power
+DISPOSITION   91% PERSONNEL | 83% VEHICLES
+LOCATION      
+SITUATION
+              Losses:
+                -4   MPi-KM         
+                 0   RPK            
+                 0   RPG-7V         
+                 0   SPG-9          
+                -1   Granatwerfer 82
+                -2   BTR-152        
+                -1   BRDM-2         
+               -15   PERSONNEL      
+
+              Current:
+                59   MPi-KM         
+                12   RPK            
+                 8   RPG-7V         
+                 4   SPG-9          
+                 8   Granatwerfer 82
+                10   BTR-152        
+                 5   BRDM-2         
+
+PERSONNEL:    144

@@ -1,0 +1,33 @@
+DATE AND TIME 1983-11-01 00:00:00
+UNIT          (BRD) Luftlandebrigade 26 "Saarland"
+ACTIVITY      Attacking
+EFFECTIVE     100% combat power
+DISPOSITION   100% PERSONNEL | 100% VEHICLES
+LOCATION      
+SITUATION
+              Losses:
+                -5   G3A3           
+                 0   M151 TOW       
+                 0   Rh202          
+                 0   MILAN          
+                 0   Iltis          
+                 0   Kraka          
+                 0   M252           
+                 0   PzF-44         
+                 0   M72 LAW        
+                 0   MG3            
+                -5   PERSONNEL      
+
+              Current:
+             1,311   G3A3           
+                82   M151 TOW       
+                48   Rh202          
+                24   MILAN          
+                92   Iltis          
+               112   Kraka          
+                 8   M252           
+                44   PzF-44         
+               112   M72 LAW        
+               104   MG3            
+
+PERSONNEL:    2,495

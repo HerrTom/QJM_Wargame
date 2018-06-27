@@ -2,7 +2,7 @@ import yaml
 import os
 import glob
 
-from pubsub import pub
+#from pubsub import pub
 
 # import custom scripts
 import db_formation

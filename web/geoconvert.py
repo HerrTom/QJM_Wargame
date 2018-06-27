@@ -56,12 +56,12 @@ def collect_children(unit_list,unit):
     equip = Counter(unit_list[unit_idx]["equipment"])
     pers = unit_list[unit_idx]["personnel"]
     if children != []:
-        print("Collecting {:9} : {}".format(unit["shortname"], children))
+        # print("Collecting {:9} : {}".format(unit["shortname"], children))
         # check if subunit has children
         for subchild in children:
             subchild_idx = search_names(unit_list,subchild)
             subchild_entry = unit_list[subchild_idx]
-            print("     Subchild {}".format(subchild))
+            # print("     Subchild {}".format(subchild))
             # call this function again
             if subchild_entry["children"] != []:
                 # this prevents double counting
@@ -216,5 +216,5 @@ write_geojson(u,'situation.js')
 
 # write an example unit
 print("-----")
-pretty_unit(unit_list,"3.CAA")
-pretty_unit(unit_list,"GSFG")
+pretty_unit(unit_list,"9.TD")
+# pretty_unit(unit_list,"GSFG")

@@ -1,0 +1,15 @@
+DATE AND TIME 1983-11-01 00:00:00
+UNIT          (BRD) 1st Strike Wing
+ACTIVITY      Attacking
+EFFECTIVE     100% combat power
+DISPOSITION   100% PERSONNEL | 100% VEHICLES
+LOCATION      
+SITUATION
+              Losses:
+                 0   F-4F Phantom II (Mk 84)
+                 0   PERSONNEL      
+
+              Current:
+                12   F-4F Phantom II (Mk 84)
+
+PERSONNEL:    24
