@@ -1,0 +1,27 @@
+DATE AND TIME 1983-11-01 08:00:00
+UNIT          (DDR) Grenzregiment 38
+ACTIVITY      prepared defense
+EFFECTIVE     95% combat power
+DISPOSITION   98% PERSONNEL | 94% VEHICLES
+LOCATION      
+SITUATION
+              Losses:
+                -7   BTR-152        
+                -4   MPi-KM         
+                -1   RPK            
+                 0   PKM            
+                 0   RPG-7V         
+                 0   SPG-9          
+                 0   2B11           
+               -19   PERSONNEL      
+
+              Current:
+               106   BTR-152        
+               344   MPi-KM         
+                47   RPK            
+                36   PKM            
+                48   RPG-7V         
+                21   SPG-9          
+                24   2B11           
+
+PERSONNEL:    882

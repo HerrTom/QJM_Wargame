@@ -235,3 +235,303 @@ PzF-44: 54
 G3-SG1: 54
 Truck: 294
 
+Gebirgsjaegerbrigade - 3584
+G3A3: 2024
+MG-3: 308
+Carl Gustav: 218
+G3-SG1: 70
+MILAN: 24
+Rh202: 64
+120mm mortar: 32
+Jagdpanzer: 17
+M102: 18
+Truck: 170
+
+###################################### NL ##########################################
+NL Armour-2995
+Laro: 65
+FN MAG: 118
+FN FAL: 677
+M72 LAW: 112
+Carl Gustav: 16
+120mm mortar: 9
+Leopard 1: 112
+ARV: 8
+M113: 65
+M557: 23
+M106: 3
+YPR-765: 69
+YPR-765 TOW: 3
+AMX-13 (105): 6
+M113 Lynx: 16
+AVLB: 2
+M109: 18
+Truck: 815
+
+
+NL mixed-3273
+YP-408 PWRDR: 3
+Laro: 71
+FN MAG: 154
+FN FAL: 717
+M72 LAW: 136
+Carl Gustav: 43
+YP-408 PWCO: 12
+YP-408 PWI-PC: 9
+YP-408 PWI-GR: 27
+M47 Dragon: 18
+YP-408 PWAT: 6
+YP-408 PWMR: 6
+120mm mortar: 12
+Leopard 1: 56
+ARV: 5
+M113: 65
+M557: 23
+M106: 3
+YPR-765: 65
+YPR-765 TOW: 27
+AMX-13 (105): 6
+M113 Lynx: 16
+AVLB: 2
+M109: 18
+Truck: 796
+
+NL YPR765-3236
+Laro: 94
+FN MAG: 149
+FN FAL: 768
+M72 LAW: 112
+Carl Gustav: 25
+120mm mortar: 18
+Leopard 1: 56
+ARV: 5
+M113: 85
+M557: 35
+M106: 3
+YPR-765: 110
+YPR-765 TOW: 30
+AMX-13 (105): 6
+M113 Lynx: 16
+AVLB: 2
+M109: 18
+Truck: 793
+
+NL YP408-3310
+YP-408 PWRDR: 6
+Laro: 48
+FN MAG: 159
+FN FAL: 666
+M72 LAW: 160
+Carl Gustav: 61
+YP-408 PWCO: 24
+YP-408 PWI-PC: 18
+YP-408 PWI-GR: 54
+M47 Dragon: 36
+YP-408 PWAT: 12
+YP-408 PWMR: 12
+120mm mortar: 6
+Centurion Mk.V: 56
+ARV: 5
+M113: 45
+M557: 11
+M106: 3
+YPR-765: 20
+YPR-765 TOW: 24
+AMX-13 (105): 6
+M113 Lynx: 16
+AVLB: 2
+M109: 18
+Truck: 799
+
+###################################### UK ##########################################
+
+UK 1 arm 2 inf-1943
+FV432 L16A1: 16
+FV432: 156
+FV107 Scimitar: 16
+FV701(C) Ferret: 15
+MILAN: 48
+FN FAL: 405
+FN MAG: 90
+Carl Gustav: 54
+51mm mortar: 18
+LSW: 108
+Chieftain Mk.V: 57
+FV105 Sultan CV: 3
+FV-438 Swingfire: 9
+FV101 Scorpion: 8
+Truck: 212
+
+UK 2 Arm 1 Inf-1846
+FV432 L16A1: 8
+FV432: 78
+FV107 Scimitar: 8
+FV701(C) Ferret: 18
+MILAN: 24
+FN FAL: 408
+FN MAG: 78
+Carl Gustav: 27
+51mm mortar: 9
+LSW: 54
+Chieftain Mk.V: 114
+FV105 Sultan CV: 6
+FV-438 Swingfire: 18
+FV101 Scorpion: 16
+Truck: 232
+
+UK 2 Arm 2 Inf-2526
+FV432 L16A1: 16
+FV432: 156
+FV107 Scimitar: 16
+FV701(C) Ferret: 22
+MILAN: 48
+FN FAL: 542
+FN MAG: 112
+Carl Gustav: 54
+51mm mortar: 18
+LSW: 108
+Chieftain Mk.V: 114
+FV105 Sultan CV: 6
+FV-438 Swingfire: 18
+FV101 Scorpion: 16
+Truck: 296
+
+UK Airmobile bde-2753
+MILAN: 84
+FN FAL: 1286
+FN MAG: 358
+Carl Gustav: 72
+L16A1: 36
+FV433 Abbot: 8
+LAAD Javelin: 12
+CH-47: 10
+Puma HC.1: 16
+Lynx AH.1 TOW: 9
+Gazelle AH.1: 3
+Land Rover: 84
+
+###################################### US ##########################################
+2Inf1Arm-1971 SFGPUCIZ---H
+M16: 478
+M16/M203: 181
+M60 MMG: 94
+M72 LAW: 82
+M47 Dragon: 24
+M113: 163
+M901: 24
+M106: 18
+M557: 22
+Truck: 136
+M60A3: 70
+
+2Inf2Arm-2550 SFGPUCA----H
+M16: 558
+M16/M203: 200
+M60 MMG: 102
+M72 LAW: 100
+M47 Dragon: 24
+M113: 176
+M901: 24
+M106: 24
+M557: 32
+Truck: 216
+M60A3: 140
+
+3Inf2Arm-3246 SFGPUCIZ---H
+M16: 757
+M16/M203: 281
+M60 MMG: 145
+M72 LAW: 132
+M47 Dragon: 36
+M113: 251
+M901: 36
+M106: 30
+M557: 38
+Truck: 244
+M60A3: 140
+
+1Inf2Arm-1854 SFGPUCA----H
+M16: 359
+M16/M203: 119
+M60 MMG: 59
+M72 LAW: 68
+M47 Dragon: 12
+M113: 101
+M901: 12
+M106: 18
+M557: 26
+Truck: 188
+M60A3: 140
+
+1Inf3Arm-2433  SFGPUCA----H
+M16: 439
+M16/M203: 138
+M60 MMG: 67
+M72 LAW: 86
+M47 Dragon: 12
+M113: 114
+M901: 12
+M106: 24
+M557: 36
+Truck: 268
+M60A3: 210
+
+ACAV rgt-5000  SFGPUCRVA--G
+M1 Abrams: 129
+M3 CFV: 111
+M113: 53
+M557: 30
+M109A2: 24
+M106: 18
+M163 VADS: 12
+Stinger: 28
+Eng. Vehicle: 28
+M628 CEV: 3
+AVLB: 6
+OH-58: 32
+AH-64: 26
+UH-60: 25
+M16: 1664
+M60 MMG: 196
+M72 LAW: 260
+Truck: 890
+
+###################################### BEL ##########################################
+
+Mech bde-1436  SFGPUCIZ---H
+FN FAL: 228
+FN MAG: 44
+Blindicide: 20
+MILAN: 36
+M113: 116
+60mm mortar: 18
+81mm mortar: 20
+FV101 Scorpion: 8
+FV107 Scimitar: 8
+FV103 Spartan: 6
+Jeep MILAN: 20
+20mm Oerlikon: 10
+Leopard 1: 40
+Jagdpanzer Kanone: 14
+M109: 18
+ARV: 17
+Truck: 120
+
+Armour bde-1644  SFGPUCA----H
+FN FAL: 240
+FN MAG: 48
+Blindicide: 22
+MILAN: 36
+M113: 116
+60mm mortar: 18
+81mm mortar: 20
+FV101 Scorpion: 10
+FV107 Scimitar: 10
+FV103 Spartan: 8
+Jeep MILAN: 20
+20mm Oerlikon: 10
+Leopard 1: 80
+Jagdpanzer Kanone: 14
+M109: 18
+ARV: 22
+Truck: 120

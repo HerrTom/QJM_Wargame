@@ -1,10 +1,10 @@
 #!!python/object:db_formation.formation
 name: (USSR) 47th Guards Tank Regiment
-shortname: 74.GTR
-command: 94.GMRD
+shortname: 47.GTR
+command: 16.GTD
 type: mech
 SIDC: SFGPUCA----G
-coords: [53.658492, 11.511151]
+coords: [53.347807, 13.116364]
 CEV: 1.90
 personnel: 1143
 faction: USSR

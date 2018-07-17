@@ -1,6 +1,6 @@
 #!!python/object:db_formation.formation
 name: (BRD) 1. Gibirgsjager Division
-shortname: 10.GJD
+shortname: 1.GJD
 command: II.Korps
 type: mech
 SIDC: SFGPUCIO---I

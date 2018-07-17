@@ -1,0 +1,33 @@
+DATE AND TIME 1983-11-01 08:00:00
+UNIT          (FRA) 46e Regiment d'Infanterie
+ACTIVITY      Attacking
+EFFECTIVE     77% combat power
+DISPOSITION   91% PERSONNEL | 66% VEHICLES
+LOCATION      
+SITUATION
+              Losses:
+               -23   VAB            
+               -19   FAMAS F-1      
+                -5   NF-1           
+                -4   LRAC F1        
+                 0   MILAN          
+                -2   Hotchkiss M201 
+                 0   M40A1 RR       
+                 0   TDA 81mm       
+                -1   HS-831A        
+                 0   MO-120         
+               -85   PERSONNEL      
+
+              Current:
+                45   VAB            
+               407   FAMAS F-1      
+                78   NF-1           
+                64   LRAC F1        
+                14   MILAN          
+                21   Hotchkiss M201 
+                 2   M40A1 RR       
+                 8   TDA 81mm       
+                 7   HS-831A        
+                 6   MO-120         
+
+PERSONNEL:    853

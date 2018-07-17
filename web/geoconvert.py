@@ -14,7 +14,7 @@ os.chdir(dname)
 
 # DEFS ####
 table_style = "width: 90%, border: 1px solid black"
-default_command = "FORMATIONS"
+default_command = "ALL COMMAND"
 
 # categories:
 with open("equip_cats.yml",'r') as f:
@@ -203,8 +203,12 @@ for ud in unit_list:
         color = "rgb(0,174,239)"
     elif ud["faction"] == "BRD":
         color = "rgb(167,169,172)"
-    elif ud["faction"] == "UK":
+    elif ud["faction"] == "NL":
         color = "rgb(247,148,30)"
+    elif ud["faction"] == "UK":
+        color = "rgb(255,204,205)"
+    elif ud["faction"] == "BEL":
+        color = "rgb(255,255,0)"
     elif ud["faction"] == "FRA":
         color = "rgb(141,198,63)"
     else:

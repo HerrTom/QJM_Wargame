@@ -1,0 +1,25 @@
+DATE AND TIME 1983-11-01 08:00:00
+UNIT          (FRA) 11e Regiment d'Chasseurs
+ACTIVITY      Attacking
+EFFECTIVE     94% combat power
+DISPOSITION   90% PERSONNEL | 87% VEHICLES
+LOCATION      
+SITUATION
+              Losses:
+                -2   AMX-30B        
+                -1   AMX-10PC       
+                -6   AMX-10P        
+                -6   FAMAS F-1      
+                -1   NF-1           
+                 0   LRAC F1        
+               -37   PERSONNEL      
+
+              Current:
+                51   AMX-30B        
+                 0   AMX-10PC       
+                 7   AMX-10P        
+                85   FAMAS F-1      
+                16   NF-1           
+                13   LRAC F1        
+
+PERSONNEL:    351

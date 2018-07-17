@@ -1,29 +1,29 @@
 #!!python/object:db_formation.formation
-name: (USSR) 47th Guards Tank Regiment
-shortname: 47.GTR
-command: 16.GTD
-type: mech
+name: (DDR) Panzerregiment 11
+shortname: PzR.11
+command: 11.MSD
+type: armour
 SIDC: SFGPUCA----G
-coords: [53.347807, 13.116364]
-CEV: 1.90
+coords: [51.3666041, 10.8668419]
+CEV: 1.58
 personnel: 1143
-faction: USSR
+faction: DDR
 equipment:
-    T-80B: 94
+    T-55A: 94
     2S1 Gvozdika: 18
     9K35 Strela-10: 4
     2S6 Tunguska: 4
     9K32 Strela-2: 3
     RPG-7V: 36
-    RPK-74: 21
-    AK-74: 275
+    RPK: 21
+    MPi-KM: 275
     BRDM-2U: 12
     BRM-1: 1
-    BTR-60PB: 4
+    BTR-70: 4
     BTR-60PA (FAC): 1
     PRP-3: 1
     BRDM-2: 4
-    BMP-2: 3
+    BMP-1: 3
     UAZ-469: 13
     GAZ-66: 17
     ZIL-131: 73
