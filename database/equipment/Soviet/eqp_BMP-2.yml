@@ -1,9 +1,9 @@
 !!python/object:db_equipment.equipment_ifv
 ammo:
 - 500
-- 4
+- 5
 - 2000
-ammo_store: 300
+ammo_store: 500
 amphibious: true
 armour: steel
 crew: 2

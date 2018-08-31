@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 7200
+TLI: 1739128.6645904034
+accuracy: 0.7
+ammo: 30x165
+barrels: 1
+calibre: 30.0
+muzzle_vel: 900.0
+name: GSh-301
+range: 2500
+rate_of_fire: 1800
+rf_multiple: 4
+rie: 1.0

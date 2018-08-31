@@ -1,0 +1,15 @@
+!!python/object:db_equipment.equipment_aircraft
+ammo:
+- 250
+- 8
+ammo_store: 250
+ceiling: 16000.0
+crew: 1
+name: Su-25 (8x UB-32)
+nation: Soviet
+range: 750
+speed: 975.0
+weapons:
+- GSh-30-2
+- UB-32
+weight: 14.0

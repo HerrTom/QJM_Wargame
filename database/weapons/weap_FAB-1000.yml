@@ -1,7 +1,7 @@
 !!python/object:db_weapons.weapon_bomb
-RF: 1
-TLI: 3600.0
-accuracy: 0.4
+RF: 7
+TLI: 1260000.0
+accuracy: 0.2
 ammo: FAB-1000
 calibre: 1000.0
 name: FAB-1000

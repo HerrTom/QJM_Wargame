@@ -1,0 +1,21 @@
+!!python/object:db_equipment.equipment_afv
+ammo:
+- 30
+- 6
+- 2000
+- 300
+ammo_store: 36
+amphibious: false
+armour: composite
+crew: 3
+fire_control: stereoscopic rangefinder
+name: T-72B
+nation: Soviet
+range: 460
+speed: 80.0
+weapons:
+- 2A46M
+- 9K119 Svir
+- PKT
+- DShK
+weight: 44.5

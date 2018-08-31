@@ -1,0 +1,17 @@
+!!python/object:db_equipment.equipment_aircraft
+ammo:
+- 150
+- 6
+- 4
+ammo_store: 150
+ceiling: 62500.0
+crew: 1
+name: Su-27
+nation: Soviet
+range: 3530
+speed: 695.0
+weapons:
+- GSh-301
+- R-27R
+- R-73
+weight: 23.0

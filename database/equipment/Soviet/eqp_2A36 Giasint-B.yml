@@ -1,0 +1,8 @@
+!!python/object:db_equipment.equipment_infarty
+ammo: []
+ammo_store: 40
+crew: 8
+name: 2A36 Giasint-B
+nation: Soviet
+weapons:
+- 2A36

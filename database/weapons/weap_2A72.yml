@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 1600
+TLI: 476036.62917889
+accuracy: 0.8
+ammo: 30x165
+barrels: 1
+calibre: 30.0
+muzzle_vel: 970.0
+name: 2A72
+range: 3200
+rate_of_fire: 400
+rf_multiple: 4
+rie: 1.0

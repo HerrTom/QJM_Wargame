@@ -4,13 +4,13 @@ ammo:
 ammo_store: 2000
 amphibious: true
 armour: steel
-crew: 3
-name: BTR-60PA (FAC)
+crew: 2
+name: MT-LB
 nation: Soviet
 range: 500
-speed: 80.0
-squad: 0.0
+speed: 61.0
+squad: 32.0
 squad_weaps: []
 weapons:
 - PKT
-weight: 10.2
+weight: 11.9

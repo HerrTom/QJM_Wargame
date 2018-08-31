@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_aam
+RF: 53
+TLI: 4290663.280471913
+ammo: R-73
+barrels: 1
+calibre: 165.0
+enhancement: 1.0
+guidance: IR
+min_range: 300.0
+muzzle_vel: 750.0
+name: R-73
+range: 30000
+rie: 1

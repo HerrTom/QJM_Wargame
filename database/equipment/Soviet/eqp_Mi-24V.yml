@@ -1,0 +1,17 @@
+!!python/object:db_equipment.equipment_aircraft
+ammo:
+- 4
+- 2
+- 1470
+ammo_store: 1470
+ceiling: 16076.0
+crew: 2
+name: Mi-24V
+nation: Soviet
+range: 450
+speed: 335.0
+weapons:
+- 9K114 Shturm
+- UB-32
+- Yak-B
+weight: 12.0

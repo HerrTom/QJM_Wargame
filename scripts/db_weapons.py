@@ -184,7 +184,7 @@ class weapon_atgm():
         MCE = 1
         AE = 1
         MBE = qjm_interps.MBE(self.barrels)
-        self.RF = RF
+        self.RF = RF / 2 # factor to deal with ASE
         MRN = 1 - 0.19 * ((self.min_range - 100) / 100)
         PEN = 1 + 0.01 * signed_sqrt(self.penetration - 500)
         VEL = 1 + .001 * (self.muzzle_vel - 400)
@@ -248,9 +248,11 @@ class weapon_aam():
         AE = 1
         MBE = qjm_interps.MBE(self.barrels)
         self.RF = RF
-        MRN = 1 - 0.19 * ((self.min_range - 100) / 100)
+        MRN = 1 - 0.19 * ((self.min_range - 1000) / 1000)
         VEL = 1 + .001 * (self.muzzle_vel - 400)
         EN = self.enhancement
+        print(self.name, RF , PTS , RIE , RN , A , RL , \
+            SME , MCE , AE , MBE , MRN , VEL , EN , GE)
         self.TLI = RF * PTS * RIE * RN * A * RL * \
             SME * MCE * AE * MBE * MRN * VEL * EN * GE
 

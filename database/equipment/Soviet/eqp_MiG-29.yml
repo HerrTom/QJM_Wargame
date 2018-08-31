@@ -1,0 +1,17 @@
+!!python/object:db_equipment.equipment_aircraft
+ammo:
+- 150
+- 2
+- 4
+ammo_store: 150
+ceiling: 59100.0
+crew: 1
+name: MiG-29
+nation: Soviet
+range: 1430
+speed: 680.0
+weapons:
+- GSh-301
+- R-27R
+- R-73
+weight: 14.9

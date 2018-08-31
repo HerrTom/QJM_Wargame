@@ -1,0 +1,21 @@
+!!python/object:db_equipment.equipment_afv
+ammo:
+- 28
+- 8
+- 2000
+- 300
+ammo_store: 36
+amphibious: false
+armour: reactive
+crew: 3
+fire_control: laser rangefinder
+name: T-64BV
+nation: Soviet
+range: 500
+speed: 60.0
+weapons:
+- 2A46M
+- 9K112 Kobra
+- PKT
+- DShK
+weight: 38.0

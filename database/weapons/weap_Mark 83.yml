@@ -1,7 +1,7 @@
 !!python/object:db_weapons.weapon_bomb
-RF: 1
-TLI: 3052.4
-accuracy: 0.4
+RF: 12
+TLI: 1831440.0
+accuracy: 0.2
 ammo: Mk 83
 calibre: 454.0
 name: Mark 83

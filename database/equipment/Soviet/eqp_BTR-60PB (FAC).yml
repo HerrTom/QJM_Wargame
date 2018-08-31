@@ -1,4 +1,7 @@
 !!python/object:db_equipment.equipment_apc
+ammo:
+- 200
+- 2000
 ammo_store: 500
 amphibious: true
 armour: steel

@@ -1,0 +1,14 @@
+!!python/object:db_weapons.weapon_atgm
+RF: 90
+TLI: 1497367.4270104242
+ammo: 9M114 Shturm
+barrels: 1
+calibre: 130.0
+enhancement: 1.5
+guidance: SACLOS radio
+min_range: 400.0
+muzzle_vel: 345.0
+name: 9K114 Shturm
+penetration: 600.0
+range: 5000
+rie: 1.0

@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 12000
+TLI: 4202894.272760142
+accuracy: 0.7
+ammo: 30x165mm
+barrels: 2
+calibre: 30.0
+muzzle_vel: 870.0
+name: GSh-30-2
+range: 3500
+rate_of_fire: 3000
+rf_multiple: 4
+rie: 1.0

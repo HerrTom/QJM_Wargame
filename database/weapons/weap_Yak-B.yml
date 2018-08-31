@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 20000
+TLI: 56577.39544376359
+accuracy: 0.7
+ammo: 12.7 mm
+barrels: 1
+calibre: 12.7
+muzzle_vel: 810.0
+name: Yak-B
+range: 1000
+rate_of_fire: 5000
+rf_multiple: 4
+rie: 1.0

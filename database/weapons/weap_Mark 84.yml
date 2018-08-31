@@ -1,7 +1,7 @@
 !!python/object:db_weapons.weapon_bomb
-RF: 1
-TLI: 3518.0
-accuracy: 0.4
+RF: 7
+TLI: 1231300.0
+accuracy: 0.2
 ammo: Mk 84
 calibre: 907.0
 name: Mark 84

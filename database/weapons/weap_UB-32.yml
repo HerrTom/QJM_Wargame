@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 187
+TLI: 508306.2793391721
+accuracy: 0.9
+ammo: S-5
+barrels: 32
+calibre: 55.0
+muzzle_vel: 350.0
+name: UB-32
+range: 4000
+rie: 1.0

@@ -1,0 +1,14 @@
+!!python/object:db_weapons.weapon_atgm
+RF: 18
+TLI: 2655063.2329181815
+ammo: Kh-25ML
+barrels: 1
+calibre: 275.0
+enhancement: 1.2
+guidance: LOSLBR
+min_range: 400.0
+muzzle_vel: 670.0
+name: Kh-25ML
+penetration: 1000.0
+range: 11000
+rie: 1.0

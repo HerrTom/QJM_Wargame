@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 97
+TLI: 3216306.64397312
+accuracy: 0.7
+ammo: 9M22U
+barrels: 40
+calibre: 122.0
+muzzle_vel: 690.0
+name: BM-21
+range: 20380
+rie: 1.0

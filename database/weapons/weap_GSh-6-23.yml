@@ -1,0 +1,13 @@
+!!python/object:db_weapons.weapon_autogun
+RF: 32000
+TLI: 7992800.325717381
+accuracy: 0.7
+ammo: AM-23
+barrels: 6
+calibre: 23.0
+muzzle_vel: 715.0
+name: GSh-6-23
+range: 2500
+rate_of_fire: 8000
+rf_multiple: 4
+rie: 1.0

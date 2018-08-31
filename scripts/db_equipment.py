@@ -1,5 +1,5 @@
+import math
 import qjm_interps
-
 import inspect
 
 global Di
@@ -118,7 +118,7 @@ class equipment_inf():
             elif i == 3:
                 weap_ASE = 0.33
             else:
-                weap_ASE = i / 4
+                weap_ASE = 1 / i
             WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
 
         self.TLI = WEAP
@@ -152,7 +152,7 @@ class equipment_infat():
             elif i == 3:
                 weap_ASE = 0.33
             else:
-                weap_ASE = i / 4
+                weap_ASE = 1 / i
             WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
 
         self.TLI = WEAP
@@ -186,7 +186,7 @@ class equipment_infarty():
             elif i == 3:
                 weap_ASE = 0.33
             else:
-                weap_ASE = i / 4
+                weap_ASE = 1 / i
             WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
 
         self.TLI = WEAP
@@ -220,7 +220,7 @@ class equipment_infad():
             elif i == 3:
                 weap_ASE = 0.33
             else:
-                weap_ASE = i / 4
+                weap_ASE = 1 / i
             WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
 
         self.TLI = WEAP
@@ -261,7 +261,7 @@ class equipment_spat():
                 elif i == 3:
                     weap_ASE = 0.33
                 else:
-                    weap_ASE = i / 4
+                    weap_ASE = 1 / i
                 pass
             WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
             
@@ -318,7 +318,7 @@ class equipment_spad():
                 elif i == 3:
                     weap_ASE = 0.33
                 else:
-                    weap_ASE = i / 4
+                    weap_ASE = 1 / i
                 pass
             WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
             
@@ -375,7 +375,7 @@ class equipment_afv():
                 elif i == 3:
                     weap_ASE = 0.33
                 else:
-                    weap_ASE = i / 4
+                    weap_ASE = 1 / i
                 pass
             WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
             
@@ -435,7 +435,7 @@ class equipment_sparty():
                 elif i == 3:
                     weap_ASE = 0.33
                 else:
-                    weap_ASE = i / 4
+                    weap_ASE = 1 / i
                 pass
             WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
             
@@ -485,6 +485,7 @@ class equipment_ifv():
             # try the ammo supply factor
             try:
                 weap_ASE = qjm_interps.ASE(self.ammo[i] / weapdb.weapons[idx].RF)
+                print(self.name, weapname, weap_ASE)
             except:
                 if i == 0:
                     weap_ASE = 1
@@ -494,7 +495,7 @@ class equipment_ifv():
                 elif i == 3:
                     weap_ASE = 0.33
                 else:
-                    weap_ASE = i / 4
+                    weap_ASE = 1 / i
                 pass
             WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
 
@@ -513,7 +514,7 @@ class equipment_ifv():
         if self.amphibious:
             AME = 1.1
         CL = 1
-        self.TLI = (((WEAP+WEAP_SQUAD) * MOF * RA) + PF * ARMF) * RFE * FCE * ASE * AME * CL
+        self.TLI = (((WEAP) * MOF * RA) + PF * ARMF) * RFE * FCE * ASE * AME * CL +WEAP_SQUAD
         
 class equipment_apc():
     type = "APC"
@@ -554,7 +555,7 @@ class equipment_apc():
                 elif i == 3:
                     weap_ASE = 0.33
                 else:
-                    weap_ASE = i / 4
+                    weap_ASE = 1 / i
                 pass
             WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di 
 
@@ -570,7 +571,7 @@ class equipment_apc():
         if self.amphibious:
             AME = 1.1
         CL = 1
-        self.TLI = (((WEAP+WEAP_SQUAD) * MOF * RA) + PF * ARMF) * AME * CL
+        self.TLI = (((WEAP) * MOF * RA) + PF * ARMF) * AME * CL +WEAP_SQUAD
 
 class equipment_aircraft():
     type = "AIR"
@@ -608,8 +609,11 @@ class equipment_aircraft():
                 elif i == 3:
                     weap_ASE = 0.33
                 else:
-                    weap_ASE = i / 4
-            WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di *0.25 # all aircraft weapons degraded by .25
+                    weap_ASE = 1 / i
+            if weapdb.weapons[idx].type == "Automatic gun":
+                WEAP += weapdb.weapons[idx].TLI * weap_ASE / Di * 0.25 # all aircraft weapons degraded by .25
+            else: # if it's not a gun or automatic gun, then ammo is the quantity of weapons
+                WEAP += weapdb.weapons[idx].TLI / Di * 0.25 * math.log(2*self.ammo[i]-1)  # all aircraft weapons degraded by .25
             #print("{} {:,.0f}".format(weapdb.weapons[idx].name,weapdb.weapons[idx].TLI))
             #WEAP += weapdb.weapons[idx].TLI / Di * factor * 0.25 # all aircraft weapons degraded by .25
             #WEAP += weapdb.weapons[idx].TLI / Di * 0.25 # all aircraft weapons degraded by .25 - remove degradation of redundant weapons?

@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 63
+TLI: 1242619.8408008758
+accuracy: 0.7
+ammo: VOF39
+barrels: 1
+calibre: 152.0
+muzzle_vel: 945.0
+name: 2A36
+range: 30500
+rie: 1.0

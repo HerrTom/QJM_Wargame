@@ -1,0 +1,14 @@
+!!python/object:db_equipment.equipment_sparty
+ammo:
+- 16
+ammo_store: 16
+amphibious: false
+armour: steel
+crew: 6
+name: BM-27
+nation: Soviet
+range: 500
+speed: 65.0
+weapons:
+- BM-27
+weight: 20.0

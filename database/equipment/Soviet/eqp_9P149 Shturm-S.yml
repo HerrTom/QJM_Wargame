@@ -1,0 +1,14 @@
+!!python/object:db_equipment.equipment_spat
+ammo:
+- 12
+ammo_store: 12
+amphibious: false
+armour: steel
+crew: 2
+name: 9P149 Shturm-S
+nation: Soviet
+range: 500
+speed: 61.0
+weapons:
+- 9K114 Shturm
+weight: 11.9

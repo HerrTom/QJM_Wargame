@@ -1,0 +1,15 @@
+!!python/object:db_equipment.equipment_aircraft
+ammo:
+- 500
+- 8
+ammo_store: 500
+ceiling: 36090.0
+crew: 2
+name: Su-24 (8x FAB-500)
+nation: Soviet
+range: 615
+speed: 1654.0
+weapons:
+- GSh-6-23
+- FAB-500
+weight: 38.0

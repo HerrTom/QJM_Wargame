@@ -1,0 +1,11 @@
+!!python/object:db_weapons.weapon_gun
+RF: 26
+TLI: 2705533.921018042
+accuracy: 0.7
+ammo: M-27-OF
+barrels: 16
+calibre: 220.0
+muzzle_vel: 690.0
+name: BM-27
+range: 35000
+rie: 1.0
